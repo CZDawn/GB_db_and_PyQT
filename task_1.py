@@ -28,13 +28,13 @@ def host_ping(hosts: list) -> None:
     # Параметр прерывания выполнения команды ping
     param = '-n' if platform.system().lower() == 'windows' else '-c'
 
-    ping_process = Popen(['ping', param, '1', str(host)], stdout=PIPE)
-    if ping_process.wait() == 0:
-        result = f'{host} - {AVAILABLE}'
-    else:
-        result = f'{host} - {UNAVAILABLE}'
-
-    print(result)
+    for host in hosts:
+        ping_process = Popen(['ping', param, '1', str(host)], stdout=PIPE)
+        if ping_process.wait() == 0:
+            result = f'{host} - {AVAILABLE}'
+        else:
+            result = f'{host} - {UNAVAILABLE}'
+        print(result)
 
 
 if __name__ == '__main__':
@@ -47,7 +47,7 @@ if __name__ == '__main__':
     for host in hosts:
         try:
             host = ip_address(host)
-        except Exception:
+        except ValueError:
             host = host
-        host_ping(hosts)
+    host_ping(hosts)
 
