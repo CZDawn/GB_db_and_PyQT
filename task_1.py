@@ -22,8 +22,8 @@ def host_ping(hosts: list) -> None:
     return: словарь сетевых узлов со значениями их доступности
     '''
 
-    AVAILABLE = 'Узел доступен'
-    UNAVAILABLE = 'Узел недоступен'
+    REACHABLE = 'Узел доступен'
+    UNREACHABLE = 'Узел недоступен'
 
     # Параметр прерывания выполнения команды ping
     param = '-n' if platform.system().lower() == 'windows' else '-c'
@@ -31,9 +31,9 @@ def host_ping(hosts: list) -> None:
     for host in hosts:
         ping_process = Popen(['ping', param, '1', str(host)], stdout=PIPE)
         if ping_process.wait() == 0:
-            result = f'{host} - {AVAILABLE}'
+            result = f'{host} - {REACHABLE}'
         else:
-            result = f'{host} - {UNAVAILABLE}'
+            result = f'{host} - {UNREACHABLE}'
         print(result)
 
 
