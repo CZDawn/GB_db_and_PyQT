@@ -9,20 +9,26 @@ from ipaddress import ip_address
 from task_1 import host_ping
 
 
-def host_range_ping() -> None:
+def host_range_ping() -> list:
     start_ip_address = input('Введите начальный ip-адрес: ')
     last_octet = int(start_ip_address.split('.')[3])
     quantity_of_addresses_for_check = int(input('Сколько адресов проверить: '))
+    result = []
     if (last_octet + quantity_of_addresses_for_check) > 256:
         print('Допустимо изменение только последнего октета в адресе!')
     else:
         try:
             ipv4 = ip_address(start_ip_address)
         except ValueError:
-            print('Введен некорректный адрес веб узла!')
+            print(f'Введен некорректный адрес веб узла!')
             return
-        hosts = [str(ipv4+index) for index in range(quantity_of_addresses_for_check)]
-        host_ping(hosts)
+
+        for index in range(quantity_of_addresses_for_check):
+            host = str(ipv4+index)
+            status = host_ping(host)
+            result.append({'Узел': host, 'Статус': status})
+
+    return result
 
 
 if __name__ == '__main__':

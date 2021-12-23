@@ -15,26 +15,28 @@ from subprocess import Popen, PIPE
 from ipaddress import ip_address
 
 
-def host_ping(hosts: list) -> None:
+def host_ping(host: object) -> str:
     '''Функция проверяет доступность каждого сетевого узла в списке.
 
     param hosts: список проверяемых сетевых узлов (ip-адреса и имена хостов)
     return: словарь сетевых узлов со значениями их доступности
     '''
 
-    REACHABLE = 'Узел доступен'
-    UNREACHABLE = 'Узел недоступен'
+    REACHABLE = 'Доступен'
+    UNREACHABLE = 'Недоступен'
 
     # Параметр прерывания выполнения команды ping
     param = '-n' if platform.system().lower() == 'windows' else '-c'
+    try:
+        host = ip_address(host)
+    except ValueError:
+        host = host
 
-    for host in hosts:
-        ping_process = Popen(['ping', param, '1', str(host)], stdout=PIPE)
-        if ping_process.wait() == 0:
-            result = f'{host} - {REACHABLE}'
-        else:
-            result = f'{host} - {UNREACHABLE}'
-        print(result)
+    ping_process = Popen(['ping', param, '1', str(host)], stdout=PIPE)
+    if ping_process.wait() == 0:
+        return REACHABLE
+    else:
+        return UNREACHABLE
 
 
 if __name__ == '__main__':
@@ -45,9 +47,5 @@ if __name__ == '__main__':
     ]
 
     for host in hosts:
-        try:
-            host = ip_address(host)
-        except ValueError:
-            host = host
-    host_ping(hosts)
+        print(host_ping(host))
 
