@@ -1,0 +1,72 @@
+2021-12-23 23:33:39,666 - INFO     - decorators - Called function "args_parser" from function "main"
+2021-12-23 23:33:39,667 - INFO     - decorators - Function "args_parser" from module "__main__" with arguments ((), {})
+2021-12-23 23:33:45,836 - INFO     - decorators - Called function "args_parser" from function "main"
+2021-12-23 23:33:45,837 - INFO     - decorators - Function "args_parser" from module "__main__" with arguments ((), {})
+2021-12-23 23:33:54,642 - INFO     - client - Client app connected. Server IP-address: 127.0.0.1, server port: 7777, username: user_1.
+2021-12-23 23:33:54,643 - CRITICAL - client - Connection with server is lost 127.0.0.1:7777
+2021-12-23 23:34:07,291 - INFO     - decorators - Called function "args_parser" from function "main"
+2021-12-23 23:34:07,291 - INFO     - decorators - Function "args_parser" from module "__main__" with arguments ((), {})
+2021-12-23 23:34:13,114 - INFO     - client - Client app connected. Server IP-address: 127.0.0.1, server port: 7777, username: me.
+2021-12-23 23:34:13,115 - CRITICAL - client - Connection with server is lost 127.0.0.1:7777
+2021-12-23 23:35:36,317 - INFO     - decorators - Called function "args_parser" from function "main"
+2021-12-23 23:35:36,317 - INFO     - decorators - Function "args_parser" from module "__main__" with arguments ((), {})
+2021-12-23 23:35:39,877 - INFO     - decorators - Called function "args_parser" from function "main"
+2021-12-23 23:35:39,878 - INFO     - decorators - Function "args_parser" from module "__main__" with arguments ((), {})
+2021-12-23 23:35:45,867 - INFO     - client - Client app connected. Server IP-address: 127.0.0.1, server port: 7777, username: user_1.
+2021-12-23 23:35:45,867 - INFO     - client - Created presence message for user user_1
+2021-12-23 23:35:45,868 - INFO     - decorators - Called function "confirm_presence" from function "main"
+2021-12-23 23:35:45,868 - INFO     - decorators - Function "confirm_presence" from module "__main__" with arguments (('user_1',), {})
+2021-12-23 23:35:45,869 - INFO     - decorators - Called function "send_message" from function "main"
+2021-12-23 23:35:45,869 - INFO     - decorators - Function "send_message" from module "common.utils" with arguments ((<socket.socket fd=5, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 49759), raddr=('127.0.0.1', 7777)>, {'action': 'presence', 'time': 1640291745.86779, 'user': 'user_1'}), {})
+2021-12-23 23:35:46,371 - INFO     - decorators - Called function "get_message" from function "main"
+2021-12-23 23:35:46,372 - INFO     - decorators - Function "get_message" from module "common.utils" with arguments ((<socket.socket fd=5, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 49759), raddr=('127.0.0.1', 7777)>,), {})
+2021-12-23 23:35:46,372 - INFO     - client - Response 200: OK
+2021-12-23 23:35:46,372 - INFO     - decorators - Called function "receive_message" from function "main"
+2021-12-23 23:35:46,372 - INFO     - decorators - Function "receive_message" from module "__main__" with arguments (({'response': 200},), {})
+2021-12-23 23:35:46,373 - INFO     - client - Connection with server 127.0.0.1:7777. Server response: Response 200: OK
+2021-12-23 23:36:42,819 - INFO     - client - Client app connected. Server IP-address: 127.0.0.1, server port: 7777, username: user_2.
+2021-12-23 23:36:42,819 - INFO     - client - Created presence message for user user_2
+2021-12-23 23:36:42,820 - INFO     - decorators - Called function "confirm_presence" from function "main"
+2021-12-23 23:36:42,820 - INFO     - decorators - Function "confirm_presence" from module "__main__" with arguments (('user_2',), {})
+2021-12-23 23:36:42,821 - INFO     - decorators - Called function "send_message" from function "main"
+2021-12-23 23:36:42,821 - INFO     - decorators - Function "send_message" from module "common.utils" with arguments ((<socket.socket fd=5, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 49760), raddr=('127.0.0.1', 7777)>, {'action': 'presence', 'time': 1640291802.81988, 'user': 'user_2'}), {})
+2021-12-23 23:36:43,327 - INFO     - decorators - Called function "get_message" from function "main"
+2021-12-23 23:36:43,327 - INFO     - decorators - Function "get_message" from module "common.utils" with arguments ((<socket.socket fd=5, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 49760), raddr=('127.0.0.1', 7777)>,), {})
+2021-12-23 23:36:43,328 - INFO     - client - Response 200: OK
+2021-12-23 23:36:43,328 - INFO     - decorators - Called function "receive_message" from function "main"
+2021-12-23 23:36:43,328 - INFO     - decorators - Function "receive_message" from module "__main__" with arguments (({'response': 200},), {})
+2021-12-23 23:36:43,328 - INFO     - client - Connection with server 127.0.0.1:7777. Server response: Response 200: OK
+2021-12-23 23:40:22,014 - INFO     - decorators - Called function "send_message" from function "create_message"
+2021-12-23 23:40:22,014 - INFO     - decorators - Function "send_message" from module "common.utils" with arguments ((<socket.socket fd=5, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 49759), raddr=('127.0.0.1', 7777)>, {'action': 'message', 'time': 1640292022.009239, 'sender': 'user_1', 'recipient': 'user_2', 'message_text': 'Hello super user!'}), {})
+2021-12-23 23:40:22,014 - INFO     - client - Message sended to user user_2
+2021-12-23 23:40:22,015 - INFO     - decorators - Called function "create_message" from function "user_menu"
+2021-12-23 23:40:22,015 - INFO     - decorators - Function "create_message" from module "__main__" with arguments ((<socket.socket fd=5, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 49759), raddr=('127.0.0.1', 7777)>, 'user_1'), {})
+2021-12-23 23:40:22,125 - INFO     - decorators - Called function "get_message" from function "server_message_handler"
+2021-12-23 23:40:22,125 - INFO     - decorators - Function "get_message" from module "common.utils" with arguments ((<socket.socket fd=5, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 49760), raddr=('127.0.0.1', 7777)>,), {})
+2021-12-23 23:40:22,138 - INFO     - client - User user_2 obtain the message Hello super user! from the user user_1
+2021-12-23 23:40:42,174 - INFO     - decorators - Called function "send_message" from function "create_message"
+2021-12-23 23:40:42,174 - INFO     - decorators - Function "send_message" from module "common.utils" with arguments ((<socket.socket fd=5, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 49760), raddr=('127.0.0.1', 7777)>, {'action': 'message', 'time': 1640292042.172864, 'sender': 'user_2', 'recipient': 'user_1', 'message_text': 'Hi dude))'}), {})
+2021-12-23 23:40:42,175 - INFO     - client - Message sended to user user_1
+2021-12-23 23:40:42,175 - INFO     - decorators - Called function "create_message" from function "user_menu"
+2021-12-23 23:40:42,176 - INFO     - decorators - Function "create_message" from module "__main__" with arguments ((<socket.socket fd=5, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 49760), raddr=('127.0.0.1', 7777)>, 'user_2'), {})
+2021-12-23 23:40:42,262 - INFO     - decorators - Called function "get_message" from function "server_message_handler"
+2021-12-23 23:40:42,262 - INFO     - decorators - Function "get_message" from module "common.utils" with arguments ((<socket.socket fd=5, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 49759), raddr=('127.0.0.1', 7777)>,), {})
+2021-12-23 23:40:42,270 - INFO     - client - User user_1 obtain the message Hi dude)) from the user user_2
+2021-12-23 23:40:49,383 - INFO     - decorators - Called function "exit_message" from function "user_menu"
+2021-12-23 23:40:49,383 - INFO     - decorators - Function "exit_message" from module "__main__" with arguments (('user_1',), {})
+2021-12-23 23:40:49,384 - INFO     - decorators - Called function "send_message" from function "user_menu"
+2021-12-23 23:40:49,384 - INFO     - decorators - Function "send_message" from module "common.utils" with arguments ((<socket.socket fd=5, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 49759), raddr=('127.0.0.1', 7777)>, {'action': 'exit', 'time': 1640292049.382261, 'user': 'user_1'}), {})
+2021-12-23 23:40:49,384 - INFO     - client - Client user_1 stop working.
+2021-12-23 23:40:49,796 - CRITICAL - client - Lost connection with server
+2021-12-23 23:40:49,797 - INFO     - decorators - Called function "server_message_handler" from function "run"
+2021-12-23 23:40:49,797 - INFO     - decorators - Function "server_message_handler" from module "__main__" with arguments ((<socket.socket fd=5, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 49759), raddr=('127.0.0.1', 7777)>, 'user_1'), {})
+2021-12-23 23:40:49,890 - INFO     - decorators - Called function "user_menu" from function "run"
+2021-12-23 23:40:49,890 - INFO     - decorators - Function "user_menu" from module "__main__" with arguments ((<socket.socket fd=5, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 49759), raddr=('127.0.0.1', 7777)>, 'user_1'), {})
+2021-12-23 23:40:56,653 - INFO     - decorators - Called function "exit_message" from function "user_menu"
+2021-12-23 23:40:56,653 - INFO     - decorators - Function "exit_message" from module "__main__" with arguments (('user_2',), {})
+2021-12-23 23:40:56,654 - INFO     - decorators - Called function "send_message" from function "user_menu"
+2021-12-23 23:40:56,654 - INFO     - decorators - Function "send_message" from module "common.utils" with arguments ((<socket.socket fd=5, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 49760), raddr=('127.0.0.1', 7777)>, {'action': 'exit', 'time': 1640292056.6520598, 'user': 'user_2'}), {})
+2021-12-23 23:40:56,654 - INFO     - client - Client user_2 stop working.
+2021-12-23 23:40:56,838 - CRITICAL - client - Lost connection with server
+2021-12-23 23:40:56,839 - INFO     - decorators - Called function "server_message_handler" from function "run"
+2021-12-23 23:40:56,839 - INFO     - decorators - Function "server_message_handler" from module "__main__" with arguments ((<socket.socket fd=5, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 49760), raddr=('127.0.0.1', 7777)>, 'user_2'), {})
