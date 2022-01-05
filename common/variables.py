@@ -8,6 +8,7 @@ DEFAULT_MAX_QUEUE_LENGTH = 5
 DEFAULT_MAX_PACKAGES_LENGTH = 1024
 DEFAULT_LOGGING_LEVEL = INFO
 DEFAULT_LOGGING_FORMAT = '%(asctime)s - %(levelname)-8s - %(module)s - %(message)s'
+DEFAULT_SERVER_DATABASE = 'sqlite:///server_base.db3'
 
 # JIM-protocol settings
 ACTION = 'action'

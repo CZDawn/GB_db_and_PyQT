@@ -60,9 +60,9 @@ class ClientSender(Thread, metaclass=ClientVerifier):
             if command == '1':
                 self.create_message()
             elif command == '2':
-                send_message(self.sock, self.exit_message())
+                send_message(self.socket, self.exit_message())
                 print('Program is finished.')
-                LOG.info(f'Client {username} stop working.')
+                LOG.info(f'Client {self.username} stop working.')
                 sleep(0.5)
                 break
             else:
@@ -70,16 +70,17 @@ class ClientSender(Thread, metaclass=ClientVerifier):
 
 
 class ClientReader(Thread, metaclass=ClientVerifier):
-    def __init__(self, username, socket):
+    def __init__(self, username, sock):
         self.username = username
-        self.socket = socket
+        self.socket = sock
         super().__init__()
 
     def run(self):
         while True:
             try:
                 message = get_message(self.socket)
-                if ACTION in message and message[ACTION] == MESSAGE and TIME in message and SENDER in message and RECIPIENT in message and MESSAGE_TEXT in message and message[RECIPIENT] == self.username:
+                if ACTION in message and message[ACTION] == MESSAGE and TIME in message and SENDER in message \
+                        and RECIPIENT in message and MESSAGE_TEXT in message and message[RECIPIENT] == self.username:
                     message_time = strftime("%d.%m.%Y %H:%m:%S", strptime(ctime(message[TIME])))
                     print(f'{message_time} - {message[SENDER]}: {message[MESSAGE_TEXT]}')
                     LOG.info(
@@ -157,7 +158,7 @@ def main():
             f'Connection with server {server_ip}:{server_port}. '
             f'Server response: {answer}'
         )
-        print('Connnected to server')
+        print('Connected to server')
     except ServerError as error:
         LOG.error(f'Response with error: {error.text}')
         sys.exit(1)

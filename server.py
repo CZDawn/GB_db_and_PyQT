@@ -1,4 +1,5 @@
 import sys
+from threading import Thread
 from select import select
 from logging import getLogger
 from argparse import ArgumentParser
@@ -12,9 +13,11 @@ from common.variables import DEFAULT_IP_ADDRESS, DEFAULT_PORT, \
     RESPONSE_200, RESPONSE_300, RESPONSE_400, \
     EXIT, RECIPIENT
 
-from common.utils import get_message, send_message
-from metaclasses import ServerVerifier
 from descriptors import Port
+from metaclasses import ServerVerifier
+from server_db_storage import ServerDatabaseStorage
+from common.utils import get_message, send_message
+
 
 LOG = getLogger('server_logger')
 
@@ -28,17 +31,20 @@ def args_parser():
     return namespace.a, namespace.p
 
 
-class Server(metaclass=ServerVerifier):
+class Server(Thread, metaclass=ServerVerifier):
     port = Port()
 
-    def __init__(self, listen_address, listen_port):
+    def __init__(self, listen_address, listen_port, database):
         self.socket = None
         self.addr = listen_address
         self.port = listen_port
+        self.database = database
 
         self.clients = []
         self.messages = []
         self.names = dict()
+
+        super().__init__()
 
     def init_socket(self):
         LOG.info(
@@ -53,7 +59,7 @@ class Server(metaclass=ServerVerifier):
         self.socket = server_sock
         self.socket.listen(DEFAULT_MAX_QUEUE_LENGTH)
 
-    def main_loop(self):
+    def run(self):
         self.init_socket()
 
         while True:
@@ -90,7 +96,7 @@ class Server(metaclass=ServerVerifier):
                     self.message_handler(message, clients_addressees)
                 except Exception:
                     LOG.info(f'Client {message[RECIPIENT]} disconnected from the server.')
-                    self.clients.remove(self.names[message[RESIPIENT]])
+                    self.clients.remove(self.names[message[RECIPIENT]])
                     del self.names[message[RECIPIENT]]
             self.messages.clear()
 
@@ -100,6 +106,8 @@ class Server(metaclass=ServerVerifier):
         if ACTION in data and data[ACTION] == PRESENCE and TIME in data and USER in data:
             if data[USER] not in self.names.keys():
                 self.names[data[USER]] = client
+                client_ip, client_port = client.getpeername()
+                self.database.user_login(data[USER], client_ip, client_port)
                 send_message(client, RESPONSE_200)
                 LOG.info(
                     f'Client {client.getpeername()} connected. '
@@ -116,14 +124,15 @@ class Server(metaclass=ServerVerifier):
                 self.clients.remove(client)
                 client.close()
             return
-        elif ACTION in data and data[
-            ACTION] == MESSAGE and TIME in data and SENDER in data and RECIPIENT in data and MESSAGE_TEXT in data:
+        elif ACTION in data and data[ACTION] == MESSAGE and TIME in data and SENDER in data and RECIPIENT in data \
+                and MESSAGE_TEXT in data:
             self.messages.append(data)
             return
         elif ACTION in data and data[ACTION] == EXIT and TIME in data and USER in data:
             LOG.info(
                 f'Client {client.getpeername()} disconnected from the server.'
             )
+            self.database.user_logout(data[USER])
             self.clients.remove(self.names[data[USER]])
             self.names[data[USER]].close()
             del self.names[data[USER]]
@@ -158,9 +167,35 @@ class Server(metaclass=ServerVerifier):
 
 def main():
     listen_address, listen_port = args_parser()
+    database = ServerDatabaseStorage()
 
-    server = Server(listen_address, listen_port)
-    server.main_loop()
+    server = Server(listen_address, listen_port, database)
+    server.daemon = True
+    server.start()
+
+    while True:
+        print('Commands:')
+        print('1 - Stop server')
+        print('2 - Show all users')
+        print('3 - Show active users')
+        print('4 - Show login history')
+
+        user_command = int(input('Make your choice: '))
+        try:
+            user_command = int(user_command)
+        except ValueError:
+            print('Please enter an integer!')
+
+        if user_command == 1:
+            break
+        elif user_command == 2:
+            print(database.all_users_list())
+        elif user_command == 3:
+            print(database.active_users_list())
+        elif user_command == 4:
+            print(database.users_login_history_list())
+        else:
+            print('Invalid command!')
 
 
 if __name__ == '__main__':
