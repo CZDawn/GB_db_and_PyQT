@@ -30,6 +30,19 @@ class ServerDatabaseStorage:
             self.user_id = user_id
             self.login_time = login_time
 
+    class UsersContacts:
+        def __init__(self, user_id, contact):
+            self.id = None
+            self. user = user
+            self.contact = contact
+
+    class UsersActivityHistory:
+        def __init__(self, user_id):
+            self.id = None
+            self.user_id = user_id
+            self.messages_sent = 0
+            self.messages_received = 0
+
     def __init__(self):
         self.database_engine = create_engine(
             DEFAULT_SERVER_DATABASE,
@@ -64,14 +77,32 @@ class ServerDatabaseStorage:
             Column('port', String)
         )
 
+        users_contacts_table = Table(
+            'Users_contacts', self.metadata,
+            Column('id', Integer, primary_key=True),
+            Column('user_id', ForeignKey('All_users.id')),
+            Column('contact', ForeignKey('All_users.id'))
+        )
+
+        users_activity_history_table = Table(
+            'Users_activity_history', self.metadata,
+            Column('id', Integer, primary_key=True),
+            Column('user_id', ForeignKey('All_users.id')),
+            Column('messages_sent', Integer),
+            Column('messages_received', Integer)
+        )
+
         self.metadata.create_all(self.database_engine)
 
         mapper(self.AllUsers, all_users_table)
         mapper(self.ActiveUsers, active_users_table)
         mapper(self.UsersLoginHistory, users_login_history_table)
+        mapper(self.UsersContacts, users_contacts_table)
+        mapper(self.UsersActivityHistory, users_activity_history_table)
 
         Session = sessionmaker(bind=self.database_engine)
         self.session = Session()
+
         self.session.query(self.ActiveUsers).delete()
         self.session.commit()
 
@@ -119,12 +150,34 @@ class ServerDatabaseStorage:
             self.AllUsers.username,
             self.UsersLoginHistory.login_time,
             self.UsersLoginHistory.ip,
-            self.UsersLoginHistory.port,
+            self.UsersLoginHistory.port
         ).join(self.AllUsers)
 
         if username:
             query = query.filter(self.AllUsers.username == username)
         return query.all()
+
+    def users_contats_list(self, username=None):
+        query = self.session.query(
+            self.AllUsers.username,
+            self.UsersContacts.contact
+        ).join(self.AllUsers)
+
+        if username:
+            query = query.filter(self.AllUsers.username == username)
+        return query.all()
+
+    def users_activity_history_list(self, username=None):
+        query = self.session.query(
+            self.AllUsers.username,
+            self.UsersActivityHistory.messages_sent,
+            self.UsersActivityHistory.messages_received
+        ).join(self.AllUsers)
+
+        if username:
+            query = query.filter(self.AllUsers.username == username)
+        return query.all()
+
 
 if __name__ == '__main__':
     test_db = ServerDatabaseStorage()
@@ -139,3 +192,8 @@ if __name__ == '__main__':
     print(test_db.users_login_history_list())
     print('--- All users ---')
     print(test_db.all_users_list())
+    print('--- Users contact ---')
+    print(test_db.users_contacts_list())
+    print('--- Users activity history ---')
+    print(test_db.users_activity_history())
+
