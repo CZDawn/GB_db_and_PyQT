@@ -757,3 +757,489 @@
 2022-01-05 20:59:50,380 - INFO     - client - Connection with server 127.0.0.1:7777. Server response: Response 200: OK
 2022-01-05 21:00:00,315 - CRITICAL - client - Lost connection with server
 2022-01-05 21:00:00,315 - CRITICAL - client - Lost connection with server
+2022-01-09 18:05:31,676 - INFO     - decorators - Called function "args_parser" from function "main"
+2022-01-09 18:05:31,677 - INFO     - decorators - Function "args_parser" from module "__main__" with arguments ((), {})
+2022-01-09 18:05:38,830 - INFO     - client - Client app connected. Server IP-address: 127.0.0.1, server port: 7777, username: some_user_1.
+2022-01-09 18:05:38,831 - INFO     - client - Created presence message for user some_user_1
+2022-01-09 18:05:38,831 - INFO     - decorators - Called function "confirm_presence" from function "main"
+2022-01-09 18:05:38,831 - INFO     - decorators - Function "confirm_presence" from module "__main__" with arguments (('some_user_1',), {})
+2022-01-09 18:05:38,832 - INFO     - decorators - Called function "send_message" from function "main"
+2022-01-09 18:05:38,832 - INFO     - decorators - Function "send_message" from module "common.utils" with arguments ((<socket.socket fd=5, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 52234), raddr=('127.0.0.1', 7777)>, {'action': 'presence', 'time': 1641740738.8311539, 'user': 'some_user_1'}), {})
+2022-01-09 18:05:52,865 - ERROR    - client - Failed decoding of JSON message.
+2022-01-09 18:06:22,153 - INFO     - decorators - Called function "args_parser" from function "main"
+2022-01-09 18:06:22,153 - INFO     - decorators - Function "args_parser" from module "__main__" with arguments ((), {})
+2022-01-09 18:06:28,405 - INFO     - client - Client app connected. Server IP-address: 127.0.0.1, server port: 7777, username: some_new_user_2.
+2022-01-09 18:06:28,406 - INFO     - client - Created presence message for user some_new_user_2
+2022-01-09 18:06:28,406 - INFO     - decorators - Called function "confirm_presence" from function "main"
+2022-01-09 18:06:28,406 - INFO     - decorators - Function "confirm_presence" from module "__main__" with arguments (('some_new_user_2',), {})
+2022-01-09 18:06:28,407 - INFO     - decorators - Called function "send_message" from function "main"
+2022-01-09 18:06:28,407 - INFO     - decorators - Function "send_message" from module "common.utils" with arguments ((<socket.socket fd=5, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 52251), raddr=('127.0.0.1', 7777)>, {'action': 'presence', 'time': 1641740788.406146, 'user': 'some_new_user_2'}), {})
+2022-01-09 18:07:02,994 - ERROR    - client - Failed decoding of JSON message.
+2022-01-09 18:07:10,978 - INFO     - decorators - Called function "args_parser" from function "main"
+2022-01-09 18:07:10,978 - INFO     - decorators - Function "args_parser" from module "__main__" with arguments ((), {})
+2022-01-09 18:07:16,629 - INFO     - client - Client app connected. Server IP-address: 127.0.0.1, server port: 7777, username: some_new_user_3.
+2022-01-09 18:07:16,630 - INFO     - client - Created presence message for user some_new_user_3
+2022-01-09 18:07:16,630 - INFO     - decorators - Called function "confirm_presence" from function "main"
+2022-01-09 18:07:16,630 - INFO     - decorators - Function "confirm_presence" from module "__main__" with arguments (('some_new_user_3',), {})
+2022-01-09 18:07:16,631 - INFO     - decorators - Called function "send_message" from function "main"
+2022-01-09 18:07:16,631 - INFO     - decorators - Function "send_message" from module "common.utils" with arguments ((<socket.socket fd=5, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 52264), raddr=('127.0.0.1', 7777)>, {'action': 'presence', 'time': 1641740836.630233, 'user': 'some_new_user_3'}), {})
+2022-01-09 18:07:24,164 - ERROR    - client - Failed decoding of JSON message.
+2022-01-09 18:08:01,809 - INFO     - decorators - Called function "args_parser" from function "main"
+2022-01-09 18:08:01,809 - INFO     - decorators - Function "args_parser" from module "__main__" with arguments ((), {})
+2022-01-09 18:08:07,480 - INFO     - client - Client app connected. Server IP-address: 127.0.0.1, server port: 7777, username: some_new_user_5.
+2022-01-09 18:08:07,481 - INFO     - client - Created presence message for user some_new_user_5
+2022-01-09 18:08:07,482 - INFO     - decorators - Called function "confirm_presence" from function "main"
+2022-01-09 18:08:07,482 - INFO     - decorators - Function "confirm_presence" from module "__main__" with arguments (('some_new_user_5',), {})
+2022-01-09 18:08:07,483 - INFO     - decorators - Called function "send_message" from function "main"
+2022-01-09 18:08:07,483 - INFO     - decorators - Function "send_message" from module "common.utils" with arguments ((<socket.socket fd=5, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 52269), raddr=('127.0.0.1', 7777)>, {'action': 'presence', 'time': 1641740887.4817522, 'user': 'some_new_user_5'}), {})
+2022-01-09 18:08:13,935 - ERROR    - client - Failed decoding of JSON message.
+2022-01-09 18:08:35,255 - INFO     - decorators - Called function "args_parser" from function "main"
+2022-01-09 18:08:35,255 - INFO     - decorators - Function "args_parser" from module "__main__" with arguments ((), {})
+2022-01-09 18:08:43,301 - INFO     - client - Client app connected. Server IP-address: 127.0.0.1, server port: 7777, username: some_new_user_6.
+2022-01-09 18:08:43,301 - INFO     - client - Created presence message for user some_new_user_6
+2022-01-09 18:08:43,302 - INFO     - decorators - Called function "confirm_presence" from function "main"
+2022-01-09 18:08:43,302 - INFO     - decorators - Function "confirm_presence" from module "__main__" with arguments (('some_new_user_6',), {})
+2022-01-09 18:08:43,303 - INFO     - decorators - Called function "send_message" from function "main"
+2022-01-09 18:08:43,303 - INFO     - decorators - Function "send_message" from module "common.utils" with arguments ((<socket.socket fd=5, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 52270), raddr=('127.0.0.1', 7777)>, {'action': 'presence', 'time': 1641740923.301912, 'user': 'some_new_user_6'}), {})
+2022-01-09 18:08:43,827 - INFO     - decorators - Called function "get_message" from function "main"
+2022-01-09 18:08:43,827 - INFO     - decorators - Function "get_message" from module "common.utils" with arguments ((<socket.socket fd=5, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 52270), raddr=('127.0.0.1', 7777)>,), {})
+2022-01-09 18:08:43,827 - INFO     - client - Response 200: OK
+2022-01-09 18:08:43,828 - INFO     - decorators - Called function "receive_message" from function "main"
+2022-01-09 18:08:43,828 - INFO     - decorators - Function "receive_message" from module "__main__" with arguments (({'response': 200},), {})
+2022-01-09 18:08:43,828 - INFO     - client - Connection with server 127.0.0.1:7777. Server response: Response 200: OK
+2022-01-09 18:08:43,980 - CRITICAL - client - Lost connection with server
+2022-01-09 18:09:24,774 - INFO     - decorators - Called function "args_parser" from function "main"
+2022-01-09 18:09:24,774 - INFO     - decorators - Function "args_parser" from module "__main__" with arguments ((), {})
+2022-01-09 18:09:33,041 - INFO     - client - Client app connected. Server IP-address: 127.0.0.1, server port: 7777, username: some_new_user_7.
+2022-01-09 18:09:33,042 - INFO     - client - Created presence message for user some_new_user_7
+2022-01-09 18:09:33,043 - INFO     - decorators - Called function "confirm_presence" from function "main"
+2022-01-09 18:09:33,043 - INFO     - decorators - Function "confirm_presence" from module "__main__" with arguments (('some_new_user_7',), {})
+2022-01-09 18:09:33,043 - INFO     - decorators - Called function "send_message" from function "main"
+2022-01-09 18:09:33,044 - INFO     - decorators - Function "send_message" from module "common.utils" with arguments ((<socket.socket fd=5, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 52271), raddr=('127.0.0.1', 7777)>, {'action': 'presence', 'time': 1641740973.042389, 'user': 'some_new_user_7'}), {})
+2022-01-09 18:09:33,568 - INFO     - decorators - Called function "get_message" from function "main"
+2022-01-09 18:09:33,568 - INFO     - decorators - Function "get_message" from module "common.utils" with arguments ((<socket.socket fd=5, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 52271), raddr=('127.0.0.1', 7777)>,), {})
+2022-01-09 18:09:33,568 - INFO     - client - Response 200: OK
+2022-01-09 18:09:33,568 - INFO     - decorators - Called function "receive_message" from function "main"
+2022-01-09 18:09:33,568 - INFO     - decorators - Function "receive_message" from module "__main__" with arguments (({'response': 200},), {})
+2022-01-09 18:09:33,568 - INFO     - client - Connection with server 127.0.0.1:7777. Server response: Response 200: OK
+2022-01-09 18:09:46,899 - INFO     - decorators - Called function "args_parser" from function "main"
+2022-01-09 18:09:46,900 - INFO     - decorators - Function "args_parser" from module "__main__" with arguments ((), {})
+2022-01-09 18:09:54,025 - INFO     - client - Client app connected. Server IP-address: 127.0.0.1, server port: 7777, username: some_new_user_8.
+2022-01-09 18:09:54,026 - INFO     - client - Created presence message for user some_new_user_8
+2022-01-09 18:09:54,027 - INFO     - decorators - Called function "confirm_presence" from function "main"
+2022-01-09 18:09:54,027 - INFO     - decorators - Function "confirm_presence" from module "__main__" with arguments (('some_new_user_8',), {})
+2022-01-09 18:09:54,027 - INFO     - decorators - Called function "send_message" from function "main"
+2022-01-09 18:09:54,028 - INFO     - decorators - Function "send_message" from module "common.utils" with arguments ((<socket.socket fd=5, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 52281), raddr=('127.0.0.1', 7777)>, {'action': 'presence', 'time': 1641740994.026412, 'user': 'some_new_user_8'}), {})
+2022-01-09 18:09:54,539 - INFO     - decorators - Called function "get_message" from function "main"
+2022-01-09 18:09:54,539 - INFO     - decorators - Function "get_message" from module "common.utils" with arguments ((<socket.socket fd=5, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 52281), raddr=('127.0.0.1', 7777)>,), {})
+2022-01-09 18:09:54,539 - INFO     - client - Response 200: OK
+2022-01-09 18:09:54,540 - INFO     - decorators - Called function "receive_message" from function "main"
+2022-01-09 18:09:54,540 - INFO     - decorators - Function "receive_message" from module "__main__" with arguments (({'response': 200},), {})
+2022-01-09 18:09:54,540 - INFO     - client - Connection with server 127.0.0.1:7777. Server response: Response 200: OK
+2022-01-09 18:09:59,745 - CRITICAL - client - Lost connection with server
+2022-01-09 18:09:59,746 - CRITICAL - client - Lost connection with server
+2022-01-09 18:12:20,785 - INFO     - decorators - Called function "args_parser" from function "main"
+2022-01-09 18:12:20,785 - INFO     - decorators - Function "args_parser" from module "__main__" with arguments ((), {})
+2022-01-09 18:12:27,433 - INFO     - client - Client app connected. Server IP-address: 127.0.0.1, server port: 7777, username: some_new_user_1.
+2022-01-09 18:12:27,433 - INFO     - client - Created presence message for user some_new_user_1
+2022-01-09 18:12:27,434 - INFO     - decorators - Called function "confirm_presence" from function "main"
+2022-01-09 18:12:27,434 - INFO     - decorators - Function "confirm_presence" from module "__main__" with arguments (('some_new_user_1',), {})
+2022-01-09 18:12:27,435 - INFO     - decorators - Called function "send_message" from function "main"
+2022-01-09 18:12:27,435 - INFO     - decorators - Function "send_message" from module "common.utils" with arguments ((<socket.socket fd=5, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 52302), raddr=('127.0.0.1', 7777)>, {'action': 'presence', 'time': 1641741147.433724, 'user': 'some_new_user_1'}), {})
+2022-01-09 18:12:27,962 - INFO     - decorators - Called function "get_message" from function "main"
+2022-01-09 18:12:27,962 - INFO     - decorators - Function "get_message" from module "common.utils" with arguments ((<socket.socket fd=5, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 52302), raddr=('127.0.0.1', 7777)>,), {})
+2022-01-09 18:12:27,962 - INFO     - client - Response 200: OK
+2022-01-09 18:12:27,962 - INFO     - decorators - Called function "receive_message" from function "main"
+2022-01-09 18:12:27,963 - INFO     - decorators - Function "receive_message" from module "__main__" with arguments (({'response': 200},), {})
+2022-01-09 18:12:27,963 - INFO     - client - Connection with server 127.0.0.1:7777. Server response: Response 200: OK
+2022-01-09 18:12:35,258 - INFO     - decorators - Called function "args_parser" from function "main"
+2022-01-09 18:12:35,258 - INFO     - decorators - Function "args_parser" from module "__main__" with arguments ((), {})
+2022-01-09 18:12:40,947 - INFO     - client - Client app connected. Server IP-address: 127.0.0.1, server port: 7777, username: some_new_user_2.
+2022-01-09 18:12:40,948 - INFO     - client - Created presence message for user some_new_user_2
+2022-01-09 18:12:40,948 - INFO     - decorators - Called function "confirm_presence" from function "main"
+2022-01-09 18:12:40,948 - INFO     - decorators - Function "confirm_presence" from module "__main__" with arguments (('some_new_user_2',), {})
+2022-01-09 18:12:40,949 - INFO     - decorators - Called function "send_message" from function "main"
+2022-01-09 18:12:40,949 - INFO     - decorators - Function "send_message" from module "common.utils" with arguments ((<socket.socket fd=5, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 52307), raddr=('127.0.0.1', 7777)>, {'action': 'presence', 'time': 1641741160.948231, 'user': 'some_new_user_2'}), {})
+2022-01-09 18:12:41,465 - INFO     - decorators - Called function "get_message" from function "main"
+2022-01-09 18:12:41,465 - INFO     - decorators - Function "get_message" from module "common.utils" with arguments ((<socket.socket fd=5, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 52307), raddr=('127.0.0.1', 7777)>,), {})
+2022-01-09 18:12:41,465 - INFO     - client - Response 200: OK
+2022-01-09 18:12:41,465 - INFO     - decorators - Called function "receive_message" from function "main"
+2022-01-09 18:12:41,465 - INFO     - decorators - Function "receive_message" from module "__main__" with arguments (({'response': 200},), {})
+2022-01-09 18:12:41,465 - INFO     - client - Connection with server 127.0.0.1:7777. Server response: Response 200: OK
+2022-01-09 18:12:45,236 - CRITICAL - client - Lost connection with server
+2022-01-09 18:12:45,236 - CRITICAL - client - Lost connection with server
+2022-01-09 18:14:04,430 - INFO     - decorators - Called function "args_parser" from function "main"
+2022-01-09 18:14:04,431 - INFO     - decorators - Function "args_parser" from module "__main__" with arguments ((), {})
+2022-01-09 18:14:07,183 - INFO     - client - Client app connected. Server IP-address: 127.0.0.1, server port: 7777, username: user_1.
+2022-01-09 18:14:07,184 - INFO     - client - Created presence message for user user_1
+2022-01-09 18:14:07,184 - INFO     - decorators - Called function "confirm_presence" from function "main"
+2022-01-09 18:14:07,184 - INFO     - decorators - Function "confirm_presence" from module "__main__" with arguments (('user_1',), {})
+2022-01-09 18:14:07,185 - INFO     - decorators - Called function "send_message" from function "main"
+2022-01-09 18:14:07,185 - INFO     - decorators - Function "send_message" from module "common.utils" with arguments ((<socket.socket fd=5, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 52322), raddr=('127.0.0.1', 7777)>, {'action': 'presence', 'time': 1641741247.184082, 'user': 'user_1'}), {})
+2022-01-09 18:14:07,705 - INFO     - decorators - Called function "get_message" from function "main"
+2022-01-09 18:14:07,705 - INFO     - decorators - Function "get_message" from module "common.utils" with arguments ((<socket.socket fd=5, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 52322), raddr=('127.0.0.1', 7777)>,), {})
+2022-01-09 18:14:07,705 - INFO     - client - Response 200: OK
+2022-01-09 18:14:07,705 - INFO     - decorators - Called function "receive_message" from function "main"
+2022-01-09 18:14:07,705 - INFO     - decorators - Function "receive_message" from module "__main__" with arguments (({'response': 200},), {})
+2022-01-09 18:14:07,706 - INFO     - client - Connection with server 127.0.0.1:7777. Server response: Response 200: OK
+2022-01-09 18:14:10,569 - INFO     - decorators - Called function "args_parser" from function "main"
+2022-01-09 18:14:10,569 - INFO     - decorators - Function "args_parser" from module "__main__" with arguments ((), {})
+2022-01-09 18:14:12,659 - INFO     - client - Client app connected. Server IP-address: 127.0.0.1, server port: 7777, username: user_2.
+2022-01-09 18:14:12,659 - INFO     - client - Created presence message for user user_2
+2022-01-09 18:14:12,660 - INFO     - decorators - Called function "confirm_presence" from function "main"
+2022-01-09 18:14:12,660 - INFO     - decorators - Function "confirm_presence" from module "__main__" with arguments (('user_2',), {})
+2022-01-09 18:14:12,661 - INFO     - decorators - Called function "send_message" from function "main"
+2022-01-09 18:14:12,661 - INFO     - decorators - Function "send_message" from module "common.utils" with arguments ((<socket.socket fd=5, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 52326), raddr=('127.0.0.1', 7777)>, {'action': 'presence', 'time': 1641741252.659688, 'user': 'user_2'}), {})
+2022-01-09 18:14:13,173 - INFO     - decorators - Called function "get_message" from function "main"
+2022-01-09 18:14:13,174 - INFO     - decorators - Function "get_message" from module "common.utils" with arguments ((<socket.socket fd=5, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 52326), raddr=('127.0.0.1', 7777)>,), {})
+2022-01-09 18:14:13,174 - INFO     - client - Response 200: OK
+2022-01-09 18:14:13,174 - INFO     - decorators - Called function "receive_message" from function "main"
+2022-01-09 18:14:13,174 - INFO     - decorators - Function "receive_message" from module "__main__" with arguments (({'response': 200},), {})
+2022-01-09 18:14:13,174 - INFO     - client - Connection with server 127.0.0.1:7777. Server response: Response 200: OK
+2022-01-09 18:14:16,481 - CRITICAL - client - Lost connection with server
+2022-01-09 18:14:16,481 - CRITICAL - client - Lost connection with server
+2022-01-09 18:16:02,749 - INFO     - decorators - Called function "args_parser" from function "main"
+2022-01-09 18:16:02,749 - INFO     - decorators - Function "args_parser" from module "__main__" with arguments ((), {})
+2022-01-09 18:16:05,759 - INFO     - client - Client app connected. Server IP-address: 127.0.0.1, server port: 7777, username: user_1.
+2022-01-09 18:16:05,759 - INFO     - client - Created presence message for user user_1
+2022-01-09 18:16:05,760 - INFO     - decorators - Called function "confirm_presence" from function "main"
+2022-01-09 18:16:05,760 - INFO     - decorators - Function "confirm_presence" from module "__main__" with arguments (('user_1',), {})
+2022-01-09 18:16:05,761 - INFO     - decorators - Called function "send_message" from function "main"
+2022-01-09 18:16:05,761 - INFO     - decorators - Function "send_message" from module "common.utils" with arguments ((<socket.socket fd=5, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 52343), raddr=('127.0.0.1', 7777)>, {'action': 'presence', 'time': 1641741365.759868, 'user': 'user_1'}), {})
+2022-01-09 18:16:06,281 - INFO     - decorators - Called function "get_message" from function "main"
+2022-01-09 18:16:06,281 - INFO     - decorators - Function "get_message" from module "common.utils" with arguments ((<socket.socket fd=5, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 52343), raddr=('127.0.0.1', 7777)>,), {})
+2022-01-09 18:16:06,281 - INFO     - client - Response 200: OK
+2022-01-09 18:16:06,281 - INFO     - decorators - Called function "receive_message" from function "main"
+2022-01-09 18:16:06,281 - INFO     - decorators - Function "receive_message" from module "__main__" with arguments (({'response': 200},), {})
+2022-01-09 18:16:06,281 - INFO     - client - Connection with server 127.0.0.1:7777. Server response: Response 200: OK
+2022-01-09 18:16:09,426 - INFO     - decorators - Called function "args_parser" from function "main"
+2022-01-09 18:16:09,426 - INFO     - decorators - Function "args_parser" from module "__main__" with arguments ((), {})
+2022-01-09 18:16:11,594 - INFO     - client - Client app connected. Server IP-address: 127.0.0.1, server port: 7777, username: user_1.
+2022-01-09 18:16:11,594 - INFO     - client - Created presence message for user user_1
+2022-01-09 18:16:11,595 - INFO     - decorators - Called function "confirm_presence" from function "main"
+2022-01-09 18:16:11,595 - INFO     - decorators - Function "confirm_presence" from module "__main__" with arguments (('user_1',), {})
+2022-01-09 18:16:11,596 - INFO     - decorators - Called function "send_message" from function "main"
+2022-01-09 18:16:11,596 - INFO     - decorators - Function "send_message" from module "common.utils" with arguments ((<socket.socket fd=5, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 52347), raddr=('127.0.0.1', 7777)>, {'action': 'presence', 'time': 1641741371.594611, 'user': 'user_1'}), {})
+2022-01-09 18:16:12,102 - INFO     - decorators - Called function "get_message" from function "main"
+2022-01-09 18:16:12,102 - INFO     - decorators - Function "get_message" from module "common.utils" with arguments ((<socket.socket fd=5, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 52347), raddr=('127.0.0.1', 7777)>,), {})
+2022-01-09 18:16:12,103 - ERROR    - client - Obtained response from server "Response 400: Username is not available.".
+2022-01-09 18:16:12,103 - ERROR    - client - Response with error:  Response 400: Username is not available.
+2022-01-09 18:16:15,149 - INFO     - decorators - Called function "args_parser" from function "main"
+2022-01-09 18:16:15,149 - INFO     - decorators - Function "args_parser" from module "__main__" with arguments ((), {})
+2022-01-09 18:16:17,158 - INFO     - client - Client app connected. Server IP-address: 127.0.0.1, server port: 7777, username: user_2.
+2022-01-09 18:16:17,159 - INFO     - client - Created presence message for user user_2
+2022-01-09 18:16:17,160 - INFO     - decorators - Called function "confirm_presence" from function "main"
+2022-01-09 18:16:17,160 - INFO     - decorators - Function "confirm_presence" from module "__main__" with arguments (('user_2',), {})
+2022-01-09 18:16:17,161 - INFO     - decorators - Called function "send_message" from function "main"
+2022-01-09 18:16:17,161 - INFO     - decorators - Function "send_message" from module "common.utils" with arguments ((<socket.socket fd=5, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 52352), raddr=('127.0.0.1', 7777)>, {'action': 'presence', 'time': 1641741377.159689, 'user': 'user_2'}), {})
+2022-01-09 18:16:17,672 - INFO     - decorators - Called function "get_message" from function "main"
+2022-01-09 18:16:17,672 - INFO     - decorators - Function "get_message" from module "common.utils" with arguments ((<socket.socket fd=5, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 52352), raddr=('127.0.0.1', 7777)>,), {})
+2022-01-09 18:16:17,672 - INFO     - client - Response 200: OK
+2022-01-09 18:16:17,672 - INFO     - decorators - Called function "receive_message" from function "main"
+2022-01-09 18:16:17,672 - INFO     - decorators - Function "receive_message" from module "__main__" with arguments (({'response': 200},), {})
+2022-01-09 18:16:17,673 - INFO     - client - Connection with server 127.0.0.1:7777. Server response: Response 200: OK
+2022-01-09 18:16:20,225 - CRITICAL - client - Lost connection with server
+2022-01-09 18:16:20,225 - CRITICAL - client - Lost connection with server
+2022-01-09 18:19:10,521 - INFO     - decorators - Called function "args_parser" from function "main"
+2022-01-09 18:19:10,521 - INFO     - decorators - Function "args_parser" from module "__main__" with arguments ((), {})
+2022-01-09 18:19:12,750 - INFO     - client - Client app connected. Server IP-address: 127.0.0.1, server port: 7777, username: user_1.
+2022-01-09 18:19:12,751 - INFO     - client - Created presence message for user user_1
+2022-01-09 18:19:12,751 - INFO     - decorators - Called function "confirm_presence" from function "main"
+2022-01-09 18:19:12,752 - INFO     - decorators - Function "confirm_presence" from module "__main__" with arguments (('user_1',), {})
+2022-01-09 18:19:12,752 - INFO     - decorators - Called function "send_message" from function "main"
+2022-01-09 18:19:12,752 - INFO     - decorators - Function "send_message" from module "common.utils" with arguments ((<socket.socket fd=5, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 52372), raddr=('127.0.0.1', 7777)>, {'action': 'presence', 'time': 1641741552.751242, 'user': 'user_1'}), {})
+2022-01-09 18:19:13,272 - INFO     - decorators - Called function "get_message" from function "main"
+2022-01-09 18:19:13,272 - INFO     - decorators - Function "get_message" from module "common.utils" with arguments ((<socket.socket fd=5, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 52372), raddr=('127.0.0.1', 7777)>,), {})
+2022-01-09 18:19:13,272 - INFO     - client - Response 200: OK
+2022-01-09 18:19:13,272 - INFO     - decorators - Called function "receive_message" from function "main"
+2022-01-09 18:19:13,272 - INFO     - decorators - Function "receive_message" from module "__main__" with arguments (({'response': 200},), {})
+2022-01-09 18:19:13,272 - INFO     - client - Connection with server 127.0.0.1:7777. Server response: Response 200: OK
+2022-01-09 18:19:16,779 - INFO     - decorators - Called function "args_parser" from function "main"
+2022-01-09 18:19:16,779 - INFO     - decorators - Function "args_parser" from module "__main__" with arguments ((), {})
+2022-01-09 18:19:18,791 - INFO     - client - Client app connected. Server IP-address: 127.0.0.1, server port: 7777, username: user_2.
+2022-01-09 18:19:18,791 - INFO     - client - Created presence message for user user_2
+2022-01-09 18:19:18,792 - INFO     - decorators - Called function "confirm_presence" from function "main"
+2022-01-09 18:19:18,792 - INFO     - decorators - Function "confirm_presence" from module "__main__" with arguments (('user_2',), {})
+2022-01-09 18:19:18,792 - INFO     - decorators - Called function "send_message" from function "main"
+2022-01-09 18:19:18,792 - INFO     - decorators - Function "send_message" from module "common.utils" with arguments ((<socket.socket fd=5, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 52376), raddr=('127.0.0.1', 7777)>, {'action': 'presence', 'time': 1641741558.7919638, 'user': 'user_2'}), {})
+2022-01-09 18:19:19,309 - INFO     - decorators - Called function "get_message" from function "main"
+2022-01-09 18:19:19,309 - INFO     - decorators - Function "get_message" from module "common.utils" with arguments ((<socket.socket fd=5, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 52376), raddr=('127.0.0.1', 7777)>,), {})
+2022-01-09 18:19:19,309 - INFO     - client - Response 200: OK
+2022-01-09 18:19:19,309 - INFO     - decorators - Called function "receive_message" from function "main"
+2022-01-09 18:19:19,309 - INFO     - decorators - Function "receive_message" from module "__main__" with arguments (({'response': 200},), {})
+2022-01-09 18:19:19,309 - INFO     - client - Connection with server 127.0.0.1:7777. Server response: Response 200: OK
+2022-01-09 18:19:21,697 - CRITICAL - client - Lost connection with server
+2022-01-09 18:19:21,697 - CRITICAL - client - Lost connection with server
+2022-01-09 18:20:01,347 - INFO     - decorators - Called function "args_parser" from function "main"
+2022-01-09 18:20:01,347 - INFO     - decorators - Function "args_parser" from module "__main__" with arguments ((), {})
+2022-01-09 18:20:03,584 - INFO     - client - Client app connected. Server IP-address: 127.0.0.1, server port: 7777, username: user_1.
+2022-01-09 18:20:03,585 - INFO     - client - Created presence message for user user_1
+2022-01-09 18:20:03,585 - INFO     - decorators - Called function "confirm_presence" from function "main"
+2022-01-09 18:20:03,586 - INFO     - decorators - Function "confirm_presence" from module "__main__" with arguments (('user_1',), {})
+2022-01-09 18:20:03,586 - INFO     - decorators - Called function "send_message" from function "main"
+2022-01-09 18:20:03,586 - INFO     - decorators - Function "send_message" from module "common.utils" with arguments ((<socket.socket fd=5, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 52381), raddr=('127.0.0.1', 7777)>, {'action': 'presence', 'time': 1641741603.5853078, 'user': 'user_1'}), {})
+2022-01-09 18:20:04,110 - INFO     - decorators - Called function "get_message" from function "main"
+2022-01-09 18:20:04,110 - INFO     - decorators - Function "get_message" from module "common.utils" with arguments ((<socket.socket fd=5, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 52381), raddr=('127.0.0.1', 7777)>,), {})
+2022-01-09 18:20:04,110 - INFO     - client - Response 200: OK
+2022-01-09 18:20:04,110 - INFO     - decorators - Called function "receive_message" from function "main"
+2022-01-09 18:20:04,110 - INFO     - decorators - Function "receive_message" from module "__main__" with arguments (({'response': 200},), {})
+2022-01-09 18:20:04,110 - INFO     - client - Connection with server 127.0.0.1:7777. Server response: Response 200: OK
+2022-01-09 18:20:07,585 - INFO     - decorators - Called function "args_parser" from function "main"
+2022-01-09 18:20:07,585 - INFO     - decorators - Function "args_parser" from module "__main__" with arguments ((), {})
+2022-01-09 18:20:09,240 - INFO     - client - Client app connected. Server IP-address: 127.0.0.1, server port: 7777, username: user_2.
+2022-01-09 18:20:09,241 - INFO     - client - Created presence message for user user_2
+2022-01-09 18:20:09,242 - INFO     - decorators - Called function "confirm_presence" from function "main"
+2022-01-09 18:20:09,242 - INFO     - decorators - Function "confirm_presence" from module "__main__" with arguments (('user_2',), {})
+2022-01-09 18:20:09,243 - INFO     - decorators - Called function "send_message" from function "main"
+2022-01-09 18:20:09,243 - INFO     - decorators - Function "send_message" from module "common.utils" with arguments ((<socket.socket fd=5, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 52382), raddr=('127.0.0.1', 7777)>, {'action': 'presence', 'time': 1641741609.2412841, 'user': 'user_2'}), {})
+2022-01-09 18:20:09,756 - INFO     - decorators - Called function "get_message" from function "main"
+2022-01-09 18:20:09,756 - INFO     - decorators - Function "get_message" from module "common.utils" with arguments ((<socket.socket fd=5, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 52382), raddr=('127.0.0.1', 7777)>,), {})
+2022-01-09 18:20:09,756 - INFO     - client - Response 200: OK
+2022-01-09 18:20:09,756 - INFO     - decorators - Called function "receive_message" from function "main"
+2022-01-09 18:20:09,756 - INFO     - decorators - Function "receive_message" from module "__main__" with arguments (({'response': 200},), {})
+2022-01-09 18:20:09,756 - INFO     - client - Connection with server 127.0.0.1:7777. Server response: Response 200: OK
+2022-01-09 18:20:18,316 - CRITICAL - client - Lost connection with server
+2022-01-09 18:20:18,316 - CRITICAL - client - Lost connection with server
+2022-01-09 18:20:53,302 - INFO     - decorators - Called function "args_parser" from function "main"
+2022-01-09 18:20:53,302 - INFO     - decorators - Function "args_parser" from module "__main__" with arguments ((), {})
+2022-01-09 18:20:55,530 - INFO     - client - Client app connected. Server IP-address: 127.0.0.1, server port: 7777, username: user_1.
+2022-01-09 18:20:55,530 - INFO     - client - Created presence message for user user_1
+2022-01-09 18:20:55,530 - INFO     - decorators - Called function "confirm_presence" from function "main"
+2022-01-09 18:20:55,531 - INFO     - decorators - Function "confirm_presence" from module "__main__" with arguments (('user_1',), {})
+2022-01-09 18:20:55,531 - INFO     - decorators - Called function "send_message" from function "main"
+2022-01-09 18:20:55,531 - INFO     - decorators - Function "send_message" from module "common.utils" with arguments ((<socket.socket fd=5, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 52388), raddr=('127.0.0.1', 7777)>, {'action': 'presence', 'time': 1641741655.5305002, 'user': 'user_1'}), {})
+2022-01-09 18:20:56,054 - INFO     - decorators - Called function "get_message" from function "main"
+2022-01-09 18:20:56,054 - INFO     - decorators - Function "get_message" from module "common.utils" with arguments ((<socket.socket fd=5, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 52388), raddr=('127.0.0.1', 7777)>,), {})
+2022-01-09 18:20:56,054 - INFO     - client - Response 200: OK
+2022-01-09 18:20:56,055 - INFO     - decorators - Called function "receive_message" from function "main"
+2022-01-09 18:20:56,055 - INFO     - decorators - Function "receive_message" from module "__main__" with arguments (({'response': 200},), {})
+2022-01-09 18:20:56,055 - INFO     - client - Connection with server 127.0.0.1:7777. Server response: Response 200: OK
+2022-01-09 18:20:58,402 - INFO     - decorators - Called function "args_parser" from function "main"
+2022-01-09 18:20:58,402 - INFO     - decorators - Function "args_parser" from module "__main__" with arguments ((), {})
+2022-01-09 18:21:00,342 - INFO     - client - Client app connected. Server IP-address: 127.0.0.1, server port: 7777, username: user_2.
+2022-01-09 18:21:00,342 - INFO     - client - Created presence message for user user_2
+2022-01-09 18:21:00,342 - INFO     - decorators - Called function "confirm_presence" from function "main"
+2022-01-09 18:21:00,343 - INFO     - decorators - Function "confirm_presence" from module "__main__" with arguments (('user_2',), {})
+2022-01-09 18:21:00,343 - INFO     - decorators - Called function "send_message" from function "main"
+2022-01-09 18:21:00,343 - INFO     - decorators - Function "send_message" from module "common.utils" with arguments ((<socket.socket fd=5, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 52389), raddr=('127.0.0.1', 7777)>, {'action': 'presence', 'time': 1641741660.342517, 'user': 'user_2'}), {})
+2022-01-09 18:21:00,855 - INFO     - decorators - Called function "get_message" from function "main"
+2022-01-09 18:21:00,855 - INFO     - decorators - Function "get_message" from module "common.utils" with arguments ((<socket.socket fd=5, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 52389), raddr=('127.0.0.1', 7777)>,), {})
+2022-01-09 18:21:00,855 - INFO     - client - Response 200: OK
+2022-01-09 18:21:00,855 - INFO     - decorators - Called function "receive_message" from function "main"
+2022-01-09 18:21:00,855 - INFO     - decorators - Function "receive_message" from module "__main__" with arguments (({'response': 200},), {})
+2022-01-09 18:21:00,856 - INFO     - client - Connection with server 127.0.0.1:7777. Server response: Response 200: OK
+2022-01-09 18:21:04,861 - CRITICAL - client - Lost connection with server
+2022-01-09 18:21:04,861 - CRITICAL - client - Lost connection with server
+2022-01-09 18:21:37,257 - INFO     - decorators - Called function "args_parser" from function "main"
+2022-01-09 18:21:37,257 - INFO     - decorators - Function "args_parser" from module "__main__" with arguments ((), {})
+2022-01-09 18:21:39,466 - INFO     - client - Client app connected. Server IP-address: 127.0.0.1, server port: 7777, username: user_1.
+2022-01-09 18:21:39,466 - INFO     - client - Created presence message for user user_1
+2022-01-09 18:21:39,467 - INFO     - decorators - Called function "confirm_presence" from function "main"
+2022-01-09 18:21:39,467 - INFO     - decorators - Function "confirm_presence" from module "__main__" with arguments (('user_1',), {})
+2022-01-09 18:21:39,468 - INFO     - decorators - Called function "send_message" from function "main"
+2022-01-09 18:21:39,468 - INFO     - decorators - Function "send_message" from module "common.utils" with arguments ((<socket.socket fd=5, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 52391), raddr=('127.0.0.1', 7777)>, {'action': 'presence', 'time': 1641741699.466948, 'user': 'user_1'}), {})
+2022-01-09 18:21:39,990 - INFO     - decorators - Called function "get_message" from function "main"
+2022-01-09 18:21:39,990 - INFO     - decorators - Function "get_message" from module "common.utils" with arguments ((<socket.socket fd=5, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 52391), raddr=('127.0.0.1', 7777)>,), {})
+2022-01-09 18:21:39,990 - INFO     - client - Response 200: OK
+2022-01-09 18:21:39,990 - INFO     - decorators - Called function "receive_message" from function "main"
+2022-01-09 18:21:39,990 - INFO     - decorators - Function "receive_message" from module "__main__" with arguments (({'response': 200},), {})
+2022-01-09 18:21:39,990 - INFO     - client - Connection with server 127.0.0.1:7777. Server response: Response 200: OK
+2022-01-09 18:21:43,767 - INFO     - decorators - Called function "args_parser" from function "main"
+2022-01-09 18:21:43,767 - INFO     - decorators - Function "args_parser" from module "__main__" with arguments ((), {})
+2022-01-09 18:21:46,470 - INFO     - client - Client app connected. Server IP-address: 127.0.0.1, server port: 7777, username: user_2.
+2022-01-09 18:21:46,471 - INFO     - client - Created presence message for user user_2
+2022-01-09 18:21:46,472 - INFO     - decorators - Called function "confirm_presence" from function "main"
+2022-01-09 18:21:46,472 - INFO     - decorators - Function "confirm_presence" from module "__main__" with arguments (('user_2',), {})
+2022-01-09 18:21:46,472 - INFO     - decorators - Called function "send_message" from function "main"
+2022-01-09 18:21:46,472 - INFO     - decorators - Function "send_message" from module "common.utils" with arguments ((<socket.socket fd=5, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 52392), raddr=('127.0.0.1', 7777)>, {'action': 'presence', 'time': 1641741706.4713228, 'user': 'user_2'}), {})
+2022-01-09 18:21:46,988 - INFO     - decorators - Called function "get_message" from function "main"
+2022-01-09 18:21:46,988 - INFO     - decorators - Function "get_message" from module "common.utils" with arguments ((<socket.socket fd=5, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 52392), raddr=('127.0.0.1', 7777)>,), {})
+2022-01-09 18:21:46,988 - INFO     - client - Response 200: OK
+2022-01-09 18:21:46,989 - INFO     - decorators - Called function "receive_message" from function "main"
+2022-01-09 18:21:46,989 - INFO     - decorators - Function "receive_message" from module "__main__" with arguments (({'response': 200},), {})
+2022-01-09 18:21:46,989 - INFO     - client - Connection with server 127.0.0.1:7777. Server response: Response 200: OK
+2022-01-09 18:22:55,292 - INFO     - decorators - Called function "send_message" from function "create_message"
+2022-01-09 18:22:55,292 - INFO     - decorators - Function "send_message" from module "common.utils" with arguments ((<socket.socket fd=5, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 52391), raddr=('127.0.0.1', 7777)>, {'action': 'message', 'time': 1641741775.290648, 'sender': 'user_1', 'recipient': 'user_2', 'message_text': 'Hello man!'}), {})
+2022-01-09 18:22:55,292 - INFO     - client - Message sended to user user_2
+2022-01-09 18:23:08,116 - CRITICAL - client - Lost connection with server
+2022-01-09 18:23:08,116 - CRITICAL - client - Lost connection with server
+2022-01-09 18:42:11,012 - INFO     - decorators - Called function "args_parser" from function "main"
+2022-01-09 18:42:11,013 - INFO     - decorators - Function "args_parser" from module "__main__" with arguments ((), {})
+2022-01-09 18:42:22,982 - INFO     - client - Client app connected. Server IP-address: 127.0.0.1, server port: 7777, username: user_1.
+2022-01-09 18:42:22,983 - INFO     - client - Created presence message for user user_1
+2022-01-09 18:42:22,983 - INFO     - decorators - Called function "confirm_presence" from function "main"
+2022-01-09 18:42:22,984 - INFO     - decorators - Function "confirm_presence" from module "__main__" with arguments (('user_1',), {})
+2022-01-09 18:42:22,984 - INFO     - decorators - Called function "send_message" from function "main"
+2022-01-09 18:42:22,984 - INFO     - decorators - Function "send_message" from module "common.utils" with arguments ((<socket.socket fd=5, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 52624), raddr=('127.0.0.1', 7777)>, {'action': 'presence', 'time': 1641742942.983327, 'user': 'user_1'}), {})
+2022-01-09 18:42:45,760 - ERROR    - client - Failed decoding of JSON message.
+2022-01-09 18:43:24,209 - INFO     - decorators - Called function "args_parser" from function "main"
+2022-01-09 18:43:24,210 - INFO     - decorators - Function "args_parser" from module "__main__" with arguments ((), {})
+2022-01-09 18:43:26,388 - INFO     - client - Client app connected. Server IP-address: 127.0.0.1, server port: 7777, username: user_1.
+2022-01-09 18:43:26,389 - INFO     - client - Created presence message for user user_1
+2022-01-09 18:43:26,389 - INFO     - decorators - Called function "confirm_presence" from function "main"
+2022-01-09 18:43:26,389 - INFO     - decorators - Function "confirm_presence" from module "__main__" with arguments (('user_1',), {})
+2022-01-09 18:43:26,390 - INFO     - decorators - Called function "send_message" from function "main"
+2022-01-09 18:43:26,390 - INFO     - decorators - Function "send_message" from module "common.utils" with arguments ((<socket.socket fd=5, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 52634), raddr=('127.0.0.1', 7777)>, {'action': 'presence', 'time': 1641743006.389036, 'user': 'user_1'}), {})
+2022-01-09 18:43:50,805 - INFO     - decorators - Called function "args_parser" from function "main"
+2022-01-09 18:43:50,805 - INFO     - decorators - Function "args_parser" from module "__main__" with arguments ((), {})
+2022-01-09 18:43:53,174 - INFO     - client - Client app connected. Server IP-address: 127.0.0.1, server port: 7777, username: user_3.
+2022-01-09 18:43:53,174 - INFO     - client - Created presence message for user user_3
+2022-01-09 18:43:53,175 - INFO     - decorators - Called function "confirm_presence" from function "main"
+2022-01-09 18:43:53,175 - INFO     - decorators - Function "confirm_presence" from module "__main__" with arguments (('user_3',), {})
+2022-01-09 18:43:53,176 - INFO     - decorators - Called function "send_message" from function "main"
+2022-01-09 18:43:53,176 - INFO     - decorators - Function "send_message" from module "common.utils" with arguments ((<socket.socket fd=5, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 52650), raddr=('127.0.0.1', 7777)>, {'action': 'presence', 'time': 1641743033.174871, 'user': 'user_3'}), {})
+2022-01-09 18:47:17,110 - INFO     - decorators - Called function "args_parser" from function "main"
+2022-01-09 18:47:17,110 - INFO     - decorators - Function "args_parser" from module "__main__" with arguments ((), {})
+2022-01-09 18:47:23,267 - INFO     - client - Client app connected. Server IP-address: 127.0.0.1, server port: 7777, username: user_4.
+2022-01-09 18:47:23,268 - INFO     - client - Created presence message for user user_4
+2022-01-09 18:47:23,272 - INFO     - decorators - Called function "confirm_presence" from function "main"
+2022-01-09 18:47:23,272 - INFO     - decorators - Function "confirm_presence" from module "__main__" with arguments (('user_4',), {})
+2022-01-09 18:47:23,274 - INFO     - decorators - Called function "send_message" from function "main"
+2022-01-09 18:47:23,275 - INFO     - decorators - Function "send_message" from module "common.utils" with arguments ((<socket.socket fd=9, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 52704), raddr=('127.0.0.1', 7777)>, {'action': 'presence', 'time': 1641743243.268296, 'user': 'user_4'}), {})
+2022-01-09 18:54:36,823 - INFO     - decorators - Called function "args_parser" from function "main"
+2022-01-09 18:54:36,824 - INFO     - decorators - Function "args_parser" from module "__main__" with arguments ((), {})
+2022-01-09 18:54:43,623 - INFO     - client - Client app connected. Server IP-address: 127.0.0.1, server port: 7777, username: some_user.
+2022-01-09 18:54:43,624 - INFO     - client - Created presence message for user some_user
+2022-01-09 18:54:43,625 - INFO     - decorators - Called function "confirm_presence" from function "main"
+2022-01-09 18:54:43,625 - INFO     - decorators - Function "confirm_presence" from module "__main__" with arguments (('some_user',), {})
+2022-01-09 18:54:43,628 - INFO     - decorators - Called function "send_message" from function "main"
+2022-01-09 18:54:43,628 - INFO     - decorators - Function "send_message" from module "common.utils" with arguments ((<socket.socket fd=8, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 52836), raddr=('127.0.0.1', 7777)>, {'action': 'presence', 'time': 1641743683.624207, 'user': 'some_user'}), {})
+2022-01-09 18:58:03,210 - ERROR    - client - Failed decoding of JSON message.
+2022-01-09 18:58:39,784 - INFO     - decorators - Called function "args_parser" from function "main"
+2022-01-09 18:58:39,785 - INFO     - decorators - Function "args_parser" from module "__main__" with arguments ((), {})
+2022-01-09 18:58:48,873 - INFO     - client - Client app connected. Server IP-address: 127.0.0.1, server port: 7777, username: some_user.
+2022-01-09 18:58:48,874 - INFO     - client - Created presence message for user some_user
+2022-01-09 18:58:48,875 - INFO     - decorators - Called function "confirm_presence" from function "main"
+2022-01-09 18:58:48,875 - INFO     - decorators - Function "confirm_presence" from module "__main__" with arguments (('some_user',), {})
+2022-01-09 18:58:48,877 - INFO     - decorators - Called function "send_message" from function "main"
+2022-01-09 18:58:48,878 - INFO     - decorators - Function "send_message" from module "common.utils" with arguments ((<socket.socket fd=8, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 52927), raddr=('127.0.0.1', 7777)>, {'action': 'presence', 'time': 1641743928.874293, 'user': 'some_user'}), {})
+2022-01-09 18:59:00,742 - ERROR    - client - Failed decoding of JSON message.
+2022-01-09 19:07:54,586 - INFO     - decorators - Called function "args_parser" from function "main"
+2022-01-09 19:07:54,588 - INFO     - decorators - Function "args_parser" from module "__main__" with arguments ((), {})
+2022-01-09 19:07:58,868 - INFO     - client - Client app connected. Server IP-address: 127.0.0.1, server port: 7777, username: user_222.
+2022-01-09 19:07:58,869 - INFO     - client - Created presence message for user user_222
+2022-01-09 19:07:58,870 - INFO     - decorators - Called function "confirm_presence" from function "main"
+2022-01-09 19:07:58,870 - INFO     - decorators - Function "confirm_presence" from module "__main__" with arguments (('user_222',), {})
+2022-01-09 19:07:58,872 - INFO     - decorators - Called function "send_message" from function "main"
+2022-01-09 19:07:58,873 - INFO     - decorators - Function "send_message" from module "common.utils" with arguments ((<socket.socket fd=8, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 52972), raddr=('127.0.0.1', 7777)>, {'action': 'presence', 'time': 1641744478.869257, 'user': 'user_222'}), {})
+2022-01-09 19:08:04,214 - ERROR    - client - Failed decoding of JSON message.
+2022-01-09 19:10:04,783 - INFO     - decorators - Called function "args_parser" from function "main"
+2022-01-09 19:10:04,783 - INFO     - decorators - Function "args_parser" from module "__main__" with arguments ((), {})
+2022-01-09 19:10:12,345 - INFO     - client - Client app connected. Server IP-address: 127.0.0.1, server port: 7777, username: user_999.
+2022-01-09 19:10:12,346 - INFO     - client - Created presence message for user user_999
+2022-01-09 19:10:12,347 - INFO     - decorators - Called function "confirm_presence" from function "main"
+2022-01-09 19:10:12,347 - INFO     - decorators - Function "confirm_presence" from module "__main__" with arguments (('user_999',), {})
+2022-01-09 19:10:12,349 - INFO     - decorators - Called function "send_message" from function "main"
+2022-01-09 19:10:12,350 - INFO     - decorators - Function "send_message" from module "common.utils" with arguments ((<socket.socket fd=8, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 52997), raddr=('127.0.0.1', 7777)>, {'action': 'presence', 'time': 1641744612.346245, 'user': 'user_999'}), {})
+2022-01-09 19:11:58,462 - ERROR    - client - Failed decoding of JSON message.
+2022-01-09 19:15:44,993 - INFO     - decorators - Called function "args_parser" from function "main"
+2022-01-09 19:15:44,994 - INFO     - decorators - Function "args_parser" from module "__main__" with arguments ((), {})
+2022-01-09 19:15:49,018 - INFO     - client - Client app connected. Server IP-address: 127.0.0.1, server port: 7777, username: difjdifjdif.
+2022-01-09 19:15:49,019 - INFO     - client - Created presence message for user difjdifjdif
+2022-01-09 19:15:49,020 - INFO     - decorators - Called function "confirm_presence" from function "main"
+2022-01-09 19:15:49,020 - INFO     - decorators - Function "confirm_presence" from module "__main__" with arguments (('difjdifjdif',), {})
+2022-01-09 19:15:49,022 - INFO     - decorators - Called function "send_message" from function "main"
+2022-01-09 19:15:49,022 - INFO     - decorators - Function "send_message" from module "common.utils" with arguments ((<socket.socket fd=8, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 53070), raddr=('127.0.0.1', 7777)>, {'action': 'presence', 'time': 1641744949.019066, 'user': 'difjdifjdif'}), {})
+2022-01-09 19:15:49,557 - INFO     - decorators - Called function "get_message" from function "main"
+2022-01-09 19:15:49,557 - INFO     - decorators - Function "get_message" from module "common.utils" with arguments ((<socket.socket fd=8, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 53070), raddr=('127.0.0.1', 7777)>,), {})
+2022-01-09 19:15:49,557 - INFO     - client - Response 200: OK
+2022-01-09 19:15:49,558 - INFO     - decorators - Called function "receive_message" from function "main"
+2022-01-09 19:15:49,558 - INFO     - decorators - Function "receive_message" from module "__main__" with arguments (({'response': 200},), {})
+2022-01-09 19:15:49,558 - INFO     - client - Connection with server 127.0.0.1:7777. Server response: Response 200: OK
+2022-01-09 19:15:54,546 - INFO     - decorators - Called function "send_message" from function "run"
+2022-01-09 19:15:54,546 - INFO     - decorators - Function "send_message" from module "common.utils" with arguments ((<socket.socket fd=8, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 53070), raddr=('127.0.0.1', 7777)>, {'action': 'exit', 'time': 1641744954.544569, 'user': 'difjdifjdif'}), {})
+2022-01-09 19:15:54,547 - INFO     - client - Client difjdifjdif stop working.
+2022-01-09 19:15:54,593 - CRITICAL - client - Lost connection with server
+2022-01-09 19:16:07,948 - INFO     - decorators - Called function "args_parser" from function "main"
+2022-01-09 19:16:07,949 - INFO     - decorators - Function "args_parser" from module "__main__" with arguments ((), {})
+2022-01-09 19:16:11,209 - INFO     - client - Client app connected. Server IP-address: 127.0.0.1, server port: 7777, username: user_111.
+2022-01-09 19:16:11,210 - INFO     - client - Created presence message for user user_111
+2022-01-09 19:16:11,212 - INFO     - decorators - Called function "confirm_presence" from function "main"
+2022-01-09 19:16:11,212 - INFO     - decorators - Function "confirm_presence" from module "__main__" with arguments (('user_111',), {})
+2022-01-09 19:16:11,214 - INFO     - decorators - Called function "send_message" from function "main"
+2022-01-09 19:16:11,215 - INFO     - decorators - Function "send_message" from module "common.utils" with arguments ((<socket.socket fd=8, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 53087), raddr=('127.0.0.1', 7777)>, {'action': 'presence', 'time': 1641744971.210867, 'user': 'user_111'}), {})
+2022-01-09 19:16:11,731 - INFO     - decorators - Called function "get_message" from function "main"
+2022-01-09 19:16:11,731 - INFO     - decorators - Function "get_message" from module "common.utils" with arguments ((<socket.socket fd=8, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 53087), raddr=('127.0.0.1', 7777)>,), {})
+2022-01-09 19:16:11,731 - INFO     - client - Response 200: OK
+2022-01-09 19:16:11,733 - INFO     - decorators - Called function "receive_message" from function "main"
+2022-01-09 19:16:11,733 - INFO     - decorators - Function "receive_message" from module "__main__" with arguments (({'response': 200},), {})
+2022-01-09 19:16:11,733 - INFO     - client - Connection with server 127.0.0.1:7777. Server response: Response 200: OK
+2022-01-09 19:16:22,179 - INFO     - decorators - Called function "send_message" from function "run"
+2022-01-09 19:16:22,179 - INFO     - decorators - Function "send_message" from module "common.utils" with arguments ((<socket.socket fd=8, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 53087), raddr=('127.0.0.1', 7777)>, {'action': 'exit', 'time': 1641744982.1748009, 'user': 'user_111'}), {})
+2022-01-09 19:16:22,179 - INFO     - client - Client user_111 stop working.
+2022-01-09 19:16:22,294 - CRITICAL - client - Lost connection with server
+2022-01-09 19:17:54,221 - INFO     - decorators - Called function "args_parser" from function "main"
+2022-01-09 19:17:54,221 - INFO     - decorators - Function "args_parser" from module "__main__" with arguments ((), {})
+2022-01-09 19:17:57,507 - INFO     - client - Client app connected. Server IP-address: 127.0.0.1, server port: 7777, username: user_1.
+2022-01-09 19:17:57,507 - INFO     - client - Created presence message for user user_1
+2022-01-09 19:17:57,508 - INFO     - decorators - Called function "confirm_presence" from function "main"
+2022-01-09 19:17:57,508 - INFO     - decorators - Function "confirm_presence" from module "__main__" with arguments (('user_1',), {})
+2022-01-09 19:17:57,508 - INFO     - decorators - Called function "send_message" from function "main"
+2022-01-09 19:17:57,509 - INFO     - decorators - Function "send_message" from module "common.utils" with arguments ((<socket.socket fd=5, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 53114), raddr=('127.0.0.1', 7777)>, {'action': 'presence', 'time': 1641745077.5077918, 'user': 'user_1'}), {})
+2022-01-09 19:17:58,035 - INFO     - decorators - Called function "get_message" from function "main"
+2022-01-09 19:17:58,035 - INFO     - decorators - Function "get_message" from module "common.utils" with arguments ((<socket.socket fd=5, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 53114), raddr=('127.0.0.1', 7777)>,), {})
+2022-01-09 19:17:58,035 - INFO     - client - Response 200: OK
+2022-01-09 19:17:58,035 - INFO     - decorators - Called function "receive_message" from function "main"
+2022-01-09 19:17:58,035 - INFO     - decorators - Function "receive_message" from module "__main__" with arguments (({'response': 200},), {})
+2022-01-09 19:17:58,035 - INFO     - client - Connection with server 127.0.0.1:7777. Server response: Response 200: OK
+2022-01-09 19:18:03,278 - INFO     - decorators - Called function "args_parser" from function "main"
+2022-01-09 19:18:03,278 - INFO     - decorators - Function "args_parser" from module "__main__" with arguments ((), {})
+2022-01-09 19:18:05,696 - INFO     - client - Client app connected. Server IP-address: 127.0.0.1, server port: 7777, username: user_2.
+2022-01-09 19:18:05,697 - INFO     - client - Created presence message for user user_2
+2022-01-09 19:18:05,697 - INFO     - decorators - Called function "confirm_presence" from function "main"
+2022-01-09 19:18:05,697 - INFO     - decorators - Function "confirm_presence" from module "__main__" with arguments (('user_2',), {})
+2022-01-09 19:18:05,698 - INFO     - decorators - Called function "send_message" from function "main"
+2022-01-09 19:18:05,698 - INFO     - decorators - Function "send_message" from module "common.utils" with arguments ((<socket.socket fd=5, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 53119), raddr=('127.0.0.1', 7777)>, {'action': 'presence', 'time': 1641745085.697154, 'user': 'user_2'}), {})
+2022-01-09 19:18:06,211 - INFO     - decorators - Called function "get_message" from function "main"
+2022-01-09 19:18:06,211 - INFO     - decorators - Function "get_message" from module "common.utils" with arguments ((<socket.socket fd=5, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 53119), raddr=('127.0.0.1', 7777)>,), {})
+2022-01-09 19:18:06,211 - INFO     - client - Response 200: OK
+2022-01-09 19:18:06,212 - INFO     - decorators - Called function "receive_message" from function "main"
+2022-01-09 19:18:06,212 - INFO     - decorators - Function "receive_message" from module "__main__" with arguments (({'response': 200},), {})
+2022-01-09 19:18:06,212 - INFO     - client - Connection with server 127.0.0.1:7777. Server response: Response 200: OK
+2022-01-09 19:18:23,053 - INFO     - decorators - Called function "send_message" from function "create_message"
+2022-01-09 19:18:23,054 - INFO     - decorators - Function "send_message" from module "common.utils" with arguments ((<socket.socket fd=5, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 53114), raddr=('127.0.0.1', 7777)>, {'action': 'message', 'time': 1641745103.051821, 'sender': 'user_1', 'recipient': 'user_2', 'message_text': 'Hello man!'}), {})
+2022-01-09 19:18:23,054 - INFO     - client - Message sended to user user_2
+2022-01-09 19:18:28,953 - CRITICAL - client - Lost connection with server
+2022-01-09 19:18:28,953 - CRITICAL - client - Lost connection with server
+2022-01-09 19:19:31,776 - INFO     - decorators - Called function "args_parser" from function "main"
+2022-01-09 19:19:31,776 - INFO     - decorators - Function "args_parser" from module "__main__" with arguments ((), {})
+2022-01-09 19:19:33,852 - INFO     - client - Client app connected. Server IP-address: 127.0.0.1, server port: 7777, username: user_1.
+2022-01-09 19:19:33,852 - INFO     - client - Created presence message for user user_1
+2022-01-09 19:19:33,853 - INFO     - decorators - Called function "confirm_presence" from function "main"
+2022-01-09 19:19:33,853 - INFO     - decorators - Function "confirm_presence" from module "__main__" with arguments (('user_1',), {})
+2022-01-09 19:19:33,854 - INFO     - decorators - Called function "send_message" from function "main"
+2022-01-09 19:19:33,854 - INFO     - decorators - Function "send_message" from module "common.utils" with arguments ((<socket.socket fd=5, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 53139), raddr=('127.0.0.1', 7777)>, {'action': 'presence', 'time': 1641745173.852871, 'user': 'user_1'}), {})
+2022-01-09 19:19:34,372 - INFO     - decorators - Called function "get_message" from function "main"
+2022-01-09 19:19:34,372 - INFO     - decorators - Function "get_message" from module "common.utils" with arguments ((<socket.socket fd=5, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 53139), raddr=('127.0.0.1', 7777)>,), {})
+2022-01-09 19:19:34,372 - INFO     - client - Response 200: OK
+2022-01-09 19:19:34,372 - INFO     - decorators - Called function "receive_message" from function "main"
+2022-01-09 19:19:34,372 - INFO     - decorators - Function "receive_message" from module "__main__" with arguments (({'response': 200},), {})
+2022-01-09 19:19:34,372 - INFO     - client - Connection with server 127.0.0.1:7777. Server response: Response 200: OK
+2022-01-09 19:19:40,478 - INFO     - decorators - Called function "args_parser" from function "main"
+2022-01-09 19:19:40,478 - INFO     - decorators - Function "args_parser" from module "__main__" with arguments ((), {})
+2022-01-09 19:19:42,762 - INFO     - client - Client app connected. Server IP-address: 127.0.0.1, server port: 7777, username: user_2.
+2022-01-09 19:19:42,762 - INFO     - client - Created presence message for user user_2
+2022-01-09 19:19:42,763 - INFO     - decorators - Called function "confirm_presence" from function "main"
+2022-01-09 19:19:42,763 - INFO     - decorators - Function "confirm_presence" from module "__main__" with arguments (('user_2',), {})
+2022-01-09 19:19:42,764 - INFO     - decorators - Called function "send_message" from function "main"
+2022-01-09 19:19:42,764 - INFO     - decorators - Function "send_message" from module "common.utils" with arguments ((<socket.socket fd=5, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 53143), raddr=('127.0.0.1', 7777)>, {'action': 'presence', 'time': 1641745182.762864, 'user': 'user_2'}), {})
+2022-01-09 19:19:43,279 - INFO     - decorators - Called function "get_message" from function "main"
+2022-01-09 19:19:43,279 - INFO     - decorators - Function "get_message" from module "common.utils" with arguments ((<socket.socket fd=5, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 53143), raddr=('127.0.0.1', 7777)>,), {})
+2022-01-09 19:19:43,279 - INFO     - client - Response 200: OK
+2022-01-09 19:19:43,279 - INFO     - decorators - Called function "receive_message" from function "main"
+2022-01-09 19:19:43,279 - INFO     - decorators - Function "receive_message" from module "__main__" with arguments (({'response': 200},), {})
+2022-01-09 19:19:43,279 - INFO     - client - Connection with server 127.0.0.1:7777. Server response: Response 200: OK
+2022-01-09 19:19:50,639 - INFO     - decorators - Called function "send_message" from function "create_message"
+2022-01-09 19:19:50,639 - INFO     - decorators - Function "send_message" from module "common.utils" with arguments ((<socket.socket fd=5, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 53139), raddr=('127.0.0.1', 7777)>, {'action': 'message', 'time': 1641745190.6373818, 'sender': 'user_1', 'recipient': 'user_2', 'message_text': 'Hello man!'}), {})
+2022-01-09 19:19:50,639 - INFO     - client - Message sended to user user_2
+2022-01-09 19:19:50,848 - INFO     - decorators - Called function "get_message" from function "run"
+2022-01-09 19:19:50,849 - INFO     - decorators - Function "get_message" from module "common.utils" with arguments ((<socket.socket fd=5, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 53143), raddr=('127.0.0.1', 7777)>,), {})
+2022-01-09 19:19:50,859 - INFO     - client - User user_2 obtain the message Hello man! from the user user_1
+2022-01-09 19:20:05,518 - INFO     - decorators - Called function "send_message" from function "run"
+2022-01-09 19:20:05,518 - INFO     - decorators - Function "send_message" from module "common.utils" with arguments ((<socket.socket fd=5, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 53139), raddr=('127.0.0.1', 7777)>, {'action': 'exit', 'time': 1641745205.517507, 'user': 'user_1'}), {})
+2022-01-09 19:20:05,519 - INFO     - client - Client user_1 stop working.
+2022-01-09 19:20:05,927 - CRITICAL - client - Lost connection with server
+2022-01-09 19:20:07,914 - INFO     - decorators - Called function "send_message" from function "run"
+2022-01-09 19:20:07,914 - INFO     - decorators - Function "send_message" from module "common.utils" with arguments ((<socket.socket fd=5, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 53143), raddr=('127.0.0.1', 7777)>, {'action': 'exit', 'time': 1641745207.913846, 'user': 'user_2'}), {})
+2022-01-09 19:20:07,914 - INFO     - client - Client user_2 stop working.
+2022-01-09 19:20:07,941 - CRITICAL - client - Lost connection with server

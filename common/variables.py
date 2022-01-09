@@ -9,6 +9,7 @@ DEFAULT_MAX_PACKAGES_LENGTH = 1024
 DEFAULT_LOGGING_LEVEL = INFO
 DEFAULT_LOGGING_FORMAT = '%(asctime)s - %(levelname)-8s - %(module)s - %(message)s'
 DEFAULT_SERVER_DATABASE = 'sqlite:///server_base.db3'
+DEFAULT_SERVER_CONFIG_FILE = 'server.ini'
 
 # JIM-protocol settings
 ACTION = 'action'
@@ -22,10 +23,19 @@ MESSAGE_TEXT = 'message_text'
 SENDER = 'sender'
 EXIT = 'exit'
 RECIPIENT = 'recipient'
+GET_CONTACTS = 'get_contacts'
+LIST_INFO = 'data_list'
+REMOVE_CONTACT = 'remove'
+ADD_CONTACT = 'add'
+USERS_REQUEST = 'get_users'
 
 # Responses
 RESPONSE_200 = {
     RESPONSE: 200
+}
+RESPONSE_202 = {
+    RESPONSE: 202,
+    LIST_INFO: None
 }
 RESPONSE_300 = {
     RESPONSE: 300,
