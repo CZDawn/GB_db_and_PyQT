@@ -1243,3 +1243,18 @@
 2022-01-09 19:20:07,914 - INFO     - decorators - Function "send_message" from module "common.utils" with arguments ((<socket.socket fd=5, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 53143), raddr=('127.0.0.1', 7777)>, {'action': 'exit', 'time': 1641745207.913846, 'user': 'user_2'}), {})
 2022-01-09 19:20:07,914 - INFO     - client - Client user_2 stop working.
 2022-01-09 19:20:07,941 - CRITICAL - client - Lost connection with server
+2022-01-09 19:31:53,611 - INFO     - decorators - Called function "args_parser" from function "main"
+2022-01-09 19:31:53,611 - INFO     - decorators - Function "args_parser" from module "__main__" with arguments ((), {})
+2022-01-09 19:31:55,846 - INFO     - client - Client app connected. Server IP-address: 127.0.0.1, server port: 7777, username: user_1.
+2022-01-09 19:31:55,846 - INFO     - client - Created presence message for user user_1
+2022-01-09 19:31:55,847 - INFO     - decorators - Called function "confirm_presence" from function "main"
+2022-01-09 19:31:55,847 - INFO     - decorators - Function "confirm_presence" from module "__main__" with arguments (('user_1',), {})
+2022-01-09 19:31:55,848 - INFO     - decorators - Called function "send_message" from function "main"
+2022-01-09 19:31:55,848 - INFO     - decorators - Function "send_message" from module "common.utils" with arguments ((<socket.socket fd=5, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 53297), raddr=('127.0.0.1', 7777)>, {'action': 'presence', 'time': 1641745915.846841, 'user': 'user_1'}), {})
+2022-01-09 19:31:56,371 - INFO     - decorators - Called function "get_message" from function "main"
+2022-01-09 19:31:56,371 - INFO     - decorators - Function "get_message" from module "common.utils" with arguments ((<socket.socket fd=5, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 53297), raddr=('127.0.0.1', 7777)>,), {})
+2022-01-09 19:31:56,371 - INFO     - client - Response 200: OK
+2022-01-09 19:31:56,372 - INFO     - decorators - Called function "receive_message" from function "main"
+2022-01-09 19:31:56,372 - INFO     - decorators - Function "receive_message" from module "__main__" with arguments (({'response': 200},), {})
+2022-01-09 19:31:56,372 - INFO     - client - Connection with server 127.0.0.1:7777. Server response: Response 200: OK
+2022-01-09 19:32:01,408 - CRITICAL - client - Lost connection with server

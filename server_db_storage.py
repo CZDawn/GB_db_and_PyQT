@@ -43,9 +43,13 @@ class ServerDatabaseStorage:
             self.messages_sent = 0
             self.messages_received = 0
 
-    def __init__(self, path):
+    def __init__(self, path=None):
+        if path:
+            path = f'sqlite:///{path}'
+        else:
+            path = DEFAULT_SERVER_DATABASE
         self.database_engine = create_engine(
-            f'sqlite:///{path}',
+            path,
             echo=False,
             pool_recycle=7200,
             connect_args={'check_same_thread': False}
@@ -82,7 +86,7 @@ class ServerDatabaseStorage:
             'Users_contacts', self.metadata,
             Column('id', Integer, primary_key=True),
             Column('user_id', ForeignKey('All_users.id')),
-            Column('contact', ForeignKey('All_users.id'))
+            Column('contact_id', ForeignKey('All_users.id'))
         )
 
         users_activity_history_table = Table(
@@ -218,6 +222,7 @@ if __name__ == '__main__':
     test_db = ServerDatabaseStorage()
     test_db.user_login('client_1', '192.168.1.4', 8080)
     test_db.user_login('client_2', '192.168.1.5', 7777)
+    test_db.user_login('client_3', '192.168.1.6', 8000)
     print('--- Active users ---')
     print(test_db.active_users_list())
     test_db.user_logout('client_1')
@@ -229,6 +234,10 @@ if __name__ == '__main__':
     print(test_db.all_users_list())
     print('--- Users contact ---')
     print(test_db.users_contacts_list('client_2'))
+    print('--- Add contact ----')
+    test_db.add_contact('client_2', 'client_3')
+    print('--- Users contacts ---')
+    print(test_db.users_contacts_list('client_2'))
     print('--- Users activity history ---')
-    print(test_db.users_activity_history())
+    print(test_db.users_activity_history_list())
 
