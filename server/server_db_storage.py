@@ -1,8 +1,11 @@
+import sys
+
 from datetime import datetime
+from sqlalchemy.orm import mapper, sessionmaker
 from sqlalchemy import create_engine, MetaData, Table, Column, Integer, \
                        String, DateTime, ForeignKey
-from sqlalchemy.orm import mapper, sessionmaker
 
+sys.path.append('../')
 from common.variables import *
 
 

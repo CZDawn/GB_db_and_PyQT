@@ -1,4 +1,7 @@
+import sys
 from logging import getLogger
+
+sys.path.append('../')
 from logs import server_logger_config
 
 

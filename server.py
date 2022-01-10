@@ -10,16 +10,17 @@ from argparse import ArgumentParser
 from PyQt5.QtWidgets import QApplication, QMessageBox
 from PyQt5.QtGui import QStandardItemModel, QStandardItem
 from socket import socket, AF_INET, SOCK_STREAM, SOL_SOCKET, SO_REUSEADDR
-from server_gui import MainWindow, gui_create_model, UsersActivityHistoryWindow, \
-                       create_statistic_model, ServerConfigWindow
 
-from descriptors import Port
+
 from common.variables import *
+from server.descriptors import Port
 from decorators import log_decorator
 from logs import server_logger_config
 from metaclasses import ServerVerifier
 from common.utils import get_message, send_message
-from server_db_storage import ServerDatabaseStorage
+from server.server_db_storage import ServerDatabaseStorage
+from server.server_gui import MainWindow, gui_create_model, UsersActivityHistoryWindow, \
+                       create_statistic_model, ServerConfigWindow
 
 
 LOG = getLogger('server_logger')
@@ -191,7 +192,7 @@ class Server(Thread, metaclass=ServerVerifier):
 def main():
     config = configparser.ConfigParser()
     dir_path = os.path.dirname(os.path.realpath(__file__))
-    config.read(f'{dir_path}/{"server.ini"}')
+    config.read(f'{dir_path}/server/{"server.ini"}')
 
     listen_address, listen_port = args_parser(
         config['SETTINGS']['Default_port'], config['SETTINGS']['Listen_address']
