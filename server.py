@@ -19,8 +19,9 @@ from logs import server_logger_config
 from metaclasses import ServerVerifier
 from common.utils import get_message, send_message
 from server.server_db_storage import ServerDatabaseStorage
-from server.server_gui import MainWindow, gui_create_model, UsersActivityHistoryWindow, \
-                       create_statistic_model, ServerConfigWindow
+from server.server_gui import MainWindow, gui_create_model, \
+                              UsersActivityHistoryWindow, \
+                              create_statistic_model, ServerConfigWindow
 
 
 LOG = getLogger('server_logger')
@@ -156,11 +157,11 @@ class Server(Thread, metaclass=ServerVerifier):
             send_message(client, response)
         elif ACTION in message and message[ACTION] == ADD_CONTACT and USER in message \
                 and self.names[message[USER]] == client:
-            self.database.add_contact(message[USER])
+            self.database.add_contact(message[USER], message[CONTACT])
             send_message(client, RESPONSE_200)
         elif ACTION in message and message[ACTION] == REMOVE_CONTACT and USER in message \
                 and self.names[message[USER]] == client:
-            self.database.remove_contact(message[USER])
+            self.database.remove_contact(message[USER], message[CONTACT])
             send_message(client, RESPONSE_200)
         elif ACTION in message and message[ACTION] == USERS_REQUEST and USER in message \
                 and self.names[message[USER]] == client:
