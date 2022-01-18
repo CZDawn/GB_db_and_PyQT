@@ -48,7 +48,7 @@ class ServerDatabaseStorage:
 
     def __init__(self, path=None):
         if path:
-            path = f'sqlite:///{path}'
+            path = f'sqlite:///server/{path}'
         else:
             path = DEFAULT_SERVER_DATABASE
         self.database_engine = create_engine(

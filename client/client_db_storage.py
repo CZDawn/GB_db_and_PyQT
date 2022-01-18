@@ -26,7 +26,7 @@ class ClientDatabaseStorage:
 
     def __init__(self, client_name):
         self.database_engine = create_engine(
-            f'sqlite:///client_{client_name}.db3',
+            f'sqlite:///client/databases/client_{client_name}.db3',
             echo=False,
             pool_recycle=7200,
             connect_args={'check_same_thread': False}
