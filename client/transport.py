@@ -162,7 +162,7 @@ class ClientTransport(Thread, QObject):
         }
         with socket_lock:
             send_message(self.transport, request_to_remove_contact)
-            self.process_server_ans(get_message(self.transport))
+            self.receive_message(get_message(self.transport))
 
     @log_decorator
     def transport_shutdown(self):

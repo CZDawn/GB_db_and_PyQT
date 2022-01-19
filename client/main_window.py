@@ -148,7 +148,7 @@ class ClientMainWindow(QMainWindow):
             self.clients_list_update()
             LOG.info(f'Successfully deleted contact {selected_contact}')
             self.messages.information(self, 'Success', 'Contact successfully deleted.')
-            item.clos()
+            item.close()
             if selected_contact == self.current_chat:
                 self.current_chat = None
                 self.set_disabled_input()

@@ -2919,3 +2919,245 @@
 2022-01-18 22:55:07,934 - INFO     - decorators - Function "send_message" from module "common.utils" with arguments ((<socket.socket fd=11, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 57611), raddr=('127.0.0.1', 7777)>, {'action': 'exit', 'time': 1642535707.502207, 'user': 'user_1'}), {})
 2022-01-18 22:55:08,435 - INFO     - decorators - Called function "transport_shutdown" from function "<module>"
 2022-01-18 22:55:08,436 - INFO     - decorators - Function "transport_shutdown" from module "client.transport" with arguments ((<ClientTransport(Thread-1, stopped daemon 123145554776064)>,), {})
+2022-01-19 21:23:31,481 - INFO     - decorators - Called function "arg_parser" from function "<module>"
+2022-01-19 21:23:31,482 - INFO     - decorators - Function "arg_parser" from module "__main__" with arguments ((), {})
+2022-01-19 21:23:35,539 - INFO     - client - Launched client with parameters: ip_address: 127.0.0.1 , port: 7777, username: user_1
+2022-01-19 21:23:35,567 - INFO     - transport - Connection attempt №1
+2022-01-19 21:23:35,567 - INFO     - transport - Created presence message for user user_1
+2022-01-19 21:23:35,569 - INFO     - decorators - Called function "confirm_presence" from function "connection_init"
+2022-01-19 21:23:35,569 - INFO     - decorators - Function "confirm_presence" from module "client.transport" with arguments ((<ClientTransport(Thread-1, initial)>,), {})
+2022-01-19 21:23:35,569 - INFO     - decorators - Called function "send_message" from function "connection_init"
+2022-01-19 21:23:35,569 - INFO     - decorators - Function "send_message" from module "common.utils" with arguments ((<socket.socket fd=11, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 61933), raddr=('127.0.0.1', 7777)>, {'action': 'presence', 'time': 1642616615.567957, 'user': 'user_1'}), {})
+2022-01-19 21:23:35,598 - INFO     - decorators - Called function "get_message" from function "connection_init"
+2022-01-19 21:23:35,598 - INFO     - decorators - Function "get_message" from module "common.utils" with arguments ((<socket.socket fd=11, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 61933), raddr=('127.0.0.1', 7777)>,), {})
+2022-01-19 21:23:35,598 - INFO     - transport - Response 200: OK
+2022-01-19 21:23:35,598 - INFO     - decorators - Called function "receive_message" from function "connection_init"
+2022-01-19 21:23:35,598 - INFO     - decorators - Function "receive_message" from module "client.transport" with arguments ((<ClientTransport(Thread-1, initial)>, {'response': 200}), {})
+2022-01-19 21:23:35,598 - INFO     - transport - Client is succesfully connected with server
+2022-01-19 21:23:35,598 - INFO     - decorators - Called function "connection_init" from function "__init__"
+2022-01-19 21:23:35,599 - INFO     - decorators - Function "connection_init" from module "client.transport" with arguments ((<ClientTransport(Thread-1, initial)>, 7777, '127.0.0.1'), {})
+2022-01-19 21:23:35,599 - INFO     - decorators - Called function "send_message" from function "all_users_list_update"
+2022-01-19 21:23:35,599 - INFO     - decorators - Function "send_message" from module "common.utils" with arguments ((<socket.socket fd=11, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 61933), raddr=('127.0.0.1', 7777)>, {'action': 'get_users', 'time': 1642616615.5990841, 'user': 'user_1'}), {})
+2022-01-19 21:23:36,105 - INFO     - decorators - Called function "get_message" from function "all_users_list_update"
+2022-01-19 21:23:36,105 - INFO     - decorators - Function "get_message" from module "common.utils" with arguments ((<socket.socket fd=11, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 61933), raddr=('127.0.0.1', 7777)>,), {})
+2022-01-19 21:23:36,111 - INFO     - decorators - Called function "all_users_list_update" from function "__init__"
+2022-01-19 21:23:36,111 - INFO     - decorators - Function "all_users_list_update" from module "client.transport" with arguments ((<ClientTransport(Thread-1, initial)>,), {})
+2022-01-19 21:23:36,112 - INFO     - decorators - Called function "send_message" from function "contacts_list_update"
+2022-01-19 21:23:36,112 - INFO     - decorators - Function "send_message" from module "common.utils" with arguments ((<socket.socket fd=11, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 61933), raddr=('127.0.0.1', 7777)>, {'action': 'get_contacts', 'time': 1642616616.1117618, 'user': 'user_1'}), {})
+2022-01-19 21:23:36,613 - INFO     - decorators - Called function "get_message" from function "contacts_list_update"
+2022-01-19 21:23:36,613 - INFO     - decorators - Function "get_message" from module "common.utils" with arguments ((<socket.socket fd=11, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 61933), raddr=('127.0.0.1', 7777)>,), {})
+2022-01-19 21:23:36,621 - INFO     - decorators - Called function "contacts_list_update" from function "__init__"
+2022-01-19 21:23:36,622 - INFO     - decorators - Function "contacts_list_update" from module "client.transport" with arguments ((<ClientTransport(Thread-1, initial)>,), {})
+2022-01-19 21:23:50,306 - INFO     - decorators - Called function "arg_parser" from function "<module>"
+2022-01-19 21:23:50,307 - INFO     - decorators - Function "arg_parser" from module "__main__" with arguments ((), {})
+2022-01-19 21:23:55,063 - INFO     - client - Launched client with parameters: ip_address: 127.0.0.1 , port: 7777, username: user_2
+2022-01-19 21:23:55,088 - INFO     - transport - Connection attempt №1
+2022-01-19 21:23:55,089 - INFO     - transport - Created presence message for user user_2
+2022-01-19 21:23:55,090 - INFO     - decorators - Called function "confirm_presence" from function "connection_init"
+2022-01-19 21:23:55,090 - INFO     - decorators - Function "confirm_presence" from module "client.transport" with arguments ((<ClientTransport(Thread-1, initial)>,), {})
+2022-01-19 21:23:55,090 - INFO     - decorators - Called function "send_message" from function "connection_init"
+2022-01-19 21:23:55,090 - INFO     - decorators - Function "send_message" from module "common.utils" with arguments ((<socket.socket fd=11, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 61954), raddr=('127.0.0.1', 7777)>, {'action': 'presence', 'time': 1642616635.089036, 'user': 'user_2'}), {})
+2022-01-19 21:23:55,601 - INFO     - decorators - Called function "get_message" from function "connection_init"
+2022-01-19 21:23:55,601 - INFO     - decorators - Function "get_message" from module "common.utils" with arguments ((<socket.socket fd=11, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 61954), raddr=('127.0.0.1', 7777)>,), {})
+2022-01-19 21:23:55,601 - INFO     - transport - Response 200: OK
+2022-01-19 21:23:55,602 - INFO     - decorators - Called function "receive_message" from function "connection_init"
+2022-01-19 21:23:55,602 - INFO     - decorators - Function "receive_message" from module "client.transport" with arguments ((<ClientTransport(Thread-1, initial)>, {'response': 200}), {})
+2022-01-19 21:23:55,602 - INFO     - transport - Client is succesfully connected with server
+2022-01-19 21:23:55,602 - INFO     - decorators - Called function "connection_init" from function "__init__"
+2022-01-19 21:23:55,602 - INFO     - decorators - Function "connection_init" from module "client.transport" with arguments ((<ClientTransport(Thread-1, initial)>, 7777, '127.0.0.1'), {})
+2022-01-19 21:23:55,603 - INFO     - decorators - Called function "send_message" from function "all_users_list_update"
+2022-01-19 21:23:55,603 - INFO     - decorators - Function "send_message" from module "common.utils" with arguments ((<socket.socket fd=11, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 61954), raddr=('127.0.0.1', 7777)>, {'action': 'get_users', 'time': 1642616635.602956, 'user': 'user_2'}), {})
+2022-01-19 21:23:56,107 - INFO     - decorators - Called function "get_message" from function "all_users_list_update"
+2022-01-19 21:23:56,107 - INFO     - decorators - Function "get_message" from module "common.utils" with arguments ((<socket.socket fd=11, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 61954), raddr=('127.0.0.1', 7777)>,), {})
+2022-01-19 21:23:56,112 - INFO     - decorators - Called function "all_users_list_update" from function "__init__"
+2022-01-19 21:23:56,112 - INFO     - decorators - Function "all_users_list_update" from module "client.transport" with arguments ((<ClientTransport(Thread-1, initial)>,), {})
+2022-01-19 21:23:56,113 - INFO     - decorators - Called function "send_message" from function "contacts_list_update"
+2022-01-19 21:23:56,113 - INFO     - decorators - Function "send_message" from module "common.utils" with arguments ((<socket.socket fd=11, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 61954), raddr=('127.0.0.1', 7777)>, {'action': 'get_contacts', 'time': 1642616636.112782, 'user': 'user_2'}), {})
+2022-01-19 21:23:56,612 - INFO     - decorators - Called function "get_message" from function "contacts_list_update"
+2022-01-19 21:23:56,612 - INFO     - decorators - Function "get_message" from module "common.utils" with arguments ((<socket.socket fd=11, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 61954), raddr=('127.0.0.1', 7777)>,), {})
+2022-01-19 21:23:56,621 - INFO     - decorators - Called function "contacts_list_update" from function "__init__"
+2022-01-19 21:23:56,621 - INFO     - decorators - Function "contacts_list_update" from module "client.transport" with arguments ((<ClientTransport(Thread-1, initial)>,), {})
+2022-01-19 21:24:04,885 - INFO     - decorators - Called function "send_message" from function "add_contact"
+2022-01-19 21:24:04,885 - INFO     - decorators - Function "send_message" from module "common.utils" with arguments ((<socket.socket fd=11, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 61933), raddr=('127.0.0.1', 7777)>, {'action': 'add', 'time': 1642616644.882487, 'user': 'user_1', 'contact': 'user_3'}), {})
+2022-01-19 21:24:05,177 - INFO     - decorators - Called function "get_message" from function "add_contact"
+2022-01-19 21:24:05,177 - INFO     - decorators - Function "get_message" from module "common.utils" with arguments ((<socket.socket fd=11, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 61933), raddr=('127.0.0.1', 7777)>,), {})
+2022-01-19 21:24:05,178 - INFO     - transport - Response 200: OK
+2022-01-19 21:24:05,178 - INFO     - decorators - Called function "receive_message" from function "add_contact"
+2022-01-19 21:24:05,178 - INFO     - decorators - Function "receive_message" from module "client.transport" with arguments ((<ClientTransport(Thread-1, started daemon 123145430904832)>, {'response': 200}), {})
+2022-01-19 21:24:05,179 - INFO     - decorators - Called function "add_contact" from function "add_contact"
+2022-01-19 21:24:05,179 - INFO     - decorators - Function "add_contact" from module "client.transport" with arguments ((<ClientTransport(Thread-1, started daemon 123145430904832)>, 'user_3'), {})
+2022-01-19 21:24:05,182 - INFO     - main_window - Successfully added contact <PyQt5.QtGui.QStandardItem object at 0x7fa7e232af70>
+2022-01-19 21:24:12,150 - INFO     - decorators - Called function "send_message" from function "remove_contact"
+2022-01-19 21:24:12,150 - INFO     - decorators - Function "send_message" from module "common.utils" with arguments ((<socket.socket fd=11, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 61933), raddr=('127.0.0.1', 7777)>, {'action': 'remove', 'time': 1642616652.149813, 'user': 'user_1', 'contact': 'user_2'}), {})
+2022-01-19 21:25:34,699 - INFO     - decorators - Called function "send_message" from function "transport_shutdown"
+2022-01-19 21:25:34,699 - INFO     - decorators - Function "send_message" from module "common.utils" with arguments ((<socket.socket fd=11, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 61954), raddr=('127.0.0.1', 7777)>, {'action': 'exit', 'time': 1642616734.698047, 'user': 'user_2'}), {})
+2022-01-19 21:25:35,200 - INFO     - decorators - Called function "transport_shutdown" from function "<module>"
+2022-01-19 21:25:35,200 - INFO     - decorators - Function "transport_shutdown" from module "client.transport" with arguments ((<ClientTransport(Thread-1, started daemon 123145373175808)>,), {})
+2022-01-19 21:26:15,001 - INFO     - decorators - Called function "arg_parser" from function "<module>"
+2022-01-19 21:26:15,001 - INFO     - decorators - Function "arg_parser" from module "__main__" with arguments ((), {})
+2022-01-19 21:26:18,684 - INFO     - client - Launched client with parameters: ip_address: 127.0.0.1 , port: 7777, username: user_1
+2022-01-19 21:26:18,709 - INFO     - transport - Connection attempt №1
+2022-01-19 21:26:18,709 - INFO     - transport - Created presence message for user user_1
+2022-01-19 21:26:18,710 - INFO     - decorators - Called function "confirm_presence" from function "connection_init"
+2022-01-19 21:26:18,710 - INFO     - decorators - Function "confirm_presence" from module "client.transport" with arguments ((<ClientTransport(Thread-1, initial)>,), {})
+2022-01-19 21:26:18,710 - INFO     - decorators - Called function "send_message" from function "connection_init"
+2022-01-19 21:26:18,710 - INFO     - decorators - Function "send_message" from module "common.utils" with arguments ((<socket.socket fd=11, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 62013), raddr=('127.0.0.1', 7777)>, {'action': 'presence', 'time': 1642616778.7095208, 'user': 'user_1'}), {})
+2022-01-19 21:26:19,229 - INFO     - decorators - Called function "get_message" from function "connection_init"
+2022-01-19 21:26:19,229 - INFO     - decorators - Function "get_message" from module "common.utils" with arguments ((<socket.socket fd=11, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 62013), raddr=('127.0.0.1', 7777)>,), {})
+2022-01-19 21:26:19,229 - INFO     - transport - Response 200: OK
+2022-01-19 21:26:19,229 - INFO     - decorators - Called function "receive_message" from function "connection_init"
+2022-01-19 21:26:19,230 - INFO     - decorators - Function "receive_message" from module "client.transport" with arguments ((<ClientTransport(Thread-1, initial)>, {'response': 200}), {})
+2022-01-19 21:26:19,230 - INFO     - transport - Client is succesfully connected with server
+2022-01-19 21:26:19,230 - INFO     - decorators - Called function "connection_init" from function "__init__"
+2022-01-19 21:26:19,230 - INFO     - decorators - Function "connection_init" from module "client.transport" with arguments ((<ClientTransport(Thread-1, initial)>, 7777, '127.0.0.1'), {})
+2022-01-19 21:26:19,230 - INFO     - decorators - Called function "send_message" from function "all_users_list_update"
+2022-01-19 21:26:19,230 - INFO     - decorators - Function "send_message" from module "common.utils" with arguments ((<socket.socket fd=11, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 62013), raddr=('127.0.0.1', 7777)>, {'action': 'get_users', 'time': 1642616779.230412, 'user': 'user_1'}), {})
+2022-01-19 21:26:19,735 - INFO     - decorators - Called function "get_message" from function "all_users_list_update"
+2022-01-19 21:26:19,736 - INFO     - decorators - Function "get_message" from module "common.utils" with arguments ((<socket.socket fd=11, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 62013), raddr=('127.0.0.1', 7777)>,), {})
+2022-01-19 21:26:19,742 - INFO     - decorators - Called function "all_users_list_update" from function "__init__"
+2022-01-19 21:26:19,742 - INFO     - decorators - Function "all_users_list_update" from module "client.transport" with arguments ((<ClientTransport(Thread-1, initial)>,), {})
+2022-01-19 21:26:19,743 - INFO     - decorators - Called function "send_message" from function "contacts_list_update"
+2022-01-19 21:26:19,743 - INFO     - decorators - Function "send_message" from module "common.utils" with arguments ((<socket.socket fd=11, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 62013), raddr=('127.0.0.1', 7777)>, {'action': 'get_contacts', 'time': 1642616779.7427, 'user': 'user_1'}), {})
+2022-01-19 21:26:20,242 - INFO     - decorators - Called function "get_message" from function "contacts_list_update"
+2022-01-19 21:26:20,242 - INFO     - decorators - Function "get_message" from module "common.utils" with arguments ((<socket.socket fd=11, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 62013), raddr=('127.0.0.1', 7777)>,), {})
+2022-01-19 21:26:20,251 - INFO     - decorators - Called function "contacts_list_update" from function "__init__"
+2022-01-19 21:26:20,251 - INFO     - decorators - Function "contacts_list_update" from module "client.transport" with arguments ((<ClientTransport(Thread-1, initial)>,), {})
+2022-01-19 21:26:24,985 - INFO     - decorators - Called function "arg_parser" from function "<module>"
+2022-01-19 21:26:24,985 - INFO     - decorators - Function "arg_parser" from module "__main__" with arguments ((), {})
+2022-01-19 21:26:27,940 - INFO     - client - Launched client with parameters: ip_address: 127.0.0.1 , port: 7777, username: user_2
+2022-01-19 21:26:27,962 - INFO     - transport - Connection attempt №1
+2022-01-19 21:26:27,962 - INFO     - transport - Created presence message for user user_2
+2022-01-19 21:26:27,963 - INFO     - decorators - Called function "confirm_presence" from function "connection_init"
+2022-01-19 21:26:27,963 - INFO     - decorators - Function "confirm_presence" from module "client.transport" with arguments ((<ClientTransport(Thread-1, initial)>,), {})
+2022-01-19 21:26:27,963 - INFO     - decorators - Called function "send_message" from function "connection_init"
+2022-01-19 21:26:27,964 - INFO     - decorators - Function "send_message" from module "common.utils" with arguments ((<socket.socket fd=11, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 62020), raddr=('127.0.0.1', 7777)>, {'action': 'presence', 'time': 1642616787.962844, 'user': 'user_2'}), {})
+2022-01-19 21:26:28,473 - INFO     - decorators - Called function "get_message" from function "connection_init"
+2022-01-19 21:26:28,473 - INFO     - decorators - Function "get_message" from module "common.utils" with arguments ((<socket.socket fd=11, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 62020), raddr=('127.0.0.1', 7777)>,), {})
+2022-01-19 21:26:28,473 - INFO     - transport - Response 200: OK
+2022-01-19 21:26:28,474 - INFO     - decorators - Called function "receive_message" from function "connection_init"
+2022-01-19 21:26:28,474 - INFO     - decorators - Function "receive_message" from module "client.transport" with arguments ((<ClientTransport(Thread-1, initial)>, {'response': 200}), {})
+2022-01-19 21:26:28,474 - INFO     - transport - Client is succesfully connected with server
+2022-01-19 21:26:28,474 - INFO     - decorators - Called function "connection_init" from function "__init__"
+2022-01-19 21:26:28,475 - INFO     - decorators - Function "connection_init" from module "client.transport" with arguments ((<ClientTransport(Thread-1, initial)>, 7777, '127.0.0.1'), {})
+2022-01-19 21:26:28,475 - INFO     - decorators - Called function "send_message" from function "all_users_list_update"
+2022-01-19 21:26:28,475 - INFO     - decorators - Function "send_message" from module "common.utils" with arguments ((<socket.socket fd=11, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 62020), raddr=('127.0.0.1', 7777)>, {'action': 'get_users', 'time': 1642616788.4750762, 'user': 'user_2'}), {})
+2022-01-19 21:26:28,979 - INFO     - decorators - Called function "get_message" from function "all_users_list_update"
+2022-01-19 21:26:28,979 - INFO     - decorators - Function "get_message" from module "common.utils" with arguments ((<socket.socket fd=11, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 62020), raddr=('127.0.0.1', 7777)>,), {})
+2022-01-19 21:26:28,986 - INFO     - decorators - Called function "all_users_list_update" from function "__init__"
+2022-01-19 21:26:28,986 - INFO     - decorators - Function "all_users_list_update" from module "client.transport" with arguments ((<ClientTransport(Thread-1, initial)>,), {})
+2022-01-19 21:26:28,987 - INFO     - decorators - Called function "send_message" from function "contacts_list_update"
+2022-01-19 21:26:28,987 - INFO     - decorators - Function "send_message" from module "common.utils" with arguments ((<socket.socket fd=11, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 62020), raddr=('127.0.0.1', 7777)>, {'action': 'get_contacts', 'time': 1642616788.986679, 'user': 'user_2'}), {})
+2022-01-19 21:26:29,486 - INFO     - decorators - Called function "get_message" from function "contacts_list_update"
+2022-01-19 21:26:29,486 - INFO     - decorators - Function "get_message" from module "common.utils" with arguments ((<socket.socket fd=11, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 62020), raddr=('127.0.0.1', 7777)>,), {})
+2022-01-19 21:26:29,494 - INFO     - decorators - Called function "contacts_list_update" from function "__init__"
+2022-01-19 21:26:29,494 - INFO     - decorators - Function "contacts_list_update" from module "client.transport" with arguments ((<ClientTransport(Thread-1, initial)>,), {})
+2022-01-19 21:26:43,394 - INFO     - decorators - Called function "send_message" from function "add_contact"
+2022-01-19 21:26:43,394 - INFO     - decorators - Function "send_message" from module "common.utils" with arguments ((<socket.socket fd=11, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 62013), raddr=('127.0.0.1', 7777)>, {'action': 'add', 'time': 1642616803.234844, 'user': 'user_1', 'contact': 'user_2'}), {})
+2022-01-19 21:26:43,576 - INFO     - decorators - Called function "get_message" from function "add_contact"
+2022-01-19 21:26:43,576 - INFO     - decorators - Function "get_message" from module "common.utils" with arguments ((<socket.socket fd=11, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 62013), raddr=('127.0.0.1', 7777)>,), {})
+2022-01-19 21:26:43,576 - INFO     - transport - Response 200: OK
+2022-01-19 21:26:43,577 - INFO     - decorators - Called function "receive_message" from function "add_contact"
+2022-01-19 21:26:43,577 - INFO     - decorators - Function "receive_message" from module "client.transport" with arguments ((<ClientTransport(Thread-1, started daemon 123145418825728)>, {'response': 200}), {})
+2022-01-19 21:26:43,577 - INFO     - decorators - Called function "add_contact" from function "add_contact"
+2022-01-19 21:26:43,577 - INFO     - decorators - Function "add_contact" from module "client.transport" with arguments ((<ClientTransport(Thread-1, started daemon 123145418825728)>, 'user_2'), {})
+2022-01-19 21:26:43,580 - INFO     - main_window - Successfully added contact <PyQt5.QtGui.QStandardItem object at 0x7ffcefc4c1f0>
+2022-01-19 21:26:54,552 - INFO     - decorators - Called function "send_message" from function "remove_contact"
+2022-01-19 21:26:54,552 - INFO     - decorators - Function "send_message" from module "common.utils" with arguments ((<socket.socket fd=11, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 62013), raddr=('127.0.0.1', 7777)>, {'action': 'remove', 'time': 1642616814.551713, 'user': 'user_1', 'contact': 'user_3'}), {})
+2022-01-19 21:26:54,650 - INFO     - decorators - Called function "get_message" from function "remove_contact"
+2022-01-19 21:26:54,650 - INFO     - decorators - Function "get_message" from module "common.utils" with arguments ((<socket.socket fd=11, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 62013), raddr=('127.0.0.1', 7777)>,), {})
+2022-01-19 21:26:54,650 - INFO     - transport - Response 200: OK
+2022-01-19 21:26:54,651 - INFO     - decorators - Called function "receive_message" from function "remove_contact"
+2022-01-19 21:26:54,651 - INFO     - decorators - Function "receive_message" from module "client.transport" with arguments ((<ClientTransport(Thread-1, started daemon 123145418825728)>, {'response': 200}), {})
+2022-01-19 21:26:54,652 - INFO     - decorators - Called function "remove_contact" from function "delete_contact"
+2022-01-19 21:26:54,652 - INFO     - decorators - Function "remove_contact" from module "client.transport" with arguments ((<ClientTransport(Thread-1, started daemon 123145418825728)>, 'user_3'), {})
+2022-01-19 21:26:54,656 - INFO     - main_window - Successfully deleted contact user_3
+2022-01-19 21:27:43,209 - INFO     - decorators - Called function "send_message" from function "transport_shutdown"
+2022-01-19 21:27:43,209 - INFO     - decorators - Function "send_message" from module "common.utils" with arguments ((<socket.socket fd=11, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 62020), raddr=('127.0.0.1', 7777)>, {'action': 'exit', 'time': 1642616863.2091079, 'user': 'user_2'}), {})
+2022-01-19 21:27:43,710 - INFO     - decorators - Called function "transport_shutdown" from function "<module>"
+2022-01-19 21:27:43,710 - INFO     - decorators - Function "transport_shutdown" from module "client.transport" with arguments ((<ClientTransport(Thread-1, started daemon 123145511792640)>,), {})
+2022-01-19 21:27:56,920 - INFO     - decorators - Called function "arg_parser" from function "<module>"
+2022-01-19 21:27:56,920 - INFO     - decorators - Function "arg_parser" from module "__main__" with arguments ((), {})
+2022-01-19 21:27:59,109 - INFO     - client - Launched client with parameters: ip_address: 127.0.0.1 , port: 7777, username: user_1
+2022-01-19 21:27:59,132 - INFO     - transport - Connection attempt №1
+2022-01-19 21:27:59,132 - INFO     - transport - Created presence message for user user_1
+2022-01-19 21:27:59,133 - INFO     - decorators - Called function "confirm_presence" from function "connection_init"
+2022-01-19 21:27:59,133 - INFO     - decorators - Function "confirm_presence" from module "client.transport" with arguments ((<ClientTransport(Thread-1, initial)>,), {})
+2022-01-19 21:27:59,134 - INFO     - decorators - Called function "send_message" from function "connection_init"
+2022-01-19 21:27:59,134 - INFO     - decorators - Function "send_message" from module "common.utils" with arguments ((<socket.socket fd=11, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 62065), raddr=('127.0.0.1', 7777)>, {'action': 'presence', 'time': 1642616879.1323788, 'user': 'user_1'}), {})
+2022-01-19 21:27:59,650 - INFO     - decorators - Called function "get_message" from function "connection_init"
+2022-01-19 21:27:59,651 - INFO     - decorators - Function "get_message" from module "common.utils" with arguments ((<socket.socket fd=11, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 62065), raddr=('127.0.0.1', 7777)>,), {})
+2022-01-19 21:27:59,651 - INFO     - transport - Response 200: OK
+2022-01-19 21:27:59,651 - INFO     - decorators - Called function "receive_message" from function "connection_init"
+2022-01-19 21:27:59,651 - INFO     - decorators - Function "receive_message" from module "client.transport" with arguments ((<ClientTransport(Thread-1, initial)>, {'response': 200}), {})
+2022-01-19 21:27:59,651 - INFO     - transport - Client is succesfully connected with server
+2022-01-19 21:27:59,651 - INFO     - decorators - Called function "connection_init" from function "__init__"
+2022-01-19 21:27:59,652 - INFO     - decorators - Function "connection_init" from module "client.transport" with arguments ((<ClientTransport(Thread-1, initial)>, 7777, '127.0.0.1'), {})
+2022-01-19 21:27:59,652 - INFO     - decorators - Called function "send_message" from function "all_users_list_update"
+2022-01-19 21:27:59,652 - INFO     - decorators - Function "send_message" from module "common.utils" with arguments ((<socket.socket fd=11, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 62065), raddr=('127.0.0.1', 7777)>, {'action': 'get_users', 'time': 1642616879.652063, 'user': 'user_1'}), {})
+2022-01-19 21:28:00,157 - INFO     - decorators - Called function "get_message" from function "all_users_list_update"
+2022-01-19 21:28:00,157 - INFO     - decorators - Function "get_message" from module "common.utils" with arguments ((<socket.socket fd=11, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 62065), raddr=('127.0.0.1', 7777)>,), {})
+2022-01-19 21:28:00,162 - INFO     - decorators - Called function "all_users_list_update" from function "__init__"
+2022-01-19 21:28:00,162 - INFO     - decorators - Function "all_users_list_update" from module "client.transport" with arguments ((<ClientTransport(Thread-1, initial)>,), {})
+2022-01-19 21:28:00,163 - INFO     - decorators - Called function "send_message" from function "contacts_list_update"
+2022-01-19 21:28:00,163 - INFO     - decorators - Function "send_message" from module "common.utils" with arguments ((<socket.socket fd=11, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 62065), raddr=('127.0.0.1', 7777)>, {'action': 'get_contacts', 'time': 1642616880.162904, 'user': 'user_1'}), {})
+2022-01-19 21:28:00,669 - INFO     - decorators - Called function "get_message" from function "contacts_list_update"
+2022-01-19 21:28:00,669 - INFO     - decorators - Function "get_message" from module "common.utils" with arguments ((<socket.socket fd=11, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 62065), raddr=('127.0.0.1', 7777)>,), {})
+2022-01-19 21:28:00,678 - INFO     - decorators - Called function "contacts_list_update" from function "__init__"
+2022-01-19 21:28:00,678 - INFO     - decorators - Function "contacts_list_update" from module "client.transport" with arguments ((<ClientTransport(Thread-1, initial)>,), {})
+2022-01-19 21:28:02,621 - INFO     - decorators - Called function "arg_parser" from function "<module>"
+2022-01-19 21:28:02,621 - INFO     - decorators - Function "arg_parser" from module "__main__" with arguments ((), {})
+2022-01-19 21:28:05,352 - INFO     - client - Launched client with parameters: ip_address: 127.0.0.1 , port: 7777, username: user_2
+2022-01-19 21:28:05,376 - INFO     - transport - Connection attempt №1
+2022-01-19 21:28:05,376 - INFO     - transport - Created presence message for user user_2
+2022-01-19 21:28:05,377 - INFO     - decorators - Called function "confirm_presence" from function "connection_init"
+2022-01-19 21:28:05,377 - INFO     - decorators - Function "confirm_presence" from module "client.transport" with arguments ((<ClientTransport(Thread-1, initial)>,), {})
+2022-01-19 21:28:05,378 - INFO     - decorators - Called function "send_message" from function "connection_init"
+2022-01-19 21:28:05,378 - INFO     - decorators - Function "send_message" from module "common.utils" with arguments ((<socket.socket fd=11, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 62071), raddr=('127.0.0.1', 7777)>, {'action': 'presence', 'time': 1642616885.376926, 'user': 'user_2'}), {})
+2022-01-19 21:28:05,886 - INFO     - decorators - Called function "get_message" from function "connection_init"
+2022-01-19 21:28:05,886 - INFO     - decorators - Function "get_message" from module "common.utils" with arguments ((<socket.socket fd=11, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 62071), raddr=('127.0.0.1', 7777)>,), {})
+2022-01-19 21:28:05,886 - INFO     - transport - Response 200: OK
+2022-01-19 21:28:05,887 - INFO     - decorators - Called function "receive_message" from function "connection_init"
+2022-01-19 21:28:05,887 - INFO     - decorators - Function "receive_message" from module "client.transport" with arguments ((<ClientTransport(Thread-1, initial)>, {'response': 200}), {})
+2022-01-19 21:28:05,887 - INFO     - transport - Client is succesfully connected with server
+2022-01-19 21:28:05,887 - INFO     - decorators - Called function "connection_init" from function "__init__"
+2022-01-19 21:28:05,887 - INFO     - decorators - Function "connection_init" from module "client.transport" with arguments ((<ClientTransport(Thread-1, initial)>, 7777, '127.0.0.1'), {})
+2022-01-19 21:28:05,888 - INFO     - decorators - Called function "send_message" from function "all_users_list_update"
+2022-01-19 21:28:05,888 - INFO     - decorators - Function "send_message" from module "common.utils" with arguments ((<socket.socket fd=11, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 62071), raddr=('127.0.0.1', 7777)>, {'action': 'get_users', 'time': 1642616885.887732, 'user': 'user_2'}), {})
+2022-01-19 21:28:06,391 - INFO     - decorators - Called function "get_message" from function "all_users_list_update"
+2022-01-19 21:28:06,391 - INFO     - decorators - Function "get_message" from module "common.utils" with arguments ((<socket.socket fd=11, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 62071), raddr=('127.0.0.1', 7777)>,), {})
+2022-01-19 21:28:06,396 - INFO     - decorators - Called function "all_users_list_update" from function "__init__"
+2022-01-19 21:28:06,396 - INFO     - decorators - Function "all_users_list_update" from module "client.transport" with arguments ((<ClientTransport(Thread-1, initial)>,), {})
+2022-01-19 21:28:06,397 - INFO     - decorators - Called function "send_message" from function "contacts_list_update"
+2022-01-19 21:28:06,397 - INFO     - decorators - Function "send_message" from module "common.utils" with arguments ((<socket.socket fd=11, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 62071), raddr=('127.0.0.1', 7777)>, {'action': 'get_contacts', 'time': 1642616886.396705, 'user': 'user_2'}), {})
+2022-01-19 21:28:06,894 - INFO     - decorators - Called function "get_message" from function "contacts_list_update"
+2022-01-19 21:28:06,895 - INFO     - decorators - Function "get_message" from module "common.utils" with arguments ((<socket.socket fd=11, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 62071), raddr=('127.0.0.1', 7777)>,), {})
+2022-01-19 21:28:06,903 - INFO     - decorators - Called function "contacts_list_update" from function "__init__"
+2022-01-19 21:28:06,903 - INFO     - decorators - Function "contacts_list_update" from module "client.transport" with arguments ((<ClientTransport(Thread-1, initial)>,), {})
+2022-01-19 21:28:12,946 - INFO     - decorators - Called function "send_message" from function "add_contact"
+2022-01-19 21:28:12,946 - INFO     - decorators - Function "send_message" from module "common.utils" with arguments ((<socket.socket fd=11, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 62071), raddr=('127.0.0.1', 7777)>, {'action': 'add', 'time': 1642616892.7835772, 'user': 'user_2', 'contact': 'user_3'}), {})
+2022-01-19 21:28:13,448 - INFO     - decorators - Called function "get_message" from function "add_contact"
+2022-01-19 21:28:13,449 - INFO     - decorators - Function "get_message" from module "common.utils" with arguments ((<socket.socket fd=11, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 62071), raddr=('127.0.0.1', 7777)>,), {})
+2022-01-19 21:28:13,449 - INFO     - transport - Response 200: OK
+2022-01-19 21:28:13,449 - INFO     - decorators - Called function "receive_message" from function "add_contact"
+2022-01-19 21:28:13,449 - INFO     - decorators - Function "receive_message" from module "client.transport" with arguments ((<ClientTransport(Thread-1, started daemon 123145405014016)>, {'response': 200}), {})
+2022-01-19 21:28:13,450 - INFO     - decorators - Called function "add_contact" from function "add_contact"
+2022-01-19 21:28:13,450 - INFO     - decorators - Function "add_contact" from module "client.transport" with arguments ((<ClientTransport(Thread-1, started daemon 123145405014016)>, 'user_3'), {})
+2022-01-19 21:28:13,453 - INFO     - main_window - Successfully added contact <PyQt5.QtGui.QStandardItem object at 0x7faf5730cf70>
+2022-01-19 21:28:21,434 - INFO     - decorators - Called function "send_message" from function "remove_contact"
+2022-01-19 21:28:21,434 - INFO     - decorators - Function "send_message" from module "common.utils" with arguments ((<socket.socket fd=11, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 62071), raddr=('127.0.0.1', 7777)>, {'action': 'remove', 'time': 1642616901.433908, 'user': 'user_2', 'contact': 'user_3'}), {})
+2022-01-19 21:28:21,503 - INFO     - decorators - Called function "get_message" from function "remove_contact"
+2022-01-19 21:28:21,503 - INFO     - decorators - Function "get_message" from module "common.utils" with arguments ((<socket.socket fd=11, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 62071), raddr=('127.0.0.1', 7777)>,), {})
+2022-01-19 21:28:21,503 - INFO     - transport - Response 200: OK
+2022-01-19 21:28:21,503 - INFO     - decorators - Called function "receive_message" from function "remove_contact"
+2022-01-19 21:28:21,503 - INFO     - decorators - Function "receive_message" from module "client.transport" with arguments ((<ClientTransport(Thread-1, started daemon 123145405014016)>, {'response': 200}), {})
+2022-01-19 21:28:21,504 - INFO     - decorators - Called function "remove_contact" from function "delete_contact"
+2022-01-19 21:28:21,504 - INFO     - decorators - Function "remove_contact" from module "client.transport" with arguments ((<ClientTransport(Thread-1, started daemon 123145405014016)>, 'user_3'), {})
+2022-01-19 21:28:21,507 - INFO     - main_window - Successfully deleted contact user_3
+2022-01-19 21:28:25,218 - INFO     - decorators - Called function "send_message" from function "transport_shutdown"
+2022-01-19 21:28:25,218 - INFO     - decorators - Function "send_message" from module "common.utils" with arguments ((<socket.socket fd=11, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 62071), raddr=('127.0.0.1', 7777)>, {'action': 'exit', 'time': 1642616905.2175229, 'user': 'user_2'}), {})
+2022-01-19 21:28:25,719 - INFO     - decorators - Called function "transport_shutdown" from function "<module>"
+2022-01-19 21:28:25,719 - INFO     - decorators - Function "transport_shutdown" from module "client.transport" with arguments ((<ClientTransport(Thread-1, stopped daemon 123145405014016)>,), {})
+2022-01-19 21:28:26,855 - INFO     - decorators - Called function "send_message" from function "transport_shutdown"
+2022-01-19 21:28:26,856 - INFO     - decorators - Function "send_message" from module "common.utils" with arguments ((<socket.socket fd=11, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 62065), raddr=('127.0.0.1', 7777)>, {'action': 'exit', 'time': 1642616906.6642828, 'user': 'user_1'}), {})
+2022-01-19 21:28:27,356 - INFO     - decorators - Called function "transport_shutdown" from function "<module>"
+2022-01-19 21:28:27,357 - INFO     - decorators - Function "transport_shutdown" from module "client.transport" with arguments ((<ClientTransport(Thread-1, stopped daemon 123145519214592)>,), {})
