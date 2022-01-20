@@ -1,12 +1,16 @@
 import sys
 import json
+import base64
 from logging import getLogger
+from Cryptodome.PublicKey import RSA
+from Cryptodome.Cipher import PKCS1_OAEP
 from PyQt5.QtCore import pyqtSlot, Qt, QEvent
 from PyQt5.QtGui import QStandardItemModel, QStandardItem, QBrush, QColor
 from PyQt5.QtWidgets import QMainWindow, QMessageBox, QApplication, qApp, QListView
 
 sys.path.append('../')
 from errors import ServerError
+from common.variables import *
 from client.add_contact import AddContactDialog
 from client.delete_contact import DelContactDialog
 from client.main_window_conv import Ui_MainClientWindow
@@ -52,8 +56,15 @@ class ClientMainWindow(QMainWindow):
         self.ui.btn_send.setDisabled(True)
         self.ui.text_message.setDisabled(True)
 
+        self.encryptor = None
+        self.current_chat = None
+        self.current_chat_key = None
+
     def history_list_update(self):
-        history_list = sorted(self.database.get_client_activity_history(self.current_chat), key=lambda item: item[3])
+        history_list = sorted(
+            self.database.get_client_activity_history(
+                self.current_chat),
+            key=lambda item: item[3])
         if not self.history_model:
             self.history_model = QStandardItemModel()
             self.ui.list_messages.setModel(self.history_model)
@@ -68,12 +79,14 @@ class ClientMainWindow(QMainWindow):
             if item[1] == 'in':
                 message = QStandardItem(f'Incoming mail from {item[3].replace(microsenod=0)}:\n {item[2]}')
                 message.setEditable(False)
+                message.setBackground(QBrush(Qcolor(255, 213, 213)))
                 message.setTextAlignment(Qt.AlignLeft)
                 self.history_model.appendRow(message)
             else:
                 message = QStandardItem(f'Outgoing mail from {item[3].replace(microsecond=0)}:\n {item[2]}')
                 message.setEditable(False)
                 message.setTextAlignment(Qt.AlignRight)
+                message.setBackground(QBrush(QColor(204, 255, 204)))
                 self.history_model.appendRow(message)
         self.ui.list_messages.scrollToBottom()
 
@@ -82,7 +95,24 @@ class ClientMainWindow(QMainWindow):
         self.set_active_user()
 
     def set_active_user(self):
-        self.ui.label_new_message.setText(f'Enter message text for {self.current_chat}')
+        try:
+            self.current_chat_key = self.transport.key_request(
+                self.current_chat)
+            LOG.debug(f'Open key for {self.current_chat} was uploaded')
+            if self.current_chat_key:
+                self.encryptor = PKCS1_OAEP.new(
+                    RSA.import_key(self.current_chat_key))
+        except (OSError, json.JSONDecodeError):
+            self.current_chat_key = None
+            self.encryptor = None
+            LOG.debug(f'Impossible to obtaine key for {self.current_chat}')
+        if not self.current_chat_key:
+            self.messages.warning(
+                self, 'Error', 'There is no encryption key for user')
+            return
+
+        self.ui.label_new_message.setText(
+            f'Enter message for {self.current_chat}')
         self.ui.btn_clear.setDisabled(False)
         self.ui.btn_send.setDisabled(False)
         self.ui.text_message.setDisabled(False)
@@ -100,7 +130,8 @@ class ClientMainWindow(QMainWindow):
     def add_contact_window(self):
         global select_dialog
         select_dialog = AddContactDialog(self.transport, self.database)
-        select_dialog.ok_button.clicked.connect(lambda: self.add_contact_action(select_dialog))
+        select_dialog.ok_button.clicked.connect(
+            lambda: self.add_contact_action(select_dialog))
         select_dialog.show()
 
     def add_contact_action(self, item):
@@ -129,7 +160,8 @@ class ClientMainWindow(QMainWindow):
     def delete_contact_window(self):
         global remove_dialog
         remove_dialog = DelContactDialog(self.database)
-        remove_dialog.ok_button.clicked.connect(lambda: self.delete_contact(remove_dialog))
+        remove_dialog.ok_button.clicked.connect(
+            lambda: self.delete_contact(remove_dialog))
         remove_dialog.show()
 
     def delete_contact(self, item):
@@ -158,8 +190,14 @@ class ClientMainWindow(QMainWindow):
         self.ui.text_message.clear()
         if not message_text:
             return
+        message_text_encrypted = self.encryptor.encrypt(
+            message_text.encode('utf-8'))
+        message_text_encrypted_base64 = base64.b64encode(
+            message_text_encrypted)
         try:
-            self.transport.create_message(self.current_chat, message_text)
+            self.transport.create_message(
+                self.current_chat,
+                message_text_encrypted_base64.decode('ascii'))
             pass
         except ServerError as err:
             self.messages.critical(self, 'Error', err.text)
@@ -177,35 +215,67 @@ class ClientMainWindow(QMainWindow):
             self.history_list_update()
 
     @pyqtSlot(str)
-    def message(self, sender):
+    def message(self, message):
+        encrypted_message = base64.b64decode(message[MESSAGE_TEXT])
+        try:
+            decrypted_message = self.decrypter.decrypt(encrypted_message)
+        except (ValueError, TypeError):
+            self.message.warning(
+                self,
+                'ERROR',
+                'Impossble to decode the message')
+            return
+        self.database.save_message(
+            self.current_chat,
+            'in',
+            decrypted_message.decode('utf-8'))
+        sender = message[SENDER]
         if sender == self.current_chat:
             self.history_list_update()
         else:
             if self.database.check_user_presence_in_client_contacts(sender):
-                if self.messages.question(self, 'New message',
-                                                f'Get new message from {sender}, open chat with him?)',
-                                                QMessageBox.Yes, QMessageBox.No) == QMessageBox.Yes:
+                if self.messages.question(
+                    self,
+                    'New message',
+                    f'Get new message from {sender}, open chat with him?',
+                    QMessageBox.Yes,
+                    QMessageBox.No) == QMessageBox.Yes:
                     self.current_chat = sender
                     self.set_active_user()
             else:
                 print('NO')
-                if self.messages.question(self, 'New message',
-                                                f'Get new message from {sender}.\n'
-                                                f'This user is not in your contact list.\n'
-                                                f' Add contact and open chat with him?',
-                                                QMessageBox.Yes, QMessageBox.No) == QMessageBox.Yes:
+                if self.messages.question(
+                    self, 'New message',
+                    f'Get new message from {sender}.\n'
+                    f'This user is not in your contact list.\n'
+                    f'Add contact and open chat with him?',
+                    QMessageBox.Yes,
+                    QMessageBox.No) == QMessageBox.Yes:
                     self.add_contact(sender)
                     self.current_chat = sender
                     self.set_active_user()
 
+                    self.database.save_message(
+                        self.current_chat,
+                        'in',
+                        decrypted_message.decode('utf-8'))
+                    self.set_active_user()
+
     @pyqtSlot()
     def connection_lost(self):
-        self.messages.warning(self, 'Connection failure', 'Lost onnection to server!')
-        self.close()
+        if  self.current_chat and not self.database.check_users_presence_in_known_users(self.current_chat):
+            self.messages.warning(
+                self,
+                'Connection failure',
+                'User was deleted from the server')
+            self.set_dicabled_input()
+            self.current_chat = None
+        self.clients_list_update()
 
     def make_connection(self, transport_object):
         transport_object.new_message_signal.connect(self.message)
         transport_object.connection_lost_signal.connect(self.connection_lost)
+        transport_object.message_205.connect(self.signal_205)
 
 
 if __name__ == '__main__':

@@ -27,10 +27,19 @@ class StartUserNameEnteringWindow(QDialog):
         self.cancel_button.move(90, 60)
         self.cancel_button.clicked.connect(qApp.exit)
 
+        self.label_password = QLabel('Enter password:', self)
+        self.label_passord.move(10, 55)
+        self.label_password.setFixedSize(150, 15)
+
+        self.client_password = QLineEdit(self)
+        self.client_password.move(10, 75)
+        self.client_password.setFixedSize(154, 20)
+        self.client_password.setEchoModel(QLineEdit.Password)
+
         self.show()
 
     def click(self):
-        if self.client_name.text():
+        if self.client_name.text() and self.client_password.text():
             self.ok_button_pressed = True
             qApp.exit()
 
