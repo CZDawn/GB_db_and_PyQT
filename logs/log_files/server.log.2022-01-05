@@ -1,0 +1,278 @@
+2022-01-05 19:22:05,675 - INFO     - decorators - Called function "args_parser" from function "main"
+2022-01-05 19:22:05,677 - INFO     - decorators - Function "args_parser" from module "__main__" with arguments ((), {})
+2022-01-05 19:23:11,493 - INFO     - decorators - Called function "args_parser" from function "main"
+2022-01-05 19:23:11,493 - INFO     - decorators - Function "args_parser" from module "__main__" with arguments ((), {})
+2022-01-05 19:23:11,529 - INFO     - server - Server ran with parameters - 127.0.0.1:7777
+2022-01-05 19:23:43,008 - INFO     - server - Connection with client ('127.0.0.1', 58666) established.
+2022-01-05 19:23:43,519 - INFO     - decorators - Called function "get_message" from function "run"
+2022-01-05 19:23:43,519 - INFO     - decorators - Function "get_message" from module "common.utils" with arguments ((<socket.socket fd=7, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 58666)>,), {})
+2022-01-05 19:23:43,538 - INFO     - decorators - Called function "send_message" from function "processing_message"
+2022-01-05 19:23:43,538 - INFO     - decorators - Function "send_message" from module "common.utils" with arguments ((<socket.socket fd=7, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 58666)>, {'response': 200}), {})
+2022-01-05 19:23:43,538 - INFO     - server - Client ('127.0.0.1', 58666) connected. Response sended {'response': 200}
+2022-01-05 19:23:56,419 - INFO     - server - Connection with client ('127.0.0.1', 58669) established.
+2022-01-05 19:23:56,921 - INFO     - decorators - Called function "get_message" from function "run"
+2022-01-05 19:23:56,921 - INFO     - decorators - Function "get_message" from module "common.utils" with arguments ((<socket.socket fd=8, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 58669)>,), {})
+2022-01-05 19:23:56,931 - INFO     - decorators - Called function "send_message" from function "processing_message"
+2022-01-05 19:23:56,931 - INFO     - decorators - Function "send_message" from module "common.utils" with arguments ((<socket.socket fd=8, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 58669)>, {'response': 200}), {})
+2022-01-05 19:23:56,931 - INFO     - server - Client ('127.0.0.1', 58669) connected. Response sended {'response': 200}
+2022-01-05 19:24:25,602 - INFO     - decorators - Called function "get_message" from function "run"
+2022-01-05 19:24:25,602 - INFO     - decorators - Function "get_message" from module "common.utils" with arguments ((<socket.socket fd=7, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 58666)>,), {})
+2022-01-05 19:24:25,604 - INFO     - decorators - Called function "send_message" from function "message_handler"
+2022-01-05 19:24:25,604 - INFO     - decorators - Function "send_message" from module "common.utils" with arguments ((<socket.socket fd=8, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 58669)>, {'action': 'message', 'time': 1641399865.159719, 'sender': 'user_1', 'recipient': 'user_2', 'message_text': 'Hello!'}), {})
+2022-01-05 19:24:25,604 - INFO     - server - Message from the client user_1 sended to adressee user_2.
+2022-01-05 19:24:42,209 - INFO     - decorators - Called function "get_message" from function "run"
+2022-01-05 19:24:42,209 - INFO     - decorators - Function "get_message" from module "common.utils" with arguments ((<socket.socket fd=8, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 58669)>,), {})
+2022-01-05 19:24:42,210 - INFO     - decorators - Called function "send_message" from function "message_handler"
+2022-01-05 19:24:42,210 - INFO     - decorators - Function "send_message" from module "common.utils" with arguments ((<socket.socket fd=7, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 58666)>, {'action': 'message', 'time': 1641399881.79312, 'sender': 'user_2', 'recipient': 'user_1', 'message_text': 'Hi!'}), {})
+2022-01-05 19:24:42,211 - INFO     - server - Message from the client user_2 sended to adressee user_1.
+2022-01-05 19:24:58,831 - INFO     - server - Client ('127.0.0.1', 58666) disconnected from the server.
+2022-01-05 19:25:00,337 - INFO     - server - Client ('127.0.0.1', 58669) disconnected from the server.
+2022-01-05 19:26:45,995 - INFO     - decorators - Called function "args_parser" from function "main"
+2022-01-05 19:26:45,995 - INFO     - decorators - Function "args_parser" from module "__main__" with arguments ((), {})
+2022-01-05 19:26:46,014 - INFO     - server - Server ran with parameters - 127.0.0.1:7777
+2022-01-05 19:27:02,097 - INFO     - server - Connection with client ('127.0.0.1', 58684) established.
+2022-01-05 19:27:02,601 - INFO     - decorators - Called function "get_message" from function "run"
+2022-01-05 19:27:02,601 - INFO     - decorators - Function "get_message" from module "common.utils" with arguments ((<socket.socket fd=8, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 58684)>,), {})
+2022-01-05 19:27:02,607 - INFO     - server - Client ('127.0.0.1', 58684) disconnected from the server.
+2022-01-05 19:27:24,489 - INFO     - server - Connection with client ('127.0.0.1', 58688) established.
+2022-01-05 19:27:24,992 - INFO     - decorators - Called function "get_message" from function "run"
+2022-01-05 19:27:24,993 - INFO     - decorators - Function "get_message" from module "common.utils" with arguments ((<socket.socket fd=9, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 58688)>,), {})
+2022-01-05 19:27:24,994 - INFO     - server - Client ('127.0.0.1', 58688) disconnected from the server.
+2022-01-05 19:28:01,647 - INFO     - decorators - Called function "args_parser" from function "main"
+2022-01-05 19:28:01,648 - INFO     - decorators - Function "args_parser" from module "__main__" with arguments ((), {})
+2022-01-05 19:28:01,665 - INFO     - server - Server ran with parameters - 127.0.0.1:7777
+2022-01-05 19:28:07,944 - INFO     - server - Connection with client ('127.0.0.1', 58695) established.
+2022-01-05 19:28:08,446 - INFO     - decorators - Called function "get_message" from function "run"
+2022-01-05 19:28:08,447 - INFO     - decorators - Function "get_message" from module "common.utils" with arguments ((<socket.socket fd=7, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 58695)>,), {})
+2022-01-05 19:28:08,470 - INFO     - decorators - Called function "send_message" from function "processing_message"
+2022-01-05 19:28:08,470 - INFO     - decorators - Function "send_message" from module "common.utils" with arguments ((<socket.socket fd=7, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 58695)>, {'response': 200}), {})
+2022-01-05 19:28:08,470 - INFO     - server - Client ('127.0.0.1', 58695) connected. Response sended {'response': 200}
+2022-01-05 19:28:14,063 - INFO     - server - Connection with client ('127.0.0.1', 58699) established.
+2022-01-05 19:28:14,568 - INFO     - decorators - Called function "get_message" from function "run"
+2022-01-05 19:28:14,568 - INFO     - decorators - Function "get_message" from module "common.utils" with arguments ((<socket.socket fd=8, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 58699)>,), {})
+2022-01-05 19:28:14,579 - INFO     - decorators - Called function "send_message" from function "processing_message"
+2022-01-05 19:28:14,579 - INFO     - decorators - Function "send_message" from module "common.utils" with arguments ((<socket.socket fd=8, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 58699)>, {'response': 200}), {})
+2022-01-05 19:28:14,579 - INFO     - server - Client ('127.0.0.1', 58699) connected. Response sended {'response': 200}
+2022-01-05 19:28:36,228 - INFO     - decorators - Called function "get_message" from function "run"
+2022-01-05 19:28:36,229 - INFO     - decorators - Function "get_message" from module "common.utils" with arguments ((<socket.socket fd=7, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 58695)>,), {})
+2022-01-05 19:28:36,230 - INFO     - decorators - Called function "send_message" from function "message_handler"
+2022-01-05 19:28:36,230 - INFO     - decorators - Function "send_message" from module "common.utils" with arguments ((<socket.socket fd=7, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 58695)>, {'response': 300, 'error': 'User with name Hello! not registered on the server.'}), {})
+2022-01-05 19:28:36,230 - ERROR    - server - User with name Hello! not registered on the server. Sending message is not available.
+2022-01-05 19:28:39,751 - INFO     - server - Client ('127.0.0.1', 58695) disconnected from the server.
+2022-01-05 19:28:49,462 - INFO     - server - Connection with client ('127.0.0.1', 58706) established.
+2022-01-05 19:28:49,964 - INFO     - decorators - Called function "get_message" from function "run"
+2022-01-05 19:28:49,964 - INFO     - decorators - Function "get_message" from module "common.utils" with arguments ((<socket.socket fd=10, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 58706)>,), {})
+2022-01-05 19:28:49,966 - INFO     - server - Client ('127.0.0.1', 58706) disconnected from the server.
+2022-01-05 19:28:57,018 - INFO     - server - Client ('127.0.0.1', 58699) disconnected from the server.
+2022-01-05 19:29:09,995 - INFO     - decorators - Called function "args_parser" from function "main"
+2022-01-05 19:29:09,995 - INFO     - decorators - Function "args_parser" from module "__main__" with arguments ((), {})
+2022-01-05 19:29:10,013 - INFO     - server - Server ran with parameters - 127.0.0.1:7777
+2022-01-05 19:29:17,586 - INFO     - server - Connection with client ('127.0.0.1', 58716) established.
+2022-01-05 19:29:18,090 - INFO     - decorators - Called function "get_message" from function "run"
+2022-01-05 19:29:18,091 - INFO     - decorators - Function "get_message" from module "common.utils" with arguments ((<socket.socket fd=7, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 58716)>,), {})
+2022-01-05 19:29:18,110 - INFO     - decorators - Called function "send_message" from function "processing_message"
+2022-01-05 19:29:18,110 - INFO     - decorators - Function "send_message" from module "common.utils" with arguments ((<socket.socket fd=7, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 58716)>, {'response': 200}), {})
+2022-01-05 19:29:18,110 - INFO     - server - Client ('127.0.0.1', 58716) connected. Response sended {'response': 200}
+2022-01-05 19:29:23,146 - INFO     - server - Connection with client ('127.0.0.1', 58719) established.
+2022-01-05 19:29:23,650 - INFO     - decorators - Called function "get_message" from function "run"
+2022-01-05 19:29:23,650 - INFO     - decorators - Function "get_message" from module "common.utils" with arguments ((<socket.socket fd=8, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 58719)>,), {})
+2022-01-05 19:29:23,661 - INFO     - decorators - Called function "send_message" from function "processing_message"
+2022-01-05 19:29:23,661 - INFO     - decorators - Function "send_message" from module "common.utils" with arguments ((<socket.socket fd=8, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 58719)>, {'response': 200}), {})
+2022-01-05 19:29:23,661 - INFO     - server - Client ('127.0.0.1', 58719) connected. Response sended {'response': 200}
+2022-01-05 19:29:36,743 - INFO     - decorators - Called function "get_message" from function "run"
+2022-01-05 19:29:36,743 - INFO     - decorators - Function "get_message" from module "common.utils" with arguments ((<socket.socket fd=7, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 58716)>,), {})
+2022-01-05 19:29:36,744 - INFO     - decorators - Called function "send_message" from function "message_handler"
+2022-01-05 19:29:36,745 - INFO     - decorators - Function "send_message" from module "common.utils" with arguments ((<socket.socket fd=8, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 58719)>, {'action': 'message', 'time': 1641400176.514438, 'sender': 'user_9', 'recipient': 'user_19', 'message_text': 'Hello!'}), {})
+2022-01-05 19:29:36,745 - INFO     - server - Message from the client user_9 sended to adressee user_19.
+2022-01-05 19:29:45,289 - INFO     - decorators - Called function "get_message" from function "run"
+2022-01-05 19:29:45,289 - INFO     - decorators - Function "get_message" from module "common.utils" with arguments ((<socket.socket fd=8, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 58719)>,), {})
+2022-01-05 19:29:45,290 - INFO     - decorators - Called function "send_message" from function "message_handler"
+2022-01-05 19:29:45,291 - INFO     - decorators - Function "send_message" from module "common.utils" with arguments ((<socket.socket fd=7, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 58716)>, {'action': 'message', 'time': 1641400184.854184, 'sender': 'user_19', 'recipient': 'user_9', 'message_text': 'Hi!'}), {})
+2022-01-05 19:29:45,291 - INFO     - server - Message from the client user_19 sended to adressee user_9.
+2022-01-05 19:55:38,617 - INFO     - decorators - Called function "args_parser" from function "main"
+2022-01-05 19:55:38,618 - INFO     - decorators - Function "args_parser" from module "__main__" with arguments ((), {})
+2022-01-05 19:55:38,660 - INFO     - server - Server ran with parameters - 127.0.0.1:7777
+2022-01-05 19:55:48,830 - INFO     - server - Connection with client ('127.0.0.1', 58869) established.
+2022-01-05 19:55:49,337 - INFO     - decorators - Called function "get_message" from function "run"
+2022-01-05 19:55:49,338 - INFO     - decorators - Function "get_message" from module "common.utils" with arguments ((<socket.socket fd=7, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 58869)>,), {})
+2022-01-05 19:55:49,364 - INFO     - decorators - Called function "send_message" from function "processing_message"
+2022-01-05 19:55:49,364 - INFO     - decorators - Function "send_message" from module "common.utils" with arguments ((<socket.socket fd=7, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 58869)>, {'response': 200}), {})
+2022-01-05 19:55:49,364 - INFO     - server - Client ('127.0.0.1', 58869) connected. Response sended {'response': 200}
+2022-01-05 19:56:33,681 - INFO     - server - Client ('127.0.0.1', 58869) disconnected from the server.
+2022-01-05 20:03:14,585 - INFO     - decorators - Called function "args_parser" from function "main"
+2022-01-05 20:03:14,585 - INFO     - decorators - Function "args_parser" from module "__main__" with arguments ((), {})
+2022-01-05 20:03:14,602 - INFO     - server - Server ran with parameters - 127.0.0.1:7777
+2022-01-05 20:03:36,756 - INFO     - server - Connection with client ('127.0.0.1', 58892) established.
+2022-01-05 20:03:37,263 - INFO     - decorators - Called function "get_message" from function "run"
+2022-01-05 20:03:37,263 - INFO     - decorators - Function "get_message" from module "common.utils" with arguments ((<socket.socket fd=7, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 58892)>,), {})
+2022-01-05 20:03:37,283 - INFO     - decorators - Called function "send_message" from function "processing_message"
+2022-01-05 20:03:37,283 - INFO     - decorators - Function "send_message" from module "common.utils" with arguments ((<socket.socket fd=7, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 58892)>, {'response': 200}), {})
+2022-01-05 20:03:37,283 - INFO     - server - Client ('127.0.0.1', 58892) connected. Response sended {'response': 200}
+2022-01-05 20:03:43,838 - INFO     - server - Connection with client ('127.0.0.1', 58896) established.
+2022-01-05 20:03:44,340 - INFO     - decorators - Called function "get_message" from function "run"
+2022-01-05 20:03:44,340 - INFO     - decorators - Function "get_message" from module "common.utils" with arguments ((<socket.socket fd=8, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 58896)>,), {})
+2022-01-05 20:03:44,353 - INFO     - decorators - Called function "send_message" from function "processing_message"
+2022-01-05 20:03:44,353 - INFO     - decorators - Function "send_message" from module "common.utils" with arguments ((<socket.socket fd=8, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 58896)>, {'response': 200}), {})
+2022-01-05 20:03:44,353 - INFO     - server - Client ('127.0.0.1', 58896) connected. Response sended {'response': 200}
+2022-01-05 20:04:10,022 - INFO     - decorators - Called function "get_message" from function "run"
+2022-01-05 20:04:10,023 - INFO     - decorators - Function "get_message" from module "common.utils" with arguments ((<socket.socket fd=7, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 58892)>,), {})
+2022-01-05 20:04:10,024 - INFO     - decorators - Called function "send_message" from function "message_handler"
+2022-01-05 20:04:10,024 - INFO     - decorators - Function "send_message" from module "common.utils" with arguments ((<socket.socket fd=8, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 58896)>, {'action': 'message', 'time': 1641402249.785558, 'sender': 'second_user', 'recipient': 'third_user', 'message_text': 'Hello!'}), {})
+2022-01-05 20:04:10,024 - INFO     - server - Message from the client second_user sended to adressee third_user.
+2022-01-05 20:04:25,628 - INFO     - decorators - Called function "get_message" from function "run"
+2022-01-05 20:04:25,628 - INFO     - decorators - Function "get_message" from module "common.utils" with arguments ((<socket.socket fd=8, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 58896)>,), {})
+2022-01-05 20:04:25,629 - INFO     - decorators - Called function "send_message" from function "message_handler"
+2022-01-05 20:04:25,629 - INFO     - decorators - Function "send_message" from module "common.utils" with arguments ((<socket.socket fd=7, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 58892)>, {'action': 'message', 'time': 1641402265.505186, 'sender': 'third_user', 'recipient': 'second_user', 'message_text': 'Hi!'}), {})
+2022-01-05 20:04:25,629 - INFO     - server - Message from the client third_user sended to adressee second_user.
+2022-01-05 20:12:49,371 - INFO     - decorators - Called function "args_parser" from function "main"
+2022-01-05 20:12:49,371 - INFO     - decorators - Function "args_parser" from module "__main__" with arguments ((), {})
+2022-01-05 20:12:49,388 - INFO     - server - Server ran with parameters - 127.0.0.1:7777
+2022-01-05 20:13:00,097 - INFO     - server - Connection with client ('127.0.0.1', 58930) established.
+2022-01-05 20:13:00,599 - INFO     - decorators - Called function "get_message" from function "run"
+2022-01-05 20:13:00,600 - INFO     - decorators - Function "get_message" from module "common.utils" with arguments ((<socket.socket fd=7, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 58930)>,), {})
+2022-01-05 20:13:00,620 - INFO     - server - Client ('127.0.0.1', 58930) disconnected from the server.
+2022-01-05 20:13:45,352 - INFO     - server - Connection with client ('127.0.0.1', 58935) established.
+2022-01-05 20:13:45,854 - INFO     - decorators - Called function "get_message" from function "run"
+2022-01-05 20:13:45,854 - INFO     - decorators - Function "get_message" from module "common.utils" with arguments ((<socket.socket fd=9, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 58935)>,), {})
+2022-01-05 20:13:45,856 - INFO     - server - Client ('127.0.0.1', 58935) disconnected from the server.
+2022-01-05 20:14:13,920 - INFO     - decorators - Called function "args_parser" from function "main"
+2022-01-05 20:14:13,920 - INFO     - decorators - Function "args_parser" from module "__main__" with arguments ((), {})
+2022-01-05 20:14:13,939 - INFO     - server - Server ran with parameters - 127.0.0.1:7777
+2022-01-05 20:14:22,342 - INFO     - server - Connection with client ('127.0.0.1', 58947) established.
+2022-01-05 20:14:22,844 - INFO     - decorators - Called function "get_message" from function "run"
+2022-01-05 20:14:22,845 - INFO     - decorators - Function "get_message" from module "common.utils" with arguments ((<socket.socket fd=7, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 58947)>,), {})
+2022-01-05 20:14:22,867 - INFO     - server - Client ('127.0.0.1', 58947) disconnected from the server.
+2022-01-05 20:14:49,741 - INFO     - decorators - Called function "args_parser" from function "main"
+2022-01-05 20:14:49,741 - INFO     - decorators - Function "args_parser" from module "__main__" with arguments ((), {})
+2022-01-05 20:14:49,758 - INFO     - server - Server ran with parameters - 127.0.0.1:7777
+2022-01-05 20:14:59,213 - INFO     - server - Connection with client ('127.0.0.1', 58962) established.
+2022-01-05 20:14:59,718 - INFO     - decorators - Called function "get_message" from function "run"
+2022-01-05 20:14:59,718 - INFO     - decorators - Function "get_message" from module "common.utils" with arguments ((<socket.socket fd=7, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 58962)>,), {})
+2022-01-05 20:14:59,738 - INFO     - decorators - Called function "send_message" from function "processing_message"
+2022-01-05 20:14:59,738 - INFO     - decorators - Function "send_message" from module "common.utils" with arguments ((<socket.socket fd=7, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 58962)>, {'response': 200}), {})
+2022-01-05 20:14:59,738 - INFO     - server - Client ('127.0.0.1', 58962) connected. Response sended {'response': 200}
+2022-01-05 20:15:06,697 - INFO     - server - Connection with client ('127.0.0.1', 58967) established.
+2022-01-05 20:15:07,202 - INFO     - decorators - Called function "get_message" from function "run"
+2022-01-05 20:15:07,203 - INFO     - decorators - Function "get_message" from module "common.utils" with arguments ((<socket.socket fd=8, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 58967)>,), {})
+2022-01-05 20:15:07,214 - INFO     - decorators - Called function "send_message" from function "processing_message"
+2022-01-05 20:15:07,214 - INFO     - decorators - Function "send_message" from module "common.utils" with arguments ((<socket.socket fd=8, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 58967)>, {'response': 200}), {})
+2022-01-05 20:15:07,214 - INFO     - server - Client ('127.0.0.1', 58967) connected. Response sended {'response': 200}
+2022-01-05 20:23:18,716 - INFO     - decorators - Called function "args_parser" from function "main"
+2022-01-05 20:23:18,717 - INFO     - decorators - Function "args_parser" from module "__main__" with arguments ((), {})
+2022-01-05 20:23:18,779 - INFO     - server - Server ran with parameters - 127.0.0.1:7777
+2022-01-05 20:23:34,279 - INFO     - server - Connection with client ('127.0.0.1', 59029) established.
+2022-01-05 20:23:34,789 - INFO     - decorators - Called function "get_message" from function "run"
+2022-01-05 20:23:34,790 - INFO     - decorators - Function "get_message" from module "common.utils" with arguments ((<socket.socket fd=9, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 59029)>,), {})
+2022-01-05 20:23:34,824 - INFO     - decorators - Called function "send_message" from function "processing_message"
+2022-01-05 20:23:34,824 - INFO     - decorators - Function "send_message" from module "common.utils" with arguments ((<socket.socket fd=9, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 59029)>, {'response': 200}), {})
+2022-01-05 20:23:34,824 - INFO     - server - Client ('127.0.0.1', 59029) connected. Response sended {'response': 200}
+2022-01-05 20:24:03,481 - INFO     - server - Client ('127.0.0.1', 59029) disconnected from the server.
+2022-01-05 20:24:10,529 - INFO     - server - Connection with client ('127.0.0.1', 59041) established.
+2022-01-05 20:24:11,036 - INFO     - decorators - Called function "get_message" from function "run"
+2022-01-05 20:24:11,036 - INFO     - decorators - Function "get_message" from module "common.utils" with arguments ((<socket.socket fd=11, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 59041)>,), {})
+2022-01-05 20:24:11,040 - INFO     - server - Client ('127.0.0.1', 59041) disconnected from the server.
+2022-01-05 20:24:49,813 - INFO     - server - Connection with client ('127.0.0.1', 59049) established.
+2022-01-05 20:24:50,315 - INFO     - decorators - Called function "get_message" from function "run"
+2022-01-05 20:24:50,316 - INFO     - decorators - Function "get_message" from module "common.utils" with arguments ((<socket.socket fd=12, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 59049)>,), {})
+2022-01-05 20:24:50,318 - INFO     - decorators - Called function "send_message" from function "processing_message"
+2022-01-05 20:24:50,318 - INFO     - decorators - Function "send_message" from module "common.utils" with arguments ((<socket.socket fd=12, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 59049)>, {'response': 400, 'error': 'Username is not available.'}), {})
+2022-01-05 20:24:50,318 - ERROR    - server - Attempt connection user ('127.0.0.1', 59049) with not available username. Sended response {'response': 400, 'error': 'Username is not available.'}
+2022-01-05 20:30:27,073 - INFO     - decorators - Called function "args_parser" from function "main"
+2022-01-05 20:30:27,074 - INFO     - decorators - Function "args_parser" from module "__main__" with arguments ((), {})
+2022-01-05 20:30:27,119 - INFO     - server - Server ran with parameters - 127.0.0.1:7777
+2022-01-05 20:30:53,984 - INFO     - server - Connection with client ('127.0.0.1', 59103) established.
+2022-01-05 20:30:54,497 - INFO     - decorators - Called function "get_message" from function "run"
+2022-01-05 20:30:54,497 - INFO     - decorators - Function "get_message" from module "common.utils" with arguments ((<socket.socket fd=9, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 59103)>,), {})
+2022-01-05 20:30:54,531 - INFO     - decorators - Called function "send_message" from function "processing_message"
+2022-01-05 20:30:54,531 - INFO     - decorators - Function "send_message" from module "common.utils" with arguments ((<socket.socket fd=9, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 59103)>, {'response': 200}), {})
+2022-01-05 20:30:54,531 - INFO     - server - Client ('127.0.0.1', 59103) connected. Response sended {'response': 200}
+2022-01-05 20:31:33,458 - INFO     - server - Connection with client ('127.0.0.1', 59111) established.
+2022-01-05 20:31:33,962 - INFO     - decorators - Called function "get_message" from function "run"
+2022-01-05 20:31:33,962 - INFO     - decorators - Function "get_message" from module "common.utils" with arguments ((<socket.socket fd=10, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 59111)>,), {})
+2022-01-05 20:31:33,977 - INFO     - decorators - Called function "send_message" from function "processing_message"
+2022-01-05 20:31:33,977 - INFO     - decorators - Function "send_message" from module "common.utils" with arguments ((<socket.socket fd=10, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 59111)>, {'response': 200}), {})
+2022-01-05 20:31:33,977 - INFO     - server - Client ('127.0.0.1', 59111) connected. Response sended {'response': 200}
+2022-01-05 20:35:09,287 - INFO     - decorators - Called function "get_message" from function "run"
+2022-01-05 20:35:09,288 - INFO     - decorators - Function "get_message" from module "common.utils" with arguments ((<socket.socket fd=10, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 59111)>,), {})
+2022-01-05 20:35:09,288 - INFO     - server - Client ('127.0.0.1', 59111) disconnected from the server.
+2022-01-05 20:35:09,291 - INFO     - server - Client ('127.0.0.1', 59111) disconnected from the server.
+2022-01-05 20:35:16,333 - INFO     - decorators - Called function "get_message" from function "run"
+2022-01-05 20:35:16,334 - INFO     - decorators - Function "get_message" from module "common.utils" with arguments ((<socket.socket fd=9, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 59103)>,), {})
+2022-01-05 20:35:16,334 - INFO     - server - Client ('127.0.0.1', 59103) disconnected from the server.
+2022-01-05 20:35:16,336 - INFO     - server - Client ('127.0.0.1', 59103) disconnected from the server.
+2022-01-05 20:39:58,009 - INFO     - decorators - Called function "args_parser" from function "main"
+2022-01-05 20:39:58,009 - INFO     - decorators - Function "args_parser" from module "__main__" with arguments ((), {})
+2022-01-05 20:39:58,059 - INFO     - server - Server ran with parameters - 127.0.0.1:7777
+2022-01-05 20:49:17,994 - INFO     - decorators - Called function "args_parser" from function "main"
+2022-01-05 20:49:17,995 - INFO     - decorators - Function "args_parser" from module "__main__" with arguments ((), {})
+2022-01-05 20:49:18,023 - INFO     - server - Server ran with parameters - 127.0.0.1:7777
+2022-01-05 20:49:32,563 - INFO     - server - Connection with client ('127.0.0.1', 59247) established.
+2022-01-05 20:49:32,567 - INFO     - decorators - Called function "get_message" from function "run"
+2022-01-05 20:49:32,567 - INFO     - decorators - Function "get_message" from module "common.utils" with arguments ((<socket.socket fd=7, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 59247)>,), {})
+2022-01-05 20:49:32,587 - INFO     - decorators - Called function "send_message" from function "processing_message"
+2022-01-05 20:49:32,587 - INFO     - decorators - Function "send_message" from module "common.utils" with arguments ((<socket.socket fd=7, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 59247)>, {'response': 200}), {})
+2022-01-05 20:49:32,587 - INFO     - server - Client ('127.0.0.1', 59247) connected. Response sended {'response': 200}
+2022-01-05 20:49:42,719 - INFO     - server - Connection with client ('127.0.0.1', 59251) established.
+2022-01-05 20:49:43,221 - INFO     - decorators - Called function "get_message" from function "run"
+2022-01-05 20:49:43,222 - INFO     - decorators - Function "get_message" from module "common.utils" with arguments ((<socket.socket fd=8, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 59251)>,), {})
+2022-01-05 20:49:43,234 - INFO     - decorators - Called function "send_message" from function "processing_message"
+2022-01-05 20:49:43,235 - INFO     - decorators - Function "send_message" from module "common.utils" with arguments ((<socket.socket fd=8, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 59251)>, {'response': 200}), {})
+2022-01-05 20:49:43,235 - INFO     - server - Client ('127.0.0.1', 59251) connected. Response sended {'response': 200}
+2022-01-05 20:50:08,907 - INFO     - decorators - Called function "get_message" from function "run"
+2022-01-05 20:50:08,907 - INFO     - decorators - Function "get_message" from module "common.utils" with arguments ((<socket.socket fd=7, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 59247)>,), {})
+2022-01-05 20:50:08,908 - INFO     - decorators - Called function "send_message" from function "message_handler"
+2022-01-05 20:50:08,909 - INFO     - decorators - Function "send_message" from module "common.utils" with arguments ((<socket.socket fd=8, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 59251)>, {'action': 'message', 'time': 1641405008.621073, 'sender': '1_user', 'recipient': '2_user', 'message_text': 'Hello!'}), {})
+2022-01-05 20:50:08,909 - INFO     - server - Message from the client 1_user sended to adressee 2_user.
+2022-01-05 20:50:18,478 - INFO     - decorators - Called function "get_message" from function "run"
+2022-01-05 20:50:18,479 - INFO     - decorators - Function "get_message" from module "common.utils" with arguments ((<socket.socket fd=8, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 59251)>,), {})
+2022-01-05 20:50:18,480 - INFO     - decorators - Called function "send_message" from function "message_handler"
+2022-01-05 20:50:18,480 - INFO     - decorators - Function "send_message" from module "common.utils" with arguments ((<socket.socket fd=7, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 59247)>, {'action': 'message', 'time': 1641405018.3871, 'sender': '2_user', 'recipient': '1_user', 'message_text': 'hi!'}), {})
+2022-01-05 20:50:18,480 - INFO     - server - Message from the client 2_user sended to adressee 1_user.
+2022-01-05 20:50:22,005 - INFO     - decorators - Called function "get_message" from function "run"
+2022-01-05 20:50:22,005 - INFO     - decorators - Function "get_message" from module "common.utils" with arguments ((<socket.socket fd=8, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 59251)>,), {})
+2022-01-05 20:50:22,005 - INFO     - server - Client ('127.0.0.1', 59251) disconnected from the server.
+2022-01-05 20:50:22,009 - INFO     - server - Client ('127.0.0.1', 59251) disconnected from the server.
+2022-01-05 20:50:23,525 - INFO     - decorators - Called function "get_message" from function "run"
+2022-01-05 20:50:23,525 - INFO     - decorators - Function "get_message" from module "common.utils" with arguments ((<socket.socket fd=7, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 59247)>,), {})
+2022-01-05 20:50:23,526 - INFO     - server - Client ('127.0.0.1', 59247) disconnected from the server.
+2022-01-05 20:50:23,527 - INFO     - server - Client ('127.0.0.1', 59247) disconnected from the server.
+2022-01-05 20:50:29,923 - INFO     - server - Connection with client ('127.0.0.1', 59261) established.
+2022-01-05 20:50:30,426 - INFO     - decorators - Called function "get_message" from function "run"
+2022-01-05 20:50:30,426 - INFO     - decorators - Function "get_message" from module "common.utils" with arguments ((<socket.socket fd=10, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 59261)>,), {})
+2022-01-05 20:50:30,427 - INFO     - decorators - Called function "send_message" from function "processing_message"
+2022-01-05 20:50:30,428 - INFO     - decorators - Function "send_message" from module "common.utils" with arguments ((<socket.socket fd=10, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 59261)>, {'response': 400, 'error': 'Username is not available.'}), {})
+2022-01-05 20:50:30,428 - ERROR    - server - Attempt connection user ('127.0.0.1', 59261) with not available username. Sended response {'response': 400, 'error': 'Username is not available.'}
+2022-01-05 20:50:40,241 - INFO     - server - Connection with client ('127.0.0.1', 59265) established.
+2022-01-05 20:50:40,745 - INFO     - decorators - Called function "get_message" from function "run"
+2022-01-05 20:50:40,745 - INFO     - decorators - Function "get_message" from module "common.utils" with arguments ((<socket.socket fd=10, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 59265)>,), {})
+2022-01-05 20:50:40,747 - INFO     - server - Client ('127.0.0.1', 59265) disconnected from the server.
+2022-01-05 20:53:38,312 - INFO     - decorators - Called function "args_parser" from function "main"
+2022-01-05 20:53:38,312 - INFO     - decorators - Function "args_parser" from module "__main__" with arguments ((), {})
+2022-01-05 20:53:38,346 - INFO     - server - Server ran with parameters - 127.0.0.1:7777
+2022-01-05 20:53:50,889 - INFO     - server - Connection with client ('127.0.0.1', 59312) established.
+2022-01-05 20:53:51,394 - INFO     - decorators - Called function "get_message" from function "run"
+2022-01-05 20:53:51,394 - INFO     - decorators - Function "get_message" from module "common.utils" with arguments ((<socket.socket fd=7, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 59312)>,), {})
+2022-01-05 20:53:51,415 - INFO     - decorators - Called function "send_message" from function "processing_message"
+2022-01-05 20:53:51,415 - INFO     - decorators - Function "send_message" from module "common.utils" with arguments ((<socket.socket fd=7, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 59312)>, {'response': 200}), {})
+2022-01-05 20:53:51,415 - INFO     - server - Client ('127.0.0.1', 59312) connected. Response sended {'response': 200}
+2022-01-05 20:53:56,964 - INFO     - server - Connection with client ('127.0.0.1', 59317) established.
+2022-01-05 20:53:57,469 - INFO     - decorators - Called function "get_message" from function "run"
+2022-01-05 20:53:57,470 - INFO     - decorators - Function "get_message" from module "common.utils" with arguments ((<socket.socket fd=8, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 59317)>,), {})
+2022-01-05 20:53:57,481 - INFO     - decorators - Called function "send_message" from function "processing_message"
+2022-01-05 20:53:57,481 - INFO     - decorators - Function "send_message" from module "common.utils" with arguments ((<socket.socket fd=8, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 59317)>, {'response': 200}), {})
+2022-01-05 20:53:57,481 - INFO     - server - Client ('127.0.0.1', 59317) connected. Response sended {'response': 200}
+2022-01-05 20:59:38,399 - INFO     - decorators - Called function "args_parser" from function "main"
+2022-01-05 20:59:38,399 - INFO     - decorators - Function "args_parser" from module "__main__" with arguments ((), {})
+2022-01-05 20:59:38,415 - INFO     - server - Server ran with parameters - 127.0.0.1:7777
+2022-01-05 20:59:46,670 - INFO     - server - Connection with client ('127.0.0.1', 59348) established.
+2022-01-05 20:59:46,673 - INFO     - decorators - Called function "get_message" from function "run"
+2022-01-05 20:59:46,673 - INFO     - decorators - Function "get_message" from module "common.utils" with arguments ((<socket.socket fd=7, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 59348)>,), {})
+2022-01-05 20:59:46,690 - INFO     - decorators - Called function "send_message" from function "processing_message"
+2022-01-05 20:59:46,690 - INFO     - decorators - Function "send_message" from module "common.utils" with arguments ((<socket.socket fd=7, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 59348)>, {'response': 200}), {})
+2022-01-05 20:59:46,690 - INFO     - server - Client ('127.0.0.1', 59348) connected. Response sended {'response': 200}
+2022-01-05 20:59:49,864 - INFO     - server - Connection with client ('127.0.0.1', 59352) established.
+2022-01-05 20:59:50,366 - INFO     - decorators - Called function "get_message" from function "run"
+2022-01-05 20:59:50,366 - INFO     - decorators - Function "get_message" from module "common.utils" with arguments ((<socket.socket fd=8, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 59352)>,), {})
+2022-01-05 20:59:50,379 - INFO     - decorators - Called function "send_message" from function "processing_message"
+2022-01-05 20:59:50,379 - INFO     - decorators - Function "send_message" from module "common.utils" with arguments ((<socket.socket fd=8, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 59352)>, {'response': 200}), {})
+2022-01-05 20:59:50,379 - INFO     - server - Client ('127.0.0.1', 59352) connected. Response sended {'response': 200}
