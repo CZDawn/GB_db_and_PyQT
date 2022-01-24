@@ -12,16 +12,12 @@ def get_message(sender) -> dict:
     ''' Processes the received message.
     Returns the message in dictionary format.
      '''
-
     obtained_message = sender.recv(DEFAULT_MAX_PACKAGES_LENGTH)
-
-    if isinstance(obtained_message, bytes):
-        decoded_message = obtained_message.decode(DEFAULT_ENCODING)
-        dict_format_message = json.loads(decoded_message)
-        if isinstance(dict_format_message, dict):
-            return dict_format_message
-        raise ValueError
-    raise ValueError
+    decoded_message = obtained_message.decode(DEFAULT_ENCODING)
+    dict_format_message = json.loads(decoded_message)
+    if isinstance(dict_format_message, dict):
+        return dict_format_message
+    raise TypeError
 
 
 @log_decorator

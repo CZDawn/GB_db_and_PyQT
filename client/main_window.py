@@ -20,10 +20,12 @@ LOG = getLogger('client_logger')
 
 
 class ClientMainWindow(QMainWindow):
-    def __init__(self, database, transport):
+    def __init__(self, database_obj, transport_obj, keys):
         super().__init__()
-        self.database = database
-        self.transport = transport
+        self.database = database_obj
+        self.transport = transport_obj
+
+        self.decrypter = PKCS1_OAEP.new(keys)
 
         self.ui = Ui_MainClientWindow()
         self.ui.setupUi(self)
@@ -38,10 +40,12 @@ class ClientMainWindow(QMainWindow):
         self.history_model = None
         self.messages = QMessageBox()
         self.current_chat = None
+        self.current_chat_key = None
         self.ui.list_messages.setHorizontalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
         self.ui.list_messages.setWordWrap(True)
 
         self.ui.list_contacts.doubleClicked.connect(self.select_active_user)
+
         self.clients_list_update()
         self.set_disabled_input()
         self.show()
@@ -72,14 +76,14 @@ class ClientMainWindow(QMainWindow):
         length = len(history_list)
         start_index = 0
         if length > 20:
-            start_index = length - 10
+            start_index = length - 20
 
         for i in range(start_index, length):
             item = history_list[i]
             if item[1] == 'in':
-                message = QStandardItem(f'Incoming mail from {item[3].replace(microsenod=0)}:\n {item[2]}')
+                message = QStandardItem(f'Incoming mail from {item[3].replace(microsecond=0)}:\n {item[2]}')
                 message.setEditable(False)
-                message.setBackground(QBrush(Qcolor(255, 213, 213)))
+                message.setBackground(QBrush(QColor(255, 213, 213)))
                 message.setTextAlignment(Qt.AlignLeft)
                 self.history_model.appendRow(message)
             else:
@@ -205,7 +209,7 @@ class ClientMainWindow(QMainWindow):
             if err.errno:
                 self.messages.critical(self, 'Error', 'Lost connection to server!')
                 self.close()
-            # self.messages.critical(self, 'Error', 'Connection timeout!')
+            self.messages.critical(self, 'Error', 'Connection timeout!')
         except (ConnectionResetError, ConnectionAbortedError):
             self.messages.critical(self, 'Error', 'Lost connection to server!')
             self.close()
@@ -214,16 +218,16 @@ class ClientMainWindow(QMainWindow):
             LOG.debug(f'Sent a message to {self.current_chat}: {message_text}')
             self.history_list_update()
 
-    @pyqtSlot(str)
+    @pyqtSlot(dict)
     def message(self, message):
         encrypted_message = base64.b64decode(message[MESSAGE_TEXT])
         try:
             decrypted_message = self.decrypter.decrypt(encrypted_message)
         except (ValueError, TypeError):
-            self.message.warning(
+            self.messages.warning(
                 self,
                 'ERROR',
-                'Impossble to decode the message')
+                'Impossible to decode the message')
             return
         self.database.save_message(
             self.current_chat,
@@ -235,26 +239,24 @@ class ClientMainWindow(QMainWindow):
         else:
             if self.database.check_user_presence_in_client_contacts(sender):
                 if self.messages.question(
-                    self,
-                    'New message',
-                    f'Get new message from {sender}, open chat with him?',
-                    QMessageBox.Yes,
-                    QMessageBox.No) == QMessageBox.Yes:
+                        self,
+                        'New message',
+                        f'Get new message from {sender}, open chat with him?',
+                        QMessageBox.Yes,
+                        QMessageBox.No) == QMessageBox.Yes:
                     self.current_chat = sender
                     self.set_active_user()
             else:
                 print('NO')
                 if self.messages.question(
-                    self, 'New message',
-                    f'Get new message from {sender}.\n'
-                    f'This user is not in your contact list.\n'
-                    f'Add contact and open chat with him?',
-                    QMessageBox.Yes,
-                    QMessageBox.No) == QMessageBox.Yes:
+                        self, 'New message',
+                        f'Get new message from {sender}.\n'
+                        f'This user is not in your contact list.\n'
+                        f'Add contact and open chat with him?',
+                        QMessageBox.Yes,
+                        QMessageBox.No) == QMessageBox.Yes:
                     self.add_contact(sender)
                     self.current_chat = sender
-                    self.set_active_user()
-
                     self.database.save_message(
                         self.current_chat,
                         'in',
@@ -263,12 +265,20 @@ class ClientMainWindow(QMainWindow):
 
     @pyqtSlot()
     def connection_lost(self):
-        if  self.current_chat and not self.database.check_users_presence_in_known_users(self.current_chat):
+        self.messages.warning(
+            self,
+            'Connection failure',
+            'User was deleted from the server')
+        self.close()
+
+    @pyqtSlot()
+    def signal_205(self):
+        if self.current_chat and not self.database.check_user_presence_in_known_users(self.current_chat):
             self.messages.warning(
                 self,
-                'Connection failure',
-                'User was deleted from the server')
-            self.set_dicabled_input()
+                'Connection lost',
+                'Contact was delete from the server')
+            self.set_disabled_input()
             self.current_chat = None
         self.clients_list_update()
 
@@ -276,14 +286,4 @@ class ClientMainWindow(QMainWindow):
         transport_object.new_message_signal.connect(self.message)
         transport_object.connection_lost_signal.connect(self.connection_lost)
         transport_object.message_205.connect(self.signal_205)
-
-
-if __name__ == '__main__':
-    APP = QApplication(sys.argv)
-    from client_db_storage import ClientDatabaseStorage
-    database = ClientDatabaseStorage('test1')
-    from transport import ClientTransport
-    transport = ClientTransport(7777, '127.0.0.1', database, 'test1')
-    window = ClientMainWindow(database, transport)
-    sys.exit(APP.exec_())
 

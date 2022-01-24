@@ -1,3 +1,4 @@
+import os
 from datetime import datetime
 from sqlalchemy import create_engine, MetaData, Table, Column, Integer, \
                        String, Text, DateTime
@@ -20,13 +21,15 @@ class ClientDatabaseStorage:
         def __init__(self, sender, addressee, message):
             self.id = None
             self.sender = sender
-            self.affressee = addressee
+            self.addressee = addressee
             self.message = message
             self.date = datetime.now()
 
     def __init__(self, client_name):
+        path = os.path.dirname(os.path.realpath(__file__))
+        file_name = f'client_{client_name}.db3'
         self.database_engine = create_engine(
-            f'sqlite:///client/databases/client_{client_name}.db3',
+            f'sqlite:///{os.path.join(path, "databases", file_name)}',
             echo=False,
             pool_recycle=7200,
             connect_args={'check_same_thread': False}
@@ -67,12 +70,15 @@ class ClientDatabaseStorage:
         self.session.query(self.ClientContacts).delete()
         self.session.commit()
 
-
     def add_contact(self, contact: str):
         if not self.session.query(self.ClientContacts).filter_by(username=contact).count():
             contact_object = self.ClientContacts(contact)
             self.session.add(contact_object)
             self.session.commit()
+
+    def contacts_clear(self):
+        self.session.query(self.ClientContacts).delete()
+        self.session.commit()
 
     def del_contact(self, contact: str):
         self.session.query(self.ClientContacts).filter_by(username=contact).delete()
@@ -80,7 +86,7 @@ class ClientDatabaseStorage:
 
     def add_known_users(self, users: list):
         self.session.query(self.AllKnownUsers).delete()
-        for user in  users:
+        for user in users:
             user_object = self.AllKnownUsers(user)
             self.session.add(user_object)
         self.session.commit()
@@ -106,14 +112,12 @@ class ClientDatabaseStorage:
             return True
         return False
 
-    def get_client_activity_history(self, sender=None, addressee=None):
-        query = self.session.query(self.ClientActivityHistory)
-        if sender:
-            query = query.filter_by(sender=sender)
-        if addressee:
-            query = query.filter_by(addressee=addressee)
-        return [(history_object.sender, history_object.addressee, history_object.message, history_object.date)
-                for history_object in query.all()]
+    def get_client_activity_history(self, sender):
+        query = self.session.query(self.ClientActivityHistory).filter_by(sender=sender)
+        return [(history_object.sender,
+                 history_object.addressee,
+                 history_object.message,
+                 history_object.date) for history_object in query.all()]
 
 
 if __name__ == '__main__':
@@ -124,8 +128,8 @@ if __name__ == '__main__':
 
     test_db.add_contact('client_3')
     test_db.add_known_users(['client_1', 'client_2', 'client_3', 'client_4'])
-    test_db.save_message('client_1', 'client_2', 'Привет!  Меня зовут client_1.')
-    test_db.save_message('client_2', 'client_1', 'Привет! А меня зовут clinet_2.')
+    test_db.save_message('client_1', 'client_2', 'Hello! My name is client_1.')
+    test_db.save_message('client_2', 'client_1', 'Hello! My name is clinet_2.')
 
     print('--- All contacts ---')
     print(test_db.get_all_client_contacts())

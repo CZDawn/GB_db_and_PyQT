@@ -2,9 +2,9 @@ import sys
 
 from PyQt5.QtCore import Qt
 from logging import getLogger
+from PyQt5.QtGui import QStandardItemModel, QStandardItem
 from PyQt5.QtWidgets import QDialog, QLabel, QComboBox, QPushButton, QApplication
 
-sys.path.append('../')
 LOG = getLogger('client_logger')
 
 
@@ -40,8 +40,6 @@ class DelContactDialog(QDialog):
 
 if __name__ == '__main__':
     app = QApplication(sys.argv)
-    from client_db_storage import ClientDatabaseStorage
-    database = ClientDatabaseStorage('test1')
     window = DelContactDialog(database)
     window.show()
     app.exec_()

@@ -3,7 +3,7 @@ import sys
 from datetime import datetime
 from sqlalchemy.orm import mapper, sessionmaker
 from sqlalchemy import create_engine, MetaData, Table, Column, Integer, \
-                       String, DateTime, ForeignKey
+                       String, DateTime, ForeignKey, Text
 
 sys.path.append('../')
 from common.variables import *
@@ -12,10 +12,12 @@ from common.variables import *
 class ServerDatabaseStorage:
 
     class AllUsers:
-        def __init__(self, username):
+        def __init__(self, username, password_hash):
             self.id = None
             self.username = username
             self.last_login = datetime.now()
+            self.password_hash = password_hash
+            self.public_key = None
 
     class ActiveUsers:
         def __init__(self, user_id, ip, port, login_time):
@@ -64,7 +66,9 @@ class ServerDatabaseStorage:
             'All_users', self.metadata,
             Column('id', Integer, primary_key=True),
             Column('username', String, unique=True),
-            Column('last_login', DateTime)
+            Column('last_login', DateTime),
+            Column('password_hash', String),
+            Column('public_key', Text)
         )
 
         active_users_table = Table(
@@ -114,18 +118,15 @@ class ServerDatabaseStorage:
         self.session.query(self.ActiveUsers).delete()
         self.session.commit()
 
-    def user_login(self, username, ip, port):
+    def user_login(self, username, ip, port, key):
         user_existing_check = self.session.query(self.AllUsers).filter_by(username=username)
         if user_existing_check.count():
             user = user_existing_check.first()
             user.last_login = datetime.now()
+            if user.public_key != key:
+                user.public_key = key
         else:
-            user = self.AllUsers(username)
-            self.session.add(user)
-            self.session.commit()
-            user_activity_history = self.UsersActivityHistory(user.id)
-            self.session.add(user_activity_history)
-
+            raise ValueError('User is not registered yet')
         new_active_user = self.ActiveUsers(user.id, ip, port, datetime.now())
         self.session.add(new_active_user)
 
@@ -133,6 +134,37 @@ class ServerDatabaseStorage:
         self.session.add(user_login_history)
 
         self.session.commit()
+
+    def add_user(self, username, password_hash):
+            user = self.AllUsers(username, password_hash)
+            self.session.add(user)
+            self.session.commit()
+            user_activity_history = self.UsersActivityHistory(user.id)
+            self.session.add(user_activity_history)
+            self.session.commit()
+
+    def remove_user(self, username):
+        user = self.session.query(self.AllUsers).filter_by(username=username).first()
+        self.session.query(self.ActiveUsers).filter_by(user_id=user.id).delete()
+        self.session.query(self.UsersLoginHistory).filter_by(user_id=user.id).delete()
+        self.session.query(self.UsersContacts).filter_by(user_id=user.id).delete()
+        self.session.query(self.UsersContacts).filter_by(contact_id=user.id).delete()
+        self.session.query(self.UsersActivityHistory).filter_by(user_id=user.id).delete()
+        self.session.query(self.AllUsers).filter_by(username=username).delete()
+        self.session.commit()
+
+    def get_hash(self, username):
+        user = self.session.query(self.AllUsers).filter_by(username=username).first()
+        return user.password_hash
+
+    def get_public_key(self, username):
+        user = self.session.query(self.AllUsers).filter_by(username=username).first()
+        return user.public_key
+
+    def check_user(self, username):
+        if self.session.query(self.AllUsers).filter_by(username=username).count():
+            return True
+        return False
 
     def user_logout(self, username):
         user = self.session.query(self.AllUsers).filter_by(username=username).first()
@@ -225,22 +257,23 @@ if __name__ == '__main__':
     test_db = ServerDatabaseStorage()
     test_db.user_login('client_1', '192.168.1.4', 8080)
     test_db.user_login('client_2', '192.168.1.5', 7777)
-    test_db.user_login('client_3', '192.168.1.6', 8000)
     print('--- Active users ---')
     print(test_db.active_users_list())
-    test_db.user_logout('client_1')
-    print('--- Active users after logout client_1 ---')
-    print(test_db.active_users_list())
-    print('--- Log history ---')
-    print(test_db.users_login_history_list())
-    print('--- All users ---')
-    print(test_db.all_users_list())
-    print('--- Users contact ---')
-    print(test_db.users_contacts_list('client_2'))
-    print('--- Add contact ----')
-    test_db.add_contact('client_2', 'client_3')
-    print('--- Users contacts ---')
-    print(test_db.users_contacts_list('client_2'))
-    print('--- Users activity history ---')
-    print(test_db.users_activity_history_list())
-
+    #test_db.user_logout('client_1')
+    #print('--- Active users after logout client_1 ---')
+    #print(test_db.active_users_list())
+    #print('--- Log history ---')
+    #print(test_db.users_login_history_list())
+    #print('--- All users ---')
+    #print(test_db.all_users_list())
+    #print('--- Users contact ---')
+    #print(test_db.users_contacts_list('client_2'))
+    #print('--- Add contact ----')
+    #test_db.add_contact('client_2', 'client_3')
+    #print('--- Users contacts ---')
+    #print(test_db.users_contacts_list('client_2'))
+    #print('--- Users activity history ---')
+    #print(test_db.users_activity_history_list())
+    #print('--- Message process ---')
+    test_db.process_message('client_1', 'client_2')
+    print(test_db.user_activity_history_list())

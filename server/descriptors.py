@@ -4,7 +4,6 @@ from logging import getLogger
 sys.path.append('../')
 from logs import server_logger_config
 
-
 LOG = getLogger('server_logger')
 
 
@@ -15,6 +14,7 @@ class Port:
                 f'Incorrect enttered port "{value}".'
             )
             sys.exit(1)
+            raise TypeError('Incorrect number of port')
         instance.__dict__[self.name] = value
 
     def __set_name__(self, owner, name):
