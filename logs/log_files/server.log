@@ -780,3 +780,10 @@
 2022-01-24 17:08:21,781 - INFO     - core - Client ('127.0.0.1', 57502) disconnected from server
 2022-01-24 17:08:23,347 - INFO     - decorators - Called function "main" from function "<module>"
 2022-01-24 17:08:23,347 - INFO     - decorators - Function "main" from module "__main__" with arguments ((), {})
+2022-01-24 18:20:46,188 - INFO     - decorators - Called function "config_load" from function "main"
+2022-01-24 18:20:46,189 - INFO     - decorators - Function "config_load" from module "__main__" with arguments ((), {})
+2022-01-24 18:20:46,193 - INFO     - decorators - Called function "args_parser" from function "main"
+2022-01-24 18:20:46,193 - INFO     - decorators - Function "args_parser" from module "__main__" with arguments (('7777', ''), {})
+2022-01-24 18:20:46,246 - INFO     - core - Server is running
+2022-01-24 18:20:59,796 - INFO     - decorators - Called function "main" from function "<module>"
+2022-01-24 18:20:59,796 - INFO     - decorators - Function "main" from module "__main__" with arguments ((), {})
