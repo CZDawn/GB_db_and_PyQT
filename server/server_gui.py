@@ -1,3 +1,7 @@
+'''
+This module response for GUI of the server.
+'''
+
 import os
 import sys
 

@@ -1,3 +1,8 @@
+'''
+This module processing the establishing of an app configuration.
+Creates GUI of configuration server and save the settings.
+'''
+
 import os
 
 from PyQt5.QtCore import Qt

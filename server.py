@@ -18,6 +18,8 @@ LOG = getLogger('server_logger')
 
 @log_decorator
 def args_parser(default_port, default_address):
+    '''Command line arguments parser'''
+
     parser = ArgumentParser()
     parser.add_argument('-p', default=default_port, type=int)
     parser.add_argument('-a', default=default_address)
@@ -27,6 +29,8 @@ def args_parser(default_port, default_address):
 
 @log_decorator
 def config_load():
+    '''Config file parser'''
+
     config = ConfigParser()
     dir_path = os.path.dirname(os.path.realpath(__file__))
     config.read(f'{dir_path}/{"server+++.ini"}')
@@ -43,9 +47,13 @@ def config_load():
 
 @log_decorator
 def main():
+    '''The main function of server module'''
+
     config = config_load()
     listen_address, listen_port = args_parser(
-        config['SETTINGS']['Default_port'], config['SETTINGS']['Listen_address'])
+        config['SETTINGS']['Default_port'],
+        config['SETTINGS']['Listen_address']
+    )
     database = ServerDatabaseStorage(
         os.path.join(
             config['SETTINGS']['Database_path'],
@@ -65,3 +73,4 @@ def main():
 
 if __name__ == '__main__':
     main()
+

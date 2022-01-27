@@ -1,3 +1,7 @@
+'''
+This is the main module of the server side of project.
+'''
+
 import os
 import sys
 import hmac

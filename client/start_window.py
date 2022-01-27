@@ -1,3 +1,5 @@
+'''This module processing the start dialog for user authorization'''
+
 from PyQt5.QtWidgets import QDialog, QLabel, QLineEdit, QPushButton, \
                             qApp, QApplication
 

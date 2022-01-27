@@ -1,3 +1,8 @@
+'''
+The function for processing transportation
+of messages betveen server and clients
+'''
+
 import json
 import sys
 
@@ -10,8 +15,9 @@ from decorators import log_decorator
 @log_decorator
 def get_message(sender) -> dict:
     ''' Processes the received message.
+
     Returns the message in dictionary format.
-     '''
+    '''
     obtained_message = sender.recv(DEFAULT_MAX_PACKAGES_LENGTH)
     decoded_message = obtained_message.decode(DEFAULT_ENCODING)
     dict_format_message = json.loads(decoded_message)
@@ -22,6 +28,8 @@ def get_message(sender) -> dict:
 
 @log_decorator
 def send_message(addressee, message) -> None:
+    '''Send the message to the certain addressee'''
+
     json_format_message_to_send = json.dumps(message)
     encoded_message = json_format_message_to_send.encode(DEFAULT_ENCODING)
     addressee.send(encoded_message)

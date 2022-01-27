@@ -1,3 +1,7 @@
+'''
+This module of creating, registering a new client in project.
+'''
+
 import sys
 
 from PyQt5.QtCore import Qt
@@ -10,6 +14,8 @@ LOG = getLogger('client_logger')
 
 
 class AddContactDialog(QDialog):
+    '''Create model of adding contact to database'''
+
     def __init__(self, transport, database):
         super().__init__()
         self.transport = transport
@@ -45,6 +51,8 @@ class AddContactDialog(QDialog):
         self.btn_refresh.clicked.connect(self.update_available_contacts)
 
     def available_contacts_update(self):
+        '''Method create available users' contacts list'''
+
         self.selector.clear()
         contacts_list = set(self.database.get_all_client_contacts())
         users_list = set(self.database.get_all_known_users())
@@ -52,6 +60,8 @@ class AddContactDialog(QDialog):
         self.selector.addItems(users_list - contacts_list)
 
     def update_available_contacts(self):
+        '''Method update users' contacts list'''
+
         try:
             self.transport.user_list_update()
         except OSError:

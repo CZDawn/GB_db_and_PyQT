@@ -1,3 +1,9 @@
+'''
+This module processing GUI of main server side window.
+Creates user model, remove it, show users activity statistics
+and configuring server.
+'''
+
 import sys
 from PyQt5.QtCore import QTimer
 from PyQt5.QtGui import QStandardItemModel, QStandardItem

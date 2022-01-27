@@ -1,3 +1,7 @@
+'''
+This module responsible for operattions with server database.
+'''
+
 import sys
 
 from datetime import datetime
@@ -12,6 +16,8 @@ from common.variables import *
 class ServerDatabaseStorage:
 
     class AllUsers:
+        '''Table of all users registered on the server'''
+
         def __init__(self, username, password_hash):
             self.id = None
             self.username = username
@@ -20,6 +26,8 @@ class ServerDatabaseStorage:
             self.public_key = None
 
     class ActiveUsers:
+        '''Table of active users registered on the server'''
+
         def __init__(self, user_id, ip, port, login_time):
             self.id = None
             self.ip = ip
@@ -28,6 +36,9 @@ class ServerDatabaseStorage:
             self.login_time = login_time
 
     class UsersLoginHistory:
+        '''Table that contains information about
+        users login activivty on the server.
+        '''
         def __init__(self, user_id, login_time, ip, port):
             self.id = None
             self.ip = ip
@@ -36,12 +47,15 @@ class ServerDatabaseStorage:
             self.login_time = login_time
 
     class UsersContacts:
+        '''Table of certain users contacts'''
         def __init__(self, user_id, contact_id):
             self.id = None
             self.user_id = user_id
             self.contact_id = contact_id
 
     class UsersActivityHistory:
+        '''Table that contains history of messages of certain user.'''
+
         def __init__(self, user_id):
             self.id = None
             self.user_id = user_id
@@ -119,6 +133,8 @@ class ServerDatabaseStorage:
         self.session.commit()
 
     def user_login(self, username, ip, port, key):
+        '''Method that processing users login on the server'''
+
         user_existing_check = self.session.query(self.AllUsers).filter_by(username=username)
         if user_existing_check.count():
             user = user_existing_check.first()
@@ -136,14 +152,18 @@ class ServerDatabaseStorage:
         self.session.commit()
 
     def add_user(self, username, password_hash):
-            user = self.AllUsers(username, password_hash)
-            self.session.add(user)
-            self.session.commit()
-            user_activity_history = self.UsersActivityHistory(user.id)
-            self.session.add(user_activity_history)
-            self.session.commit()
+        '''Method that processing adding (register) user on the server'''
+
+        user = self.AllUsers(username, password_hash)
+        self.session.add(user)
+        self.session.commit()
+        user_activity_history = self.UsersActivityHistory(user.id)
+        self.session.add(user_activity_history)
+        self.session.commit()
 
     def remove_user(self, username):
+        '''Method that processing removing user from the server'''
+
         user = self.session.query(self.AllUsers).filter_by(username=username).first()
         self.session.query(self.ActiveUsers).filter_by(user_id=user.id).delete()
         self.session.query(self.UsersLoginHistory).filter_by(user_id=user.id).delete()
@@ -167,11 +187,15 @@ class ServerDatabaseStorage:
         return False
 
     def user_logout(self, username):
+        '''Method that processing login out of user'''
+
         user = self.session.query(self.AllUsers).filter_by(username=username).first()
         self.session.query(self.ActiveUsers).filter_by(user_id=user.id).delete()
         self.session.commit()
 
     def process_message(self, sender, recipient):
+        '''Method that managing messages between clients'''
+
         sender_id = self.session.query(self.AllUsers).filter_by(username=sender).first().id
         recipient_id = self.session.query(self.AllUsers).filter_by(username=recipient).first().id
         sender_row = self.session.query(self.UsersActivityHistory).filter_by(user_id=sender_id).first()
@@ -182,6 +206,10 @@ class ServerDatabaseStorage:
         self.session.commit()
 
     def add_contact(self, user, contact):
+        '''Method thqt processing adding contact
+        to the certain users contact list
+        '''
+
         user = self.session.query(self.AllUsers).filter_by(username=user).first()
         contact = self.session.query(self.AllUsers).filter_by(username=contact).first()
 
@@ -193,6 +221,10 @@ class ServerDatabaseStorage:
         self.session.commit()
 
     def remove_contact(self, user, contact):
+        '''Method that processing removing conntact
+        from the certain users contact list.
+        '''
+
         user = self.session.query(self.AllUsers).filter_by(username=user).first()
         contact = self.session.query(self.AllUsers).filter_by(username=contact).first()
 
@@ -206,6 +238,8 @@ class ServerDatabaseStorage:
         self.session.commit()
 
     def all_users_list(self):
+        '''Method that returns all availbel users, registered in the server'''
+
         query = self.session.query(
             self.AllUsers.username,
             self.AllUsers.last_login
@@ -213,6 +247,8 @@ class ServerDatabaseStorage:
         return query.all()
 
     def active_users_list(self):
+        '''Method that returns all active users in current time'''
+
         query = self.session.query(
             self.AllUsers.username,
             self.ActiveUsers.ip,
@@ -222,6 +258,8 @@ class ServerDatabaseStorage:
         return query.all()
 
     def users_login_history_list(self, username=None):
+        '''Method that returns all users login history'''
+
         query = self.session.query(
             self.AllUsers.username,
             self.UsersLoginHistory.login_time,
@@ -234,6 +272,8 @@ class ServerDatabaseStorage:
         return query.all()
 
     def users_contacts_list(self, username):
+        '''Method that returns certain users list of contacts'''
+
         user = self.session.query(self.AllUsers).filter_by(username=username).one()
         query = self.session.query(self.UsersContacts, self.AllUsers.username). \
             filter_by(user_id=user.id). \
@@ -241,6 +281,8 @@ class ServerDatabaseStorage:
         return [contact[1] for contact in query.all()]
 
     def users_activity_history_list(self, username=None):
+        '''Method that returns certain users messaging history'''
+
         query = self.session.query(
             self.AllUsers.username,
             self.AllUsers.last_login,

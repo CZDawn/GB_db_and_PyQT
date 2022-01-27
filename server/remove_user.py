@@ -1,3 +1,7 @@
+'''
+This module responsible for processing GUI of removing user dorm the server.
+'''
+
 from PyQt5.QtCore import Qt
 from PyQt5.QtWidgets import QDialog, QLabel, QComboBox, QPushButton
 

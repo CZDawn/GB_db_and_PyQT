@@ -1,3 +1,8 @@
+'''
+This is module processing transportation (handeling)
+messages between clients by server.
+'''
+
 import sys
 import hashlib
 import hmac

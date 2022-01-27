@@ -1,3 +1,7 @@
+'''This module contains classes and method of processing
+deleting certain contact in users contact list.
+'''
+
 import sys
 
 from PyQt5.QtCore import Qt

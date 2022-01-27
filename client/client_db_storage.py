@@ -1,3 +1,10 @@
+'''
+This module contains the statements of creating and
+processing clients database storage.
+
+Databasese creats for each registered on server users.
+'''
+
 import os
 from datetime import datetime
 from sqlalchemy import create_engine, MetaData, Table, Column, Integer, \
@@ -6,6 +13,7 @@ from sqlalchemy.orm import mapper, sessionmaker
 
 
 class ClientDatabaseStorage:
+    '''Class for processing work with database object'''
 
     class AllKnownUsers:
         def __init__(self, username):

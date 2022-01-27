@@ -1,3 +1,7 @@
+'''
+This module processing the check of the entered port in command line arguments.
+'''
+
 import sys
 from logging import getLogger
 

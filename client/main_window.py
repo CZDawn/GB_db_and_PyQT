@@ -1,6 +1,9 @@
+'''The main module of creating GUI of the client side project part'''
+
 import sys
 import json
 import base64
+
 from logging import getLogger
 from Cryptodome.PublicKey import RSA
 from Cryptodome.Cipher import PKCS1_OAEP
@@ -20,6 +23,8 @@ LOG = getLogger('client_logger')
 
 
 class ClientMainWindow(QMainWindow):
+    '''Class  of main client side window'''
+
     def __init__(self, database_obj, transport_obj, keys):
         super().__init__()
         self.database = database_obj
@@ -51,6 +56,8 @@ class ClientMainWindow(QMainWindow):
         self.show()
 
     def set_disabled_input(self):
+        '''Method of setting the muted input field'''
+
         self.ui.label_new_message.setText('To select a recipient, double-click on it in the contact window.')
         self.ui.text_message.clear()
         if self.history_model:
@@ -65,6 +72,8 @@ class ClientMainWindow(QMainWindow):
         self.current_chat_key = None
 
     def history_list_update(self):
+        '''Method that show the client history'''
+
         history_list = sorted(
             self.database.get_client_activity_history(
                 self.current_chat),
@@ -95,6 +104,8 @@ class ClientMainWindow(QMainWindow):
         self.ui.list_messages.scrollToBottom()
 
     def select_active_user(self):
+        '''Active user selection method for messaging'''
+
         self.current_chat = self.ui.list_contacts.currentIndex().data()
         self.set_active_user()
 
@@ -123,6 +134,8 @@ class ClientMainWindow(QMainWindow):
         self.history_list_update()
 
     def clients_list_update(self):
+        '''Method of updating users contacts list'''
+
         clients_contacts_list = self.database.get_all_client_contacts()
         self.contacts_model = QStandardItemModel()
         for i in sorted(clients_contacts_list):
@@ -132,6 +145,8 @@ class ClientMainWindow(QMainWindow):
         self.ui.list_contacts.setModel(self.contacts_model)
 
     def add_contact_window(self):
+        '''Method for displaying window with adding contact dialog'''
+
         global select_dialog
         select_dialog = AddContactDialog(self.transport, self.database)
         select_dialog.ok_button.clicked.connect(
@@ -139,11 +154,15 @@ class ClientMainWindow(QMainWindow):
         select_dialog.show()
 
     def add_contact_action(self, item):
+        '''Method of adding contact action'''
+
         new_contact = item.selector.currentText()
         self.add_contact(new_contact)
         item.close()
 
     def add_contact(self, new_contact):
+        '''Method of adding contact'''
+
         try:
             self.transport.add_contact(new_contact)
         except ServerError as err:
@@ -162,6 +181,8 @@ class ClientMainWindow(QMainWindow):
             self.messages.information(self, 'Success', 'Contact successfully aded.')
 
     def delete_contact_window(self):
+        '''Method for displaying window with deleting contact dialog'''
+
         global remove_dialog
         remove_dialog = DelContactDialog(self.database)
         remove_dialog.ok_button.clicked.connect(
@@ -169,6 +190,8 @@ class ClientMainWindow(QMainWindow):
         remove_dialog.show()
 
     def delete_contact(self, item):
+        '''Method of deleting contact'''
+
         selected_contact = item.selector.currentText()
         try:
             self.transport.remove_contact(selected_contact)
@@ -190,6 +213,8 @@ class ClientMainWindow(QMainWindow):
                 self.set_disabled_input()
 
     def send_message(self):
+        '''Method for sending message to current active contact'''
+
         message_text = self.ui.text_message.toPlainText()
         self.ui.text_message.clear()
         if not message_text:

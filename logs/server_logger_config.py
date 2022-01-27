@@ -1,3 +1,7 @@
+'''
+This is the module of server logging configuration
+'''
+
 import os
 import sys
 from logging import getLogger, Formatter, StreamHandler, ERROR, handlers

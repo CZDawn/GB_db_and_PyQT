@@ -1,3 +1,10 @@
+'''
+Main project module of the client side logic.
+
+This module contains the statements of establishing connection with server
+and processing GUI of client program window.
+'''
+
 import os
 import sys
 import argparse
@@ -18,6 +25,8 @@ LOG = getLogger('client_logger')
 
 @log_decorator
 def arg_parser():
+    '''Command line arguments parser'''
+
     parser = argparse.ArgumentParser()
     parser.add_argument('addr', default=DEFAULT_IP_ADDRESS, nargs='?')
     parser.add_argument('port', default=DEFAULT_PORT, type=int, nargs='?')
@@ -35,6 +44,8 @@ def arg_parser():
 if __name__ == '__main__':
     server_address, server_port, client_name, client_password = arg_parser()
     client_app = QApplication(sys.argv)
+
+    # Start users' authorization dialog
     start_window = StartUserNameEnteringWindow()
 
     if not client_name or not client_password:
@@ -46,10 +57,13 @@ if __name__ == '__main__':
             exit(0)
 
     LOG.info(
-        f'Launched client with parameters: ip_address: {server_address} , port: {server_port}, username: {client_name}')
+        f'Launched client with parameters: ip_address: {server_address} , '
+        f'port: {server_port}, username: {client_name}'
+    )
 
     dir_path = os.path.dirname(os.path.realpath(__file__))
     key_file = os.path.join(dir_path, f'{client_name}.key')
+
     if not os.path.exists(key_file):
         keys = RSA.generate(2048, os.urandom)
         with open(key_file, 'wb') as key:
@@ -83,3 +97,4 @@ if __name__ == '__main__':
 
     transport.transport_shutdown()
     transport.join()
+

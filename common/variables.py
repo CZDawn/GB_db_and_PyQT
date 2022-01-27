@@ -1,3 +1,7 @@
+'''
+Global project default variables
+'''
+
 from logging import INFO
 
 # Default settings

@@ -1,3 +1,7 @@
+'''
+This module contains classes of processing frequently raises errors
+'''
+
 class ServerError(Exception):
     def __init__(self, text):
         self.text = text

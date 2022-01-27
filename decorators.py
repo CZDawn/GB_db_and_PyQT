@@ -13,6 +13,8 @@ else:
 
 
 def log_decorator(_function):
+    '''Decorator for  logging classes and methods of the project'''
+
     @wraps(_function)
     def decorator(*args, **kwargs):
         result = _function(*args, **kwargs)

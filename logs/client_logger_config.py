@@ -1,3 +1,7 @@
+'''
+This is the module of clients' ligging configuration
+'''
+
 import os
 import sys
 from logging import getLogger, Formatter, StreamHandler, ERROR, FileHandler

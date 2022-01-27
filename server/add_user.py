@@ -1,3 +1,7 @@
+'''
+This module processing register user on the server.
+'''
+
 import hashlib
 import binascii
 
@@ -55,6 +59,8 @@ class RegisterUser(QDialog):
         self.show()
 
     def save_data(self):
+        '''Save new user in database.'''
+
         if not self.client_name.text():
             self.message.critical(
                 self, 'Error', 'No username')
