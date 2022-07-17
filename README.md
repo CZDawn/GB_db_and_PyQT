@@ -1,1 +1,1 @@
-# PyQT Chat
+# GEEKCHAT
