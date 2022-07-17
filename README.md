@@ -1,1 +1,1 @@
-# GB_db_and_PyQT
+# PyQT Chat
